@@ -1,0 +1,6 @@
+.item{
+	padding: 20px;
+	border-bottom: 2px solid rgb(66,139,202);}
+.item h4{margin: 0;}
+.item-img{width: 100%;}
+.harga-stok{padding-top: 35px;}
