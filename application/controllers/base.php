@@ -7,6 +7,12 @@ class Base extends CI_Controller {
       // Your own constructor code
       }
 
+      //base view
+      public function baseView($view='',$data=''){
+            $data['childView'] = $view;
+            $this->load->view('base/baseView',$data);
+      }
+
       protected function header($header, $data) {
             //menyimpan variabel header
             $data['header'] = $header;

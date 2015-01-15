@@ -173,7 +173,7 @@
 			</div>
 		</div>
 		<div class="item row">
-			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-imgs" src="#"></div>
+			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-img" src="<?php echo base_url('resource/img/sarung/IMG-20140630-01245.jpg') ?>"></div>
 			<div class="col-md-7">
 				<h4><a href="#">nama barang</a></h4>
 				<p>Deskripsi Barang</p>
@@ -184,7 +184,7 @@
 			</div>
 		</div>
 		<div class="item row">
-			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-imgs" src="#"></div>
+			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-img" src="<?php echo base_url('resource/img/sarung/IMG-20140626-01231.jpg') ?>"></div>
 			<div class="col-md-7">
 				<h4><a href="#">nama barang</a></h4>
 				<p>Deskripsi Barang</p>
@@ -195,7 +195,7 @@
 			</div>
 		</div>
 		<div class="item row">
-			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-imgs" src="#"></div>
+			<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-img" src="<?php echo base_url('resource/img/sarung/IMG-20140630-01246.jpg') ?>"></div>
 			<div class="col-md-7">
 				<h4><a href="#">nama barang</a></h4>
 				<p>Deskripsi Barang</p>
@@ -212,6 +212,36 @@
 	<div class="col-md-3">lkllo</div>
 	<!-- end of sidebar -->
 </div>
+
+<!-- Footer -->
+<center><br/>
+	<div class="page-footer">
+		<h5>Didukung oleh :</h5><br/>
+		<div class="row" >
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+		</div>
+		fhghhf
+	</div>
+</center>
 
 </div>
 </div>
