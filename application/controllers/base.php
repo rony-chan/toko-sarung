@@ -7,38 +7,19 @@ class Base extends CI_Controller {
       // Your own constructor code
       }
 
-      //base view
-      public function baseView($view='',$data=''){
-            $data['childView'] = $view;
-            $this->load->view('base/baseView',$data);
-      }
-
-      protected function header($header, $data) {
-            //menyimpan variabel header
-            $data['header'] = $header;
-            //menyisipkan file header.php
-            $this->load->view('base/header.php', $data);
-      }
-
-      protected function footer($footer, $data) {
-            //menyimpan variabel header
-            $data['footer'] = $footer;
-            //menyisipkan file header.php
-            $this->load->view('base/footer.php', $data);
-      }
-
-      protected function display_admin($content_admin, $data) {
+     
+      protected function displayAdmin($content_admin, $data) {
             //menyimpan variabel content_admin
             $data['content_admin'] = $content_admin;
             //menyisipkan file display-admin.php
-            $this->load->view('base/display-admin.php', $data);
+            $this->load->view('base/displayAdmin.php', $data);
       }
 
-      protected function display_user($content_user, $data) {
+      protected function displayUser($content_user, $data) {
             //menyimpan variabel content_user
             $data['content_user'] = $content_user;
             //menyisipkan file display-user.php
-            $this->load->view('base/display-user.php', $data);
+            $this->load->view('base/displayUser.php', $data);
       }
 
       protected function navbar($navbar, $data) {

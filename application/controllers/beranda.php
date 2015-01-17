@@ -15,13 +15,12 @@ class Beranda extends Base {
 	public function index(){
 
 		//menyimpan judul halaman dengan variabel title
-		$data['title']= 'Selamat Datang';
+		$data = array(
+			'title'=>'hai',
+			'sarung'=>$this->m_sarung->daftarSarung(10,0),//10 sarung terbaru
+			);
 		//load data pada controller base dan menyisipkan file header.php
-		$this->header('base/header', $data);
-		//load modal
-		$this->load->view('user/beranda');
-		//load data pada controller base dan menyisipkan file footer.php
-		$this->footer('base/footer', $data);
+		$this->displayUser('user/beranda',$data);
 	}
 	
 
