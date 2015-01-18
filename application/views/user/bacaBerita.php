@@ -21,7 +21,9 @@
           <!-- end of list barang -->
 
           <!-- sidebar -->
-          <div class="col-md-3">lkllo</div>
+          <div class="col-md-3">
+            <?php $this->load->view('user/sidebar');?>
+          </div>
           <!-- end of sidebar -->
         </div>
 

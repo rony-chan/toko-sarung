@@ -13,11 +13,12 @@ class Beranda extends Base {
 	}
 
 	public function index(){
-
+		$this->load->model('m_berita');
 		//menyimpan judul halaman dengan variabel title
 		$data = array(
 			'title'=>'hai',
 			'sarung'=>$this->m_sarung->daftarSarung(10,0),//10 sarung terbaru
+			'berita'=>$this->m_berita->listBerita(4,0),//4 berita terbaru
 			);
 		//load data pada controller base dan menyisipkan file header.php
 		$this->displayUser('user/beranda',$data);

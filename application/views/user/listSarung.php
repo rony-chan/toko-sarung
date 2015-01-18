@@ -1,13 +1,25 @@
 <div class="row">
 	<!-- list barang -->
 	<div class="col-md-9">
-		<div class="page-header">
-			<h1>Sarung Terbaru <small>selalu up to date</small></h1>
-		</div>
+		<br/>
+		<ol class="breadcrumb">
+			<?php if($this->uri->segment(2) == 'sarung'){?>
+			<li><a href="<?php echo site_url()?>">Home</a></li>
+			<li class="active">Sarung</li>
+			<?php } else if($this->uri->segment(2) == 'merek'){?>
+			<li><a href="<?php echo site_url()?>">Home</a></li>
+			<li><a href="<?php echo site_url('p/sarung')?>">Sarung</a></li>
+			<li class="active">merek : <?php echo $title?></li>
+			<?php } else if($this->uri->segment(2) == 'cari') {?>
+			<li><a href="<?php echo site_url()?>">Home</a></li>
+			<li><a href="<?php echo site_url('p/sarung')?>">Saruome</a></li>
+			<li class="active">cari : <?php echo $keyword?></li>
+			<?php } ?>
+		</ol>
 		<?php foreach($sarung as $s):?>
 			<?php
 			//get thumbnails
-			$thumb = $this->m_sarung-> fotoSarung($s['id_sarung']);
+			$thumb = $this->m_sarung->fotoSarung($s['id_sarung']);
 			if(!empty($sarung)){
 				$thumb = base_url('resource/img/sarung/'.$thumb['gambar']);
 			}else{
@@ -34,57 +46,47 @@
 					</center>
 				</div>
 			</div>
-		<?php endforeach;?>
-		<div class="page-header">
-			<h1>Berita Terbaru <small>jangan sampai ketinggalan</small></h1>
+		<?php endforeach;?>	
+		<div class="large-12 columns">
+			<center><?php echo $this->pagination->create_links();?></center>
 		</div>
-		<?php foreach($berita as $b):?>
-			<div class="item row">
-				<div class="col-md-2"><p><small><?php echo $b['updatedate']?></small></p><p>oleh <?php echo $b['username']?></p></div>
-				<div class="col-md-10">
-					<h4><a href="<?php echo site_url('p/berita/'.$b['id_berita']);?>"><?php echo $b['judul']?></a></h4>
-					<p><?php
-						echo substr($b['konten'], 0,100)?></p>
-					</div>
-				</div>
-			<?php endforeach;?>
-		</div>
-		<!-- end of list barang -->
-
-		<!-- sidebar -->
-		<div class="col-md-3"> <?php $this->load->view('user/sidebar');?></div>
-		<!-- end of sidebar -->
 	</div>
+	<!-- end of list barang -->
 
-	<!-- Footer -->
-	<center><br/>
-		<div class="page-footer">
-			<h5>Didukung oleh :</h5><br/>
-			<div class="row" >
-				<div class="col-xs-6 col-md-3">
-					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
-					</a>
-				</div>
-				<div class="col-xs-6 col-md-3">
-					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
-					</a>
-				</div>
-				<div class="col-xs-6 col-md-3">
-					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
-					</a>
-				</div>
-				<div class="col-xs-6 col-md-3">
-					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
-					</a>
-				</div>
+	<!-- sidebar -->
+	<div class="col-md-3"> <?php $this->load->view('user/sidebar');?></div>
+	<!-- end of sidebar -->
+</div>
+
+<!-- Footer -->
+<center><br/>
+	<div class="page-footer">
+		<h5>Didukung oleh :</h5><br/>
+		<div class="row" >
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
 			</div>
-			fhghhf
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<a href="#" class="thumbnail">
+					<img data-src="holder.js/100%x120" alt="...">
+				</a>
+			</div>
 		</div>
-	</center>
+		fhghhf
+	</div>
+</center>
 
 </div>
 </div>

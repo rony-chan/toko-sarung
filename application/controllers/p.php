@@ -47,7 +47,99 @@ class P extends Base {
 	/// ALL ABOUT SARUNG
 	//////////////////////////
 	public function sarung(){
-		
+		if(!empty($this->uri->segment(3))){//lihat detai sarung
+			$idsarung = $this->uri->segment(3);
+			$data = array(
+				'view'=>$this->m_sarung->detailSarung($idsarung),
+				'gambar'=>$this->m_sarung->gambarBySarung($idsarung),//menampilkan semua gambar berdasarkan id sarung
+				'sarung'=>$this->m_sarung->daftarSarung(5,0),//5 sarung terbaru
+				);
+			$data['title'] = $data['view']['nama'];
+			$this->displayUser('user/detailSarung',$data);
+		}else{//lihat daftar sarung
+			//pagination setup
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('p/sarung'),//get lattest location
+				'total_rows'=>$this->db->count_all('sarung'),//total berita on database
+				);
+			$this->load->library('pagination');
+			$this->pagination->initialize($config);
+			$uri = $this->uri->segment(4);
+			if(!$uri){
+				$uri = 0;
+			}
+			//$this->pagination->create_links();
+			// end of pagination setup
+			$data = array(
+				'title'=>'Semua Merek',
+				'sarung'=>$this->m_sarung->daftarSarung($config['per_page'],$uri),
+				);
+			$this->displayUser('user/listSarung',$data);
+		}
+	}
+	//merek
+	public function merek(){
+		if(empty($this->uri->segment(3))){
+			redirect(site_url('p/sarung'));
+		}else{			
+			$idmerek = $this->uri->segment(3);
+			//start pagination
+			$this->db->where('id_merk',$idmerek);
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('p/merek'),//get lattest location
+				'total_rows'=>$this->db->count_all_results('sarung'),//total berita on database
+				);
+			$this->load->library('pagination');
+			$this->pagination->initialize($config);
+			$uri = $this->uri->segment(4);
+			if(!$uri){
+				$uri = 0;
+			}
+			//end of pagination
+			$data = array(
+				'sarung'=> $this->m_sarung->daftarSarungByMerek($config['per_page'],$uri,$idmerek),
+				);
+			$data['title'] = $this->m_sarung->merek($idmerek);
+			$this->displayUser('user/listSarung',$data);
+		}
+	}
+	//pencarian sarung
+	public function cari(){
+		if(!empty($_GET['q'])){
+			redirect(site_url('p/cari/'.$_GET['q']));
+		} else{
+			$q = $this->uri->segment(3);
+			$keyword = str_replace('%20', ' ', $q);
+			//start pagination
+			$this->db->like('nama',$keyword);
+			$this->db->or_like('deskripsi',$keyword);
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('p/cari'),//get lattest location
+				'total_rows'=>$this->db->count_all_results('sarung'),//total berita on database
+				);
+			$this->load->library('pagination');
+			$this->pagination->initialize($config);
+			$uri = $this->uri->segment(4);
+			if(!$uri){
+				$uri = 0;
+			}
+			//end of pagination
+			$data = array(
+				'title' => $keyword,
+				'sarung' =>$this->m_sarung->cariSarung($config['per_page'],$uri,$keyword),
+				'keyword'=>$keyword
+				);
+			$this->displayUser('user/listSarung',$data);
+		}
 	}
 
 }
