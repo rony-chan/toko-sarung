@@ -122,7 +122,7 @@
                       <li><a href="<?php echo site_url('p/berita/3')?>">Cara Belanja</a></li>
                     </ul>
                   </li>
-                  <li><a href="<?php echo site_url('p/berita/5')?>"><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</a></li>
+                  <li><a href="<?php echo site_url('p/berita/7')?>"><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</a></li>
                 </ul>
 
                 <div>

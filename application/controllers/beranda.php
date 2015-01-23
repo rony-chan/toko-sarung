@@ -16,7 +16,7 @@ class Beranda extends Base {
 		$this->load->model('m_berita');
 		//menyimpan judul halaman dengan variabel title
 		$data = array(
-			'title'=>'hai',
+			'title'=>'Toko Grosir',
 			'sarung'=>$this->m_sarung->daftarSarung(10,0),//10 sarung terbaru
 			'berita'=>$this->m_berita->listBerita(4,0),//4 berita terbaru
 			);
