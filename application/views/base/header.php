@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="<?php echo base_url('resource/img/icon/favicon.png'); ?>">
+  <link rel="shortcut icon" href="<?php echo base_url('resource/img/icons/favicon.png'); ?>">
 
   <title><?php echo $title ?> | Sarung Hasaniyyin</title>
 
@@ -82,7 +82,7 @@
             </div>
             <div class="row mg-b-10">
               <div class="col-md-5 row">
-                <img class="logo" src="resource/img/logo.jpg'); ?>"/>
+                <img class="logo" src="resource/img/pictures/logo.png'); ?>"/>
               </div>
               <div class="col-md-7 mg-l-30">
                 <div class="pull-right">
@@ -147,25 +147,25 @@
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/01.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  slideshow transition twins
+                  Terbuat dari bahan berkualitas
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/02.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  random caption transition
+                  Tidak mudah luntur
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/03.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  mobile ready, touch swipe
+                  Nyaman dipakai 24 jam
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/04.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  responsive, scale smoothly
+                  Multifungsi, bisa dipakai siapapun
                 </div>
               </div>
             </div>
