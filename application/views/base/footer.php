@@ -50,17 +50,48 @@
           <h4 class="modal-title" id="myModalLabel">Daftar Member</h4>
       </div>
       <div class="modal-body">
-          <input type="text" class="form-control" placeholder="Nama Lengkap"><br/>
-          <input type="text" class="form-control" placeholder="Email"><br/>
-          <input type="text" class="form-control" placeholder="Alamat Lengkap"><br/>
-          <input type="text" class="form-control" placeholder="Nomor Telepon / Handphone"><br/>
-          <input type="text" class="form-control" placeholder="Password"><br/>
-          <input type="text" class="form-control" placeholder="Ulangi Password">
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Daftar</button>
-      </div>
-  </div>
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="inputnama" class="col-sm-3 control-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Nama Lengkap">
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputalamat" class="col-sm-3 control-label">Alamat Lengkap</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Alamat Lengkap">
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="inputtelepon" class="col-sm-5 control-label">Nomor Telepon / Handphone</label>
+          <div class="col-sm-7">
+            <input type="text" class="form-control" placeholder="Nomor Telepon / Handphone">
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="inputemail" class="col-sm-3 control-label">Email</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" placeholder="Email">
+    </div>
+</div>
+<div class="form-group">
+  <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+  <div class="col-sm-9">
+    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+</div>
+</div>
+<div class="form-group">
+  <label for="inputPassword3" class="col-sm-3 control-label">Ulangi Password</label>
+  <div class="col-sm-9">
+    <input type="password" class="form-control" id="inputPassword3" placeholder="Ulangi Password">
+</div>
+</div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary">Daftar</button>
+</div>
+</div>
 </div>
 </div>
 

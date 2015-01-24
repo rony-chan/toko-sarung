@@ -147,25 +147,25 @@
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/01.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Terbuat dari bahan berkualitas
+                  Bermacam-macam pilihan
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/02.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Tidak mudah luntur
+                  Produk-produk terkenal
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/03.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Nyaman dipakai 24 jam
+                  Kualitas tenun terbaik
                 </div>
               </div>
               <div>
                 <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/04.jpg'); ?>" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Multifungsi, bisa dipakai siapapun
+                  Tidak mudah luntur
                 </div>
               </div>
             </div>
