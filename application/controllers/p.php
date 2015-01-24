@@ -141,5 +141,52 @@ class P extends Base {
 			$this->displayUser('user/listSarung',$data);
 		}
 	}
+	//login user
+	public function login(){
+		$this->load->library('form_validation');
+		//set rules
+		$this->form_validation->set_rules('input_email','Email','required|trim|callback_validate_credentials');//rules for email
+		$this->form_validation->set_rules('input_password','password','trim|required');//rules for password
+		if($this->form_validation->run()){//form validation is valid
+			$email = $_POST['input_email'];
+			$password = md5(md5($_POST['input_password']));
+			//get al userdata
+			$userdata  = $this->m_user->can_login($email,$password);
+			//cek jika data pelanggan ditemukan
+			if(!empty($userdata)){
+				$sessiondata['userlogin'] = $userdata;
+				//set session
+				$this->userdata->set_userdata($sessiondata);
+				redirect(site_url().'?success=login success');
+			}else{
+				$data['title'] = 'Login Error';
+				$data['script'] = '<script>$("#slider1_container").hide();</script>';
+				$data['error'] = 'email dan password tidak cucok';
+				$this->displayUser('user/loginerror',$data);
+			}
+		}else{
+			$data['title'] = 'Login Error';
+			$data['script'] = '<script>$("#slider1_container").hide();</script>';
+			$data['error'] = 'email dan password tidak cucok';
+			$this->displayUser('user/loginerror',$data);
+		}
+	}
+	//login validation credentials
+	public function validate_credentials(){
+		$username = $this->input->post('input_username');
+		$password = md5(md5($this->input->post('input_password')));
+		//cek apakah tersedia di database
+		if($this->m_user->can_login($username,$password)){
+			return true;
+		}else{
+			$this->form_validation->set_message('validate_credentials','email dan password tidak cucok');
+			return false;
+		}
+	}
+	//logout
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect(site_url(),'refresh');
+	}
 
 }
