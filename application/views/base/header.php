@@ -76,109 +76,116 @@
           <div class="col-md-offset-1 col-md-10 wrapper-beranda">
             <div class="row">
               <?php if(!empty($this->session->userdata('userlogin'))){?>
-              <ul class="navbar-right">
-                <strong>welcome,</strong><?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?>
-              </ul>
-              <?php }else{?>
               <ul class="list-inline navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#id_register">Register</a></li> /
-                <li><a href="#" data-toggle="modal" data-target="#id_login">Login</a></li>
-              </ul>
-              <?php } ?>
-            </div>
-            <div class="row mg-b-10">
-              <div class="col-md-5 row">
-                <img class="logo" src="<?php echo base_url('resource/img/logo/logo.png')?>"/>
-              </div>
-              <div class="col-md-7 mg-l-30">
-                <div class="pull-right">
-                  <form method="GET" action="<?php echo site_url('p/cari')?>">
-                    <input name="q" type="text" class="cari">
-                    <button class="btn btn-primary btn-xs">Cari</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <ul class="nav nav-tabs">
-                <li ><a href="<?php echo site_url()?>"><span class="glyphicon glyphicon-home"></span>
-                  Beranda</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="glyphicon glyphicon-shopping-cart"></span> Produk <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?php echo base_url('p/sarung')?>">Semua Merek</a></li>
-                      <?php 
-                      $merk = $this->m_sarung->semuaMerk();
-                      foreach($merk as $m):
-                        echo ' <li><a href="'.site_url('p/merek/'.$m['id_sarung_merk']).'">'.$m['merek'].'</a></li>';
-                      endforeach;
-                      ?>
-                    </ul>
-                  </li>
-                  <li><a href="<?php echo site_url('p/berita')?>"><span class="glyphicon glyphicon-bullhorn"></span> Berita</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="glyphicon glyphicon-exclamation-sign"></span>  Info Penting <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?php echo site_url('p/berita/5')?>">Baca Saya</a></li>
-                      <li><a href="<?php echo site_url('p/berita/6')?>">Garansi</a></li>
-                      <li><a href="<?php echo site_url('p/berita/3')?>">Cara Belanja</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="<?php echo site_url('p/berita/7')?>"><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</a></li>
+                <strong>Selamat Datang</strong> 
+                <li class="dropdown">
+                  <a class="dropdown-toogle" data-toogle="dropdown" href="#"><?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Update Info</a></li>
+                    <li><a href="#">Status Pesanan</a></li>
+                  </ul>
+                  <li><a href="<?php echo site_url('p/logout')?>">Logout</a></li>
                 </ul>
-
-                <div>
-                  <!-- Jssor Slider Begin -->
-                  <!-- You can move inline styles to css file or css block. -->
-                  <div id="slider1_container" style="position: relative; width: 1050px;
-                  height: 300px; overflow: hidden;">
-
-                  <!-- Loading Screen -->
-                  <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                    background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+                <?php }else{?>
+                <ul class="list-inline navbar-right">
+                  <li><a href="#" data-toggle="modal" data-target="#id_register">Register</a></li> /
+                  <li><a href="#" data-toggle="modal" data-target="#id_login">Login</a></li>
+                </ul>
+                <?php } ?>
+              </div>
+              <div class="row mg-b-10">
+                <div class="col-md-5 row">
+                  <img class="logo" src="<?php echo base_url('resource/img/logo/logo.png')?>"/>
+                </div>
+                <div class="col-md-7 mg-l-30">
+                  <div class="pull-right">
+                    <form method="GET" action="<?php echo site_url('p/cari')?>">
+                      <input name="q" type="text" class="cari">
+                      <button class="btn btn-primary btn-xs">Cari</button>
+                    </form>
                   </div>
-                  <div style="position: absolute; display: block; background: url(resource/img/slider/loading.gif) no-repeat center center;
-                  top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+              </div>
+              <div class="row">
+                <ul class="nav nav-tabs">
+                  <li ><a href="<?php echo site_url()?>"><span class="glyphicon glyphicon-home"></span>
+                    Beranda</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Produk <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="<?php echo base_url('p/sarung')?>">Semua Merek</a></li>
+                        <?php 
+                        $merk = $this->m_sarung->semuaMerk();
+                        foreach($merk as $m):
+                          echo ' <li><a href="'.site_url('p/merek/'.$m['id_sarung_merk']).'">'.$m['merek'].'</a></li>';
+                        endforeach;
+                        ?>
+                      </ul>
+                    </li>
+                    <li><a href="<?php echo site_url('p/berita')?>"><span class="glyphicon glyphicon-bullhorn"></span> Berita</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>  Info Penting <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="<?php echo site_url('p/berita/5')?>">Baca Saya</a></li>
+                        <li><a href="<?php echo site_url('p/berita/6')?>">Garansi</a></li>
+                        <li><a href="<?php echo site_url('p/berita/3')?>">Cara Belanja</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="<?php echo site_url('p/berita/7')?>"><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</a></li>
+                  </ul>
+
+                  <div>
+                    <!-- Jssor Slider Begin -->
+                    <!-- You can move inline styles to css file or css block. -->
+                    <div id="slider1_container" style="position: relative; width: 1050px;
+                    height: 300px; overflow: hidden;">
+
+                    <!-- Loading Screen -->
+                    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                      <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                      background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url(resource/img/slider/loading.gif) no-repeat center center;
+                    top: 0px; left: 0px;width: 100%;height:100%;">
+                  </div>
+                </div>
+
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1050px; height: 300px;
+                overflow: hidden;">
+                <div>
+                  <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/01.jpg'); ?>" /></a>
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                    Bermacam-macam pilihan
+                  </div>
+                </div>
+                <div>
+                  <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/02.jpg'); ?>" /></a>
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                    Produk-produk terkenal
+                  </div>
+                </div>
+                <div>
+                  <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/03.jpg'); ?>" /></a>
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                    Kualitas tenun terbaik
+                  </div>
+                </div>
+                <div>
+                  <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/04.jpg'); ?>" /></a>
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                    Tidak mudah luntur
+                  </div>
                 </div>
               </div>
 
-              <!-- Slides Container -->
-              <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1050px; height: 300px;
-              overflow: hidden;">
-              <div>
-                <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/01.jpg'); ?>" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Bermacam-macam pilihan
-                </div>
-              </div>
-              <div>
-                <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/02.jpg'); ?>" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Produk-produk terkenal
-                </div>
-              </div>
-              <div>
-                <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/03.jpg'); ?>" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Kualitas tenun terbaik
-                </div>
-              </div>
-              <div>
-                <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/04.jpg'); ?>" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
-                  Tidak mudah luntur
-                </div>
-              </div>
-            </div>
-
-            <!-- Bullet Navigator Skin Begin -->
-            <!-- jssor slider bullet navigator skin 01 -->
-            <style>
+              <!-- Bullet Navigator Skin Begin -->
+              <!-- jssor slider bullet navigator skin 01 -->
+              <style>
             /*
             .jssorb01 div           (normal)
             .jssorb01 div:hover     (normal mouseover)

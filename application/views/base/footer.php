@@ -111,7 +111,7 @@
     <script src="<?php echo base_url('resource/js/jssor.js'); ?>"></script>
     <script src="<?php echo base_url('resource/js/jssor.slider.js'); ?>"></script>
       <?php if(!empty($script)){echo $script;}?>
-
+    <script>$('.dropdown-toggle').dropdown()</script>
     <script>
         jQuery(document).ready(function ($) {
             //Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html
