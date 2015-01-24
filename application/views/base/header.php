@@ -82,7 +82,7 @@
             </div>
             <div class="row mg-b-10">
               <div class="col-md-5 row">
-                <img class="logo" src="resource/img/logo/logo.png'); ?>"/>
+                <img class="logo" src="<?php echo base_url('resource/img/logo/logo.png')?>"/>
               </div>
               <div class="col-md-7 mg-l-30">
                 <div class="pull-right">
