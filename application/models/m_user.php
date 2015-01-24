@@ -9,9 +9,9 @@ class m_user extends CI_Model{
 	//can login
 	public function can_login($email,$password){
 		$this->db->where('email',$email);
-		$this->db->or_where('password',$password);
+		$this->db->where('password',$password);
 		$query = $this->db->get('pelanggan');
-		if($query->num_rows()>2){
+		if($query->num_rows()>0){
 			return $query->result_array();
 		}else{
 			return array();

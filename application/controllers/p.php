@@ -146,7 +146,7 @@ class P extends Base {
 		$this->load->library('form_validation');
 		//set rules
 		$this->form_validation->set_rules('input_email','Email','required|trim|callback_validate_credentials');//rules for email
-		$this->form_validation->set_rules('input_password','password','trim|required');//rules for password
+		$this->form_validation->set_rules('input_password','Password','trim|required');//rules for password
 		if($this->form_validation->run()){//form validation is valid
 			$email = $_POST['input_email'];
 			$password = md5(md5($_POST['input_password']));
@@ -156,7 +156,7 @@ class P extends Base {
 			if(!empty($userdata)){
 				$sessiondata['userlogin'] = $userdata;
 				//set session
-				$this->userdata->set_userdata($sessiondata);
+				$this->session->set_userdata($sessiondata);
 				redirect(site_url().'?success=login success');
 			}else{
 				$data['title'] = 'Login Error';
@@ -167,7 +167,7 @@ class P extends Base {
 		}else{
 			$data['title'] = 'Login Error';
 			$data['script'] = '<script>$("#slider1_container").hide();</script>';
-			$data['error'] = 'email dan password tidak cucok';
+			$data['error'] = validation_errors();
 			$this->displayUser('user/loginerror',$data);
 		}
 	}

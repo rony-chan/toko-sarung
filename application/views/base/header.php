@@ -75,10 +75,16 @@
          <div class="col-md-12">
           <div class="col-md-offset-1 col-md-10 wrapper-beranda">
             <div class="row">
+              <?php if(!empty($this->session->userdata('userlogin'))){?>
+              <ul class="navbar-right">
+                <strong>welcome,</strong><?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?>
+              </ul>
+              <?php }else{?>
               <ul class="list-inline navbar-right">
                 <li><a href="#" data-toggle="modal" data-target="#id_register">Register</a></li> /
                 <li><a href="#" data-toggle="modal" data-target="#id_login">Login</a></li>
               </ul>
+              <?php } ?>
             </div>
             <div class="row mg-b-10">
               <div class="col-md-5 row">
@@ -86,7 +92,7 @@
               </div>
               <div class="col-md-7 mg-l-30">
                 <div class="pull-right">
-                <form method="GET" action="<?php echo site_url('p/cari')?>">
+                  <form method="GET" action="<?php echo site_url('p/cari')?>">
                     <input name="q" type="text" class="cari">
                     <button class="btn btn-primary btn-xs">Cari</button>
                   </form>
