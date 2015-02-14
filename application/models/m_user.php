@@ -17,4 +17,15 @@ class m_user extends CI_Model{
 			return array();
 		}
 	}
+	public function validate_credentials(){
+		$username = $this->input->post('input_username');
+		$password = md5(md5($this->input->post('input_password')));
+		//cek apakah tersedia di database
+		if($this->m_admin->can_login($username,$password)){
+			return true;
+		}else{
+			$this->form_validation->set_message('validate_credentials','email dan password tidak cucok');
+			return false;
+		}
+	}
 }

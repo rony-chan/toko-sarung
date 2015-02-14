@@ -32,7 +32,8 @@
 <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
     <button type="submit" class="btn btn-primary" style="float: left; margin-right: 5px;">Login</button>
-    <span><p style="margin-top: 5px;">Lupa Password? <a href="#">Klik di sini</a></p></span>
+    <span><p style="margin-top: 5px;"><a data-toggle="modal" href="#id_register">Bukan member</a></p></span>
+    <!-- <span><p style="margin-top: 5px;">Lupa Password? <a href="#">Klik di sini</a></p></span> -->
 </div>
 </div>
 </form>
@@ -64,8 +65,8 @@
             </div>
         </div>
         <div class="form-group">
-          <label for="inputtelepon" class="col-sm-5 control-label">Nomor Telepon / Handphone</label>
-          <div class="col-sm-7">
+          <label for="inputtelepon" class="col-sm-3 control-label">Nomor Telepon / Handphone</label>
+          <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Nomor Telepon / Handphone">
         </div>
     </div>

@@ -1,6 +1,5 @@
 <?php
-$this->load->view('base/body-open');
-$this->load->view('admin/navbar');
+$this->load->view('base/adminheader');
 $this->load->view($content_admin);
-$this->load->view('base/body-close');
+$this->load->view('base/adminfooter');
 ?>

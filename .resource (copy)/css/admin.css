@@ -1,0 +1,12 @@
+body{background-color: #f4f4f4}
+.login-form h1{font-size: 20px}
+.login-form{
+	margin-top:40%;border:1px solid lightgrey;background-color: #fff
+}
+.login-form input{height: 40px;margin-bottom: 10px}
+.admin-left-sidebar{padding:10px;background-color: #000;color:#fff;}
+.admin-left-sidebar a{color:#fff;}
+.admin-content{padding:10px;background-color: #fff}
+.admin-content h1{font-size: 20px}
+.userpanel-admin{float:right;margin-top: 20px}
+.form-add{}

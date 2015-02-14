@@ -27,7 +27,11 @@
       						<label class="sr-only" for="exampleInputEmail2">Jumlah Kodi</label>
       						<input style="width:200px" type="number" min="1" max="<?php echo $view['jumlah']?>" class="form-control" id="exampleInputEmail2" placeholder="Jumlah Kodi" required>
       					</div>
-      					<button onclick="return alert('belum ron')" type="submit" class="btn btn-info">Booking</button>
+                                    <?php if(!empty($this->session->userdata('userlogin'))){?>
+                                    <button onclick="return alert('belum ron')" type="submit" class="btn btn-info">Booking</button>
+                                    <?php } else {?>
+                                    <a class="btn btn-primary" data-toggle="modal" href="#id_login">Booking</a>
+                                    <?php } ?>
       				</form>
       				<hr/>
       				<p><?php echo nl2br($view['deskripsi'])?></p>

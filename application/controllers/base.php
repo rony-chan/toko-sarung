@@ -7,15 +7,18 @@ class Base extends CI_Controller {
             $this->load->model('m_user');
       // Your own constructor code
       }
-
-     
+      //admin only
+      public function adminOnly(){
+            if(empty($this->session->userdata('adminlogin'))){
+                  redirect(site_url('admin?error=Anda belum login'));
+            }
+      }     
       protected function displayAdmin($content_admin, $data) {
             //menyimpan variabel content_admin
             $data['content_admin'] = $content_admin;
             //menyisipkan file display-admin.php
             $this->load->view('base/displayAdmin.php', $data);
       }
-
       protected function displayUser($content_user, $data) {
             //menyimpan variabel content_user
             $data['content_user'] = $content_user;
