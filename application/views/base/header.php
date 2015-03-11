@@ -84,7 +84,7 @@
                     <li><a href="#">Status Pesanan</a></li>
                   </ul>
                   <li><a href="<?php echo site_url('p/logout')?>">Logout</a></li><br/>
-                  <li><h4><a href=""><span class="glyphicon glyphicon-shopping-cart">Rp<?php echo $this->cart->format_number($this->cart->total());?>,-</span></a></h4></li>
+                  <li><h4><a href="<?php echo site_url('order/lihatKeranjang');?>"><span class="glyphicon glyphicon-shopping-cart">(<?php echo $this->cart->total_items();?>) Rp<?php echo number_format($this->cart->total());?>,-</span></a></h4></li>
                 </ul>
                 <?php }else{?>
                 <ul class="list-inline navbar-right">
@@ -137,7 +137,7 @@
                     </li>
                     <li><a href="<?php echo site_url('p/berita/7')?>"><span class="glyphicon glyphicon-phone-alt"></span> Hubungi Kami</a></li>
                   </ul>
-
+                  <?php if(empty($this->session->userdata('userlogin'))){?>
                   <div>
                     <!-- Jssor Slider Begin -->
                     <!-- You can move inline styles to css file or css block. -->
@@ -250,3 +250,4 @@
         </div>
         <!-- Jssor Slider End -->
       </div>
+      <?php } ?>
