@@ -22,13 +22,14 @@
       			</div>
       			<div class="col-md-8"><h3><a href="#"><?php echo $view['nama']?></a></h3><h4>Rp <?php echo number_format($view['harga'])?>/kodi</h4>
       				<h4>Stok <?php echo $view['jumlah']?> Kodi</h4>
-      				<form class="form-inline" role="form">
+      				<form method="POST" action="<?php echo site_url('order/addToCart') ?>" class="form-inline" role="form">
       					<div class="form-group">
       						<label class="sr-only" for="exampleInputEmail2">Jumlah Kodi</label>
-      						<input style="width:200px" type="number" min="1" max="<?php echo $view['jumlah']?>" class="form-control" id="exampleInputEmail2" placeholder="Jumlah Kodi" required>
-      					</div>
+      						<input name="jumlah" style="width:200px" type="number" min="1" max="<?php echo $view['jumlah']?>" class="form-control" id="exampleInputEmail2" placeholder="Jumlah Kodi" required>
+      					             <input type="hidden" name="idbarang" value="<?php echo $view['id_sarung'] ?>">
+                     </div>
                                     <?php if(!empty($this->session->userdata('userlogin'))){?>
-                                    <button onclick="return alert('belum ron')" type="submit" class="btn btn-info">Booking</button>
+                                    <button type="submit" class="btn btn-info">Booking</button>
                                     <?php } else {?>
                                     <a class="btn btn-primary" data-toggle="modal" href="#id_login">Booking</a>
                                     <?php } ?>

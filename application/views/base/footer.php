@@ -113,6 +113,13 @@
     <script src="<?php echo base_url('resource/js/jssor.slider.js'); ?>"></script>
       <?php if(!empty($script)){echo $script;}?>
     <script>$('.dropdown-toggle').dropdown()</script>
+    <?php
+     if(!empty($_GET['error'])){//error note
+        echo '<script>alert(\''.$_GET["error"].'\')</script>';
+     }else if(!empty($_GET['success'])){//success note
+        echo '<script>alert(\''.$_GET["success"].'\')</script>';
+     }
+    ?>
     <script>
         jQuery(document).ready(function ($) {
             //Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html

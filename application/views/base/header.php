@@ -32,7 +32,7 @@
 
 
           <!-- Caption Style -->
-          <style> 
+          <style>
             .captionOrange, .captionBlack
             {
               color: #fff;
@@ -69,7 +69,6 @@
               background: url(../img/browser-icons.png);
             }
           </style>
-
         </head>
         <body>
          <div class="col-md-12">
@@ -77,14 +76,15 @@
             <div class="row">
               <?php if(!empty($this->session->userdata('userlogin'))){?>
               <ul class="list-inline navbar-right">
-                <strong>Selamat Datang</strong> 
+                <strong>Selamat Datang</strong>
                 <li class="dropdown">
                   <a class="dropdown-toogle" data-toogle="dropdown" href="#"><?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?><span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Update Info</a></li>
                     <li><a href="#">Status Pesanan</a></li>
                   </ul>
-                  <li><a href="<?php echo site_url('p/logout')?>">Logout</a></li>
+                  <li><a href="<?php echo site_url('p/logout')?>">Logout</a></li><br/>
+                  <li><h4><a href=""><span class="glyphicon glyphicon-shopping-cart">Rp<?php echo $this->cart->format_number($this->cart->total());?>,-</span></a></h4></li>
                 </ul>
                 <?php }else{?>
                 <ul class="list-inline navbar-right">
@@ -116,7 +116,7 @@
                       </a>
                       <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('p/sarung')?>">Semua Merek</a></li>
-                        <?php 
+                        <?php
                         $merk = $this->m_sarung->semuaMerk();
                         foreach($merk as $m):
                           echo ' <li><a href="'.site_url('p/merek/'.$m['id_sarung_merk']).'">'.$m['merek'].'</a></li>';
@@ -159,25 +159,25 @@
                 overflow: hidden;">
                 <div>
                   <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/01.jpg'); ?>" /></a>
-                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     Bermacam-macam pilihan
                   </div>
                 </div>
                 <div>
                   <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/02.jpg'); ?>" /></a>
-                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     Produk-produk terkenal
                   </div>
                 </div>
                 <div>
                   <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/03.jpg'); ?>" /></a>
-                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     Kualitas tenun terbaik
                   </div>
                 </div>
                 <div>
                   <a u=image href="#"><img src="<?php echo base_url('resource/img/slider/04.jpg'); ?>" /></a>
-                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;"> 
+                  <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     Tidak mudah luntur
                   </div>
                 </div>
