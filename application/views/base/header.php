@@ -7,9 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="<?php echo base_url('resource/img/icons/favicon.png'); ?>">
-
   <title><?php echo $title ?> | Sarung Hasaniyyin</title>
-
   <!-- Bootstrap -->
   <link href="<?php echo base_url('resource/css/bootstrap.css'); ?>" rel="stylesheet">
   <!-- Sarung -->
@@ -18,7 +16,11 @@
   <link href="<?php echo base_url('resource/css/style.css'); ?>" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url('resource/css/dashboard.css'); ?>" rel="stylesheet">
-
+  <?php
+   if(!empty($script)){
+      echo $script;
+   }
+  ?>
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="<?php echo base_url('resource/js/ie-emulation-modes-warning.js'); ?>"></script>

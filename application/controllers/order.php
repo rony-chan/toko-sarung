@@ -14,18 +14,46 @@ class Order extends Base {
    public function lihatKeranjang(){
       $data = array(
          'title'=>'Lihat Keranjang',
-         );
+      );
       $this->displayUser('order/lihatKeranjang',$data);
    }
    //lihat status order
    public function lihatOrder(){
-      $data = array(
-         'title'=>'Status Order',
-         'view'=>$this->m_order->myOrder(),
-      );
+      if(!empty($this->uri->segment(4))){//for cek custom view order
+         switch ($this->uri->segment(4)) {
+            case 'menunggu':
+            $data = array(
+               'script'=>'<script>$(document).ready(function(){$("#menunggu").addClass("active");});</script>',
+               'title'=>'Status Order',
+               'view'=>$this->m_order->myCustomOrder('menunggu pembayaran'),
+            );
+            break;
+            case 'lunas':
+            $data = array(
+               'script'=>'<script>$(document).ready(function(){$("#lunas").addClass("active");});</script>',
+               'title'=>'Status Order',
+               'view'=>$this->m_order->myCustomOrder('lunas'),
+            );
+            break;
+         }
+      }else{
+         $data = array(
+            'script'=>'<script>$(document).ready(function(){$("#semua").addClass("active");});</script>',
+            'title'=>'Status Order',
+            'view'=>$this->m_order->myOrder(),
+         );
+      }
       $this->displayUser('order/lihatOrder',$data);
    }
-
+   //lihat item
+   public function lihatItem(){
+      $idOrder = $this->uri->segment(3);
+      $data = array(
+         'title'=>'LIhat Order Item',
+         'view'=>$this->m_order->getOrderItem($idOrder),
+      );
+      $this->displayUser('order/lihatItem',$data);
+   }
    ///////////////////////////
    // ALL ABOUT CART
    ///////////////////////////
@@ -61,7 +89,7 @@ class Order extends Base {
       $link = $link[0];
       echo $id = $this->uri->segment(3);
       $data = array('rowid'=>$id,'qty'=>0);//kembali ke 0
-   	$this->cart->update($data);
+      $this->cart->update($data);
       redirect($link.'?success=berhasil hapus dari cart');//balik ke halaman sebelumnya
    }
 

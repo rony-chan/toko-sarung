@@ -27,6 +27,14 @@ class m_order extends CI_Model{
       $order = $this->db->get('pesan');
       return $order->result_array();//get result
    }
+	//show custom order
+	public function myCustomOrder($status){
+      $iduser = $this->session->userdata['userlogin'][0]['id_pelanggan'];//get id pelanggan
+      $this->db->where('id_pelanggan',$iduser);
+      $this->db->where('status',$status);
+		$order = $this->db->get('pesan');
+      return $order->result_array();//get result
+   }
    ////////////////////
    // ALL ABOUT STUFF
    ////////////////////
@@ -37,5 +45,14 @@ class m_order extends CI_Model{
       WHERE id_sarung = ?";
       return $this->db->query($sql,$params);//execute query
    }
+	//cek all item by id order
+	public function getOrderItem($idorder){
+		$sql = "SELECT sarung.id_sarung AS 'id_sarung',sarung.nama, sarung.harga, pesan_item.subtotal, pesan_item.jumlah
+		FROM sarung
+		INNER JOIN pesan_item ON pesan_item.id_sarung = sarung.id_sarung
+		WHERE pesan_item.id_pesan = ?";
+		$items = $this->db->query($sql,$idorder);
+		return $items->result_array();
+	}
 
 }
