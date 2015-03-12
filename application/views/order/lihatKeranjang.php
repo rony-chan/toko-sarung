@@ -23,19 +23,34 @@
                <tr>
                   <td><?php echo $list['name'] ?></td>
                   <td><?php echo $list['qty'] ?></td>
+                  <td>Rp <?php echo number_format($list['subtotal']/$list['qty']);?>,-</td>
                   <td>Rp <?php echo number_format($list['subtotal']);?>,-</td>
-                  <td>Rp <?php echo number_format($list['subtotal']*$list['qty']);?>,-</td>
                   <td>
                      <a class="btn btn-xs btn-primary" href="<?php echo site_url('p/sarung/'.$list['id']) ?>">edit</a>
                      <a onclick="return confirm('anda yakin')" class="btn btn-xs btn-danger" href="<?php echo site_url('order/deleteCart/'.$list['rowid']) ?>">hapus</a>
                   </td>
                </tr>
             <?php endforeach; ?>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td></td>
+               <td></td>
+               <td>
+                  <strong>Rp<?php echo number_format($this->cart->total());?>,-</strong>
+               </td>
+               <td></td>
+            </tr>
          </table>
+         <div class="row">
+            <div class=" col-md-12">
+               <br/>
+               <a class="btn btn-primary" href="<?php echo site_url('order/addOrder') ?>">Masukan Ke Order <i class="glyphicon glyphicon-arrow-right"></i></a>
+            </div>
+         </div>
       </div>
    </div>
    <div class="col-md-3">
-      ...
+      <?php $this->load->view('user/sidebar');?>
    </div>
 </div>
 <!-- Footer -->

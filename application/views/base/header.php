@@ -78,11 +78,14 @@
               <ul class="list-inline navbar-right">
                 <strong>Selamat Datang</strong>
                 <li class="dropdown">
-                  <a class="dropdown-toogle" data-toogle="dropdown" href="#"><?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?><span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Update Info</a></li>
-                    <li><a href="#">Status Pesanan</a></li>
-                  </ul>
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <?php echo $this->session->userdata['userlogin'][0]['nama_lengkap'];?><span class="caret"></span>
+                 </a>
+                 <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('order/lihatOrder')?>">Pesanan</a></li>
+                    <li><a href="<?php echo site_url('p/editProfile')?>">Update Profile</a></li>
+                 </ul>
+                </li>
                   <li><a href="<?php echo site_url('p/logout')?>">Logout</a></li><br/>
                   <li><h4><a href="<?php echo site_url('order/lihatKeranjang');?>"><span class="glyphicon glyphicon-shopping-cart">(<?php echo $this->cart->total_items();?>) Rp<?php echo number_format($this->cart->total());?>,-</span></a></h4></li>
                 </ul>
