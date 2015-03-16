@@ -1,7 +1,818 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f95852ed-e72e-40be-88c3-2d3816a2e8e7" name="Default" comment="" />
+    <list default="true" id="f95852ed-e72e-40be-88c3-2d3816a2e8e7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/admin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/sarung.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/banner/ads1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/banner/ads2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/icons/cs.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/icons/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/logo/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/product/product1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/IMG-20140626-01231.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/IMG-20140630-01243.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/IMG-20140630-01245.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/IMG-20140630-01246.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/cendana1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/gajahduduk1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/hasaniyin1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/uzair1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/wadimor1.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/sarung/wadimorbiru.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/1920/blue.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/1920/purple.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/1920/red.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/a12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/a17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/a21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/b05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/b21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/contact-us.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/facebook.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/google.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-finger-pointing.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-fruit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-jssor-slider.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-navigator-horizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-navigator.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-phone-horizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-phone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-slide-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-slide-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-slide-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/c-text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/new-site/cool-guy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/share/share-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/img/slider/twitter.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/docs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/ie-emulation-modes-warning.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/ie10-viewport-bug-workaround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/jquery-1.9.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/jssor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/js/jssor.slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/adapters/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/build-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/contents.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/about/dialogs/about.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/image/dialogs/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/image/images/noimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/link/dialogs/anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/link/dialogs/link.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/link/images/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/link/images/hidpi/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/magicline/images/hidpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/magicline/images/icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/magicline/images/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/pastefromword/filter/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/scayt/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/scayt/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/scayt/dialogs/options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/table/dialogs/table.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/api.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/appendto.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/assets/inlineall/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/assets/outputxhtml/outputxhtml.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/assets/posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/assets/sample.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/assets/uilanguages/languages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/datafiltering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/divreplace.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/inlineall.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/inlinebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/inlinetextarea.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/jquery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/dialog/assets/my_dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/dialog/dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/enterkey/enterkey.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/htmlwriter/outputforflash.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/htmlwriter/outputhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/magicline/magicline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/toolbar/toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/plugins/wysiwygarea/fullpage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/readonly.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/replacebyclass.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/replacebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/sample.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/sample.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/sample_posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/tabindex.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/uicolor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/uilanguages.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/samples/xhtmlstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/hidpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/hidpi/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/hidpi/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/hidpi/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/skins/moono/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/ckeditor/styles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/content_upload/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/content_upload/.thumbs/images/Hydrangeas.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/content_upload/images/Hydrangeas.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/browse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/base.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/theme_dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/theme_dark.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/theme_default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/cache/theme_default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/conf/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/conf/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/conf/upload.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/class/browser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/class/minifier.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/class/uploader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/types/type_img.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/core/types/type_mime.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/css/000.base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/css/999.agent.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/css/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/doc/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/doc/Changelog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/doc/LICENSE.GPL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/doc/LICENSE.LGPL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/integration/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/integration/BolmerCMS.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/integration/drupal.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/000._jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/002._jqueryui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/006.jquery.uniform.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/010.jquery.fixes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/020.jquery.rightClick.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/021.jquery.taphold.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/029.jquery.agent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/030.jquery.helper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/031.jquery.md5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/040.object.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/041.dialogs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/050.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/060.toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/070.settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/080.files.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/090.folders.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/091.menus.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/091.viewImage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/100.clipboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/110.dropUpload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/120.misc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/js_localize.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/af.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/bg.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/ca.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/cs.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/da.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/de.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/el.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/en.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/es.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/et.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/fa.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/fi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/fr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/he.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/hu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/id.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/it.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/ja.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/lt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/lv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/nl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/no.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/pl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/pt-br.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/pt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/ru.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/sk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/sv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/tr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/uk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/vi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lang/zh-cn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_fastImage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_image_gd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_image_gmagick.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_image_imagick.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/class_zipFolder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/helper_dir.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/helper_file.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/helper_httpCache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/helper_path.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/lib/helper_text.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/01.ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/02.misc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/bg_transparent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/..png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/.image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/avi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/bat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/bmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/bz2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/ccd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/cgi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/com.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/csh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/cue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/deb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/dll.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/doc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/docx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/exe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/fla.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/flv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/fon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/gif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/gz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/htm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/html.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/ini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/iso.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/jar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/java.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/jpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/jpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/js.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mdx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/midi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mkv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mov.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mp3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mp4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/mpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/nfo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/nrg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/ogg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/php.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/phps.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/pl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/pm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/png.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/ppt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/pptx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/psd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/qt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/rar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/rpm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/rtf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/sh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/srt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/sub.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/swf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/tgz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/tif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/tiff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/torrent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/ttf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/txt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/wav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/wma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/xls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/xlsx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/big/zip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/..png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/.image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/avi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/bat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/bmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/bz2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/ccd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/cgi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/com.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/csh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/cue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/deb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/dll.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/doc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/docx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/exe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/fla.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/flv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/fon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/gif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/gz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/htm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/html.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/ini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/iso.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/jar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/java.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/jpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/jpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/js.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mdx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/midi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mkv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mov.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mp3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mp4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/mpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/nfo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/nrg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/ogg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/php.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/phps.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/pl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/pm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/png.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/ppt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/pptx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/psd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/qt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/rar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/rpm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/rtf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/sh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/srt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/sub.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/swf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/tgz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/tif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/tiff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/torrent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/ttf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/txt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/wav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/wma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/xls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/xlsx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/files/small/zip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/about.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/clipboard-add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/clipboard-clear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/clipboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/folder-new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/maximize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/move.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/rename.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/upload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/icons/view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/kcf_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/tree/denied.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/tree/minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/tree/plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/ui-icons_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/ui-icons_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/img/ui-icons_white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/dark/js.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/01.ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/02.misc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/bg_transparent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/..png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/.image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/avi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/bat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/bmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/bz2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/ccd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/cgi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/com.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/csh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/cue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/deb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/dll.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/doc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/docx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/exe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/fla.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/flv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/fon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/gif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/gz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/htm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/html.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/ini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/iso.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/jar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/java.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/jpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/jpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/js.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mdx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/midi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mkv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mov.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mp3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mp4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/mpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/nfo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/nrg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/ogg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/php.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/phps.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/pl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/pm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/png.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/ppt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/pptx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/psd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/qt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/rar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/rpm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/rtf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/sh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/srt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/sub.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/swf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/tgz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/tif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/tiff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/torrent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/ttf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/txt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/wav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/wma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/xls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/xlsx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/big/zip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/..png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/.image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/avi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/bat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/bmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/bz2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/ccd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/cgi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/com.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/csh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/cue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/deb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/dll.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/doc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/docx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/exe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/fla.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/flv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/fon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/gif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/gz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/htm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/html.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/ini.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/iso.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/jar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/java.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/jpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/jpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/js.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mdx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/midi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mkv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mov.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mp3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mp4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mpeg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/mpg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/nfo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/nrg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/ogg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/php.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/phps.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/pl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/pm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/png.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/ppt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/pptx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/psd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/qt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/rar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/rpm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/rtf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/sh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/srt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/sub.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/swf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/tgz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/tif.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/tiff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/torrent.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/ttf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/txt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/wav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/wma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/xls.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/xlsx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/files/small/zip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/about.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/clipboard-add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/clipboard-clear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/clipboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/folder-new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/maximize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/move.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/rename.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/upload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/icons/view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/kcf_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/tree/denied.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/tree/folder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/tree/minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/tree/plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/ui-icons_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/img/ui-icons_white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/themes/default/js.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/tpl/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/tpl/tpl_browser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/tpl/tpl_css.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/tpl/tpl_javascript.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.resource (copy)/plugin/kcfinder/upload.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/m_order.php" afterPath="$PROJECT_DIR$/application/models/m_order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/manage.php" afterPath="$PROJECT_DIR$/application/controllers/manage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/pesanan.php" afterPath="$PROJECT_DIR$/application/views/admin/pesanan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="sarung-rony.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -48,10 +859,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-4" />
-    <option name="width" value="1368" />
-    <option name="height" value="773" />
+    <option name="x" value="47" />
+    <option name="y" value="24" />
+    <option name="width" value="1319" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -76,7 +887,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -97,6 +907,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -122,15 +933,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -149,16 +960,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="47" y="24" width="1319" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.090490796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2366864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26172465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26156178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -198,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -206,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="2955">
           <caret line="33" column="78" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -214,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1635">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -222,7 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1455">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -230,7 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -238,7 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -246,7 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="870">
           <caret line="33" column="78" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -254,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1185">
           <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -262,7 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2250">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -270,7 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55452865" vertical-offset="0" max-vertical-offset="541">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -333,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="870">
           <caret line="33" column="78" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -341,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1635">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -349,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2250">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -357,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

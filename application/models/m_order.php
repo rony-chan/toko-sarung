@@ -10,6 +10,37 @@ class m_order extends CI_Model{
    ////////////////////
    // ALL ABOUT ORDER
    ////////////////////
+	//view all order
+	//view all filter order
+	public function allOrder($limit,$offset,$status=""){
+		if(empty($status)){//show all
+			$params = array($offset,$limit);
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
+			LIMIT ?,?";
+		}else{
+			$params = array($offset,$limit,$status);
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
+			LIMIT ?,? WHERE pesan.status = ?";
+		}
+		$query = $this->db->query($sql,$params);
+		return $query->result_array();
+	}
+	//count all order
+	public function countAllOrder($status=""){
+		if(empty($status)){//show all
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pesan";
+		}else{
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pesan
+			WHERE pesan.status = ?";
+		}
+		$query = $this->db->query($sql,$status);
+		return $query->num_rows();
+	}
+	//get detail order
    public function detailOrder($idorder){
       $this->db->where('id_pesan',$idorder);
       $query = $this->db->get('pesan');

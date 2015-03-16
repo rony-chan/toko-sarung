@@ -12,32 +12,44 @@
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<ul class="nav nav-tabs" id="myTab">
-						<li class="active"><a href="#home">Semua Pesanan</a></li>
-						<li><a href="#profile">Pesanan Diproses</a></li>
-						<li><a href="#profile">Pesanan Selesai</a></li>
+						<li id="semua"><a href="<?php echo site_url('manage/pesanan');?>">Semua Pesanan</a></li>
+						<li id="diproses"><a href="<?php echo site_url('manage/pesanan/act/diproses');?>">Pesanan Diproses</a></li>
+						<li id="selesai"><a href="<?php echo site_url('manage/pesanan/act/selesai');?>">Pesanan Selesai</a></li>
 					</ul>
 					<table class="table table-striped">
 						<thead>
 							<tr>
 								<th>No.</th>
-								<th>Id Pemesan</th>
+								<th>Id Pesan</th>
 								<th>Pemesan</th>
 								<th>Total Harga</th>
-								<th>Total barang</th>
-								<th>Berat(gr)</th>
 								<th>Status</th>
 							</tr>
 						</thead>
 						<tbody>
+						<?php foreach($view as $v):?>
 							<tr>
 								<td>1</td>
-								<td>345-567</td>
-								<td>Yusuf Akhsan</td>
-								<td>Rp45.000,-</td>
-								<td>34</td>
-								<td>45gr</td>
-								<td></td>
+								<td><?php echo $v['id_pesan'];?></td>
+								<td><?php echo $v['nama_lengkap'];?></td>
+								<td>Rp<?php echo number_format($v['harga']);?>,-</td>
+								<td>
+									<?php
+	                        switch ($v['status']) {
+	                           case 'menunggu pembayaran':
+	                           echo '<span class="label label-warning">'.$v['status'].'</span>';
+	                           break;
+	                           case 'lunas':
+	                           echo '<span class="label label-success">'.$v['status'].'</span>';
+	                           break;
+	                           default:
+	                           echo '<span class="label label-default">tidak ada status</span>';
+	                           break;
+	                        }
+	                        ?>
+								</td>
 							</tr>
+						<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div><!-- /.box-body -->
