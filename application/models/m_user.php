@@ -28,4 +28,10 @@ class m_user extends CI_Model{
 			return false;
 		}
 	}
+	//get detail user by id
+	public function userbyId($iduser){
+		$this->db->where('id_pelanggan',$iduser);
+		$query = $this->db->get('pelanggan');
+		return $query->row_array();
+	}
 }

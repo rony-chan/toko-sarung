@@ -10,6 +10,11 @@ class m_order extends CI_Model{
    ////////////////////
    // ALL ABOUT ORDER
    ////////////////////
+   public function detailOrder($idorder){
+      $this->db->where('id_pesan',$idorder);
+      $query = $this->db->get('pesan');
+      return $query->row_array();
+   }
    //check pesanan yang tidak dieksekusi dalam waktu 1x24 jam
 
    //get last id order by id pelanggan

@@ -127,4 +127,24 @@ class Order extends Base {
       endforeach;
       redirect(site_url('order/lihatOrder').'?success=order sudah dimasukan, silahkan melakukan pembayaran untuk lanjut ke langkah berikutnya');//balik ke halaman sebelumnya
    }
+
+   /////////////////////////////
+   // ALL ABOUT CETAK
+   /////////////////////////////
+   public function cetakbukti(){
+      $idOrder = $this->uri->segment(3);
+      $data = array(
+         'order'=>$this->m_order->detailOrder($idOrder),//detail order
+         'item'=>$this->m_order->getOrderItem($idOrder),//item order
+         );
+      $data['pelanggan'] = $this->m_user->userbyId($data['order']['id_pelanggan']);//id pelanggan
+      $this->load->view('order/cetakbukti',$data);
+      $html = $this->output->get_output();
+      $this->load->library('dompdf_gen');
+		// Convert to PDF
+		$this->dompdf->load_html($html);
+		$this->dompdf->render();
+		$title = 'Cetak Bukti Order ';//pdf title
+		$this->dompdf->stream($title.".pdf");//pdf file name
+   }
 }

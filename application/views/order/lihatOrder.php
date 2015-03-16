@@ -51,7 +51,10 @@
                         }
                         ?>
                      </td>
-                     <td><a class="btn btn-primary btn-xs" href="<?php echo site_url('order/lihatItem/'.$v['id_pesan']) ?>">detail</a></td>
+                     <td>
+                     <a class="btn btn-primary btn-xs" href="<?php echo site_url('order/lihatItem/'.$v['id_pesan']) ?>">Detail</a>
+                     <a class="btn btn-primary btn-xs" href="<?php echo site_url('order/cetakbukti/'.$v['id_pesan']) ?>">Cetak Bukti</a>
+                     </td>
                   </tr>
                <?php endforeach; ?>
             </table>
