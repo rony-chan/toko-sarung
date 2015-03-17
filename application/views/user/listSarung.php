@@ -60,33 +60,33 @@
 
 <!-- Footer -->
 <center><br/>
-	<div class="page-footer">
-		<h5>Didukung oleh :</h5><br/>
-		<div class="row" >
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail">
-					<img data-src="holder.js/100%x120" alt="...">
-				</a>
+		<div class="page-footer">
+			<h5>Didukung oleh :</h5><br/>
+			<div class="row" >
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail">
+						<img src="<?php echo base_url('resource/img/sponsor/BHS.png'); ?>" alt="Sarung Merk BHS">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail">
+						<img src="<?php echo base_url('resource/img/sponsor/gajah duduk.png'); ?>" alt="Sarung Gajah Duduk">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail">
+						<img src="<?php echo base_url('resource/img/sponsor/wadimor.jpg'); ?>" alt="Sarung Wadimor">
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail">
+						<img src="<?php echo base_url('resource/img/sponsor/cendana.png'); ?>" alt="Sarung Cendana">
+					</a>
+				</div>
 			</div>
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail">
-					<img data-src="holder.js/100%x120" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail">
-					<img data-src="holder.js/100%x120" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail">
-					<img data-src="holder.js/100%x120" alt="...">
-				</a>
-			</div>
+			Nothing
 		</div>
-		fhghhf
-	</div>
-</center>
+	</center>
 
 </div>
 </div>

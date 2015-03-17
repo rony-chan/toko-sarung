@@ -63,26 +63,26 @@
 			<div class="row" >
 				<div class="col-xs-6 col-md-3">
 					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
+						<img src="<?php echo base_url('resource/img/sponsor/BHS.png'); ?>" alt="Sarung Merk BHS">
 					</a>
 				</div>
 				<div class="col-xs-6 col-md-3">
 					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
+						<img src="<?php echo base_url('resource/img/sponsor/gajah duduk.png'); ?>" alt="Sarung Gajah Duduk">
 					</a>
 				</div>
 				<div class="col-xs-6 col-md-3">
 					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
+						<img src="<?php echo base_url('resource/img/sponsor/wadimor.jpg'); ?>" alt="Sarung Wadimor">
 					</a>
 				</div>
 				<div class="col-xs-6 col-md-3">
 					<a href="#" class="thumbnail">
-						<img data-src="holder.js/100%x120" alt="...">
+						<img src="<?php echo base_url('resource/img/sponsor/cendana.png'); ?>" alt="Sarung Cendana">
 					</a>
 				</div>
 			</div>
-			fhghhf
+			Nothing
 		</div>
 	</center>
 
