@@ -82,7 +82,7 @@
 					</a>
 				</div>
 			</div>
-			Nothing
+			
 		</div>
 	</center>
 
