@@ -28,7 +28,7 @@ class Manage extends Base {
 		$idpesanan = $this->uri->segment(3);
 		$status = $this->uri->segment(4);//status barang
 		$this->db->where('id_pesan',$idpesanan);
-		$this->db->update('pesan',array('barangDiambil',$status));
+		$this->db->update('pesan',array('barangDiambil'=>$status));
 		redirect($this->agent->referrer());//ubah status barang
 	}
 	//olah data pesanan
@@ -217,12 +217,10 @@ class Manage extends Base {
 			);
 		$this->displayAdmin('admin/editsarung',$data);
 	}
-
 	//olah data berita
 	public function berita(){
 
 	}
-
 	//olah data admin
 	public function admin(){
 

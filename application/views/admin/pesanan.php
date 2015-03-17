@@ -45,10 +45,10 @@
 		                          echo '<td><span class="label label-success">'.$v['status'].'</span>';
 		                           switch ($v['barangDiambil']){
 								  	case '0':
-								  		echo ' barang belum diambil';
+								  		echo '<span style="color:orange"> barang belum diambil</span>';
 								  		break;
 								  	case '1':
-								  		echo ' barang sudah diambil';
+								  		echo '<span style="color:green"> barang sudah diambil</span>';
 								  		break;						  	
 								  	
 								  }
