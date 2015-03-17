@@ -53,10 +53,18 @@
                 </a>
               </div>
             </div>
-            Nothing
+            <p>© 2015 Toko Sarung Hasaniyyin</p>
+            <p>
+              Toko Grosir Sarung Hasaniyyin Webstore </br>
+              Jl. Cempaka 5 No. 3, Kel. Poncol, Kab. Pekalongan </br>
+              Jawa Tengah Indonesia </br>
+              Telp Toko (0274)-998877 </br></br> 
+
+              HOTLINE 087733498000 (Senin s/d Sabtu :  08:30 WIB s/d 18:15 WIB) </br>
+              Informasi : info@hasaniyyin.net   |   Marketing : sales@hasaniyyin.net   |   SMS : 087733498000
+            </p>
           </div>
         </center>
-
       </div>
     </div>
   </div>
