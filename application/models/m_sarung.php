@@ -66,6 +66,13 @@ class m_sarung extends CI_Model{
 		}
 
 	}
+	//menampilkan id sarung yang terakhir dimasukan
+	public function getLastIdSarung(){
+		$this->db->order_by('id_sarung','desc');
+		$query = $this->db->get('sarung');
+		$query = $query->row_array();
+		return $query['id_sarung'];//get last id of sarung
+	}
 	//cari sarung
 	public function cariSarung($limit,$offset,$keyword){
 		$params = array($offset,$limit);

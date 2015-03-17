@@ -133,16 +133,89 @@ class Manage extends Base {
 				'view'=>$this->m_sarung->daftarSarung($config['per_page'],$uri),
 				);
 		}
-		$this->pagination->initialize($config);		
+		$this->pagination->initialize($config);
+		$data['merek'] = $this->m_sarung->semuaMerk();
 		$this->displayAdmin('admin/sarung',$data);
 	}
-
+	//add sarung
+	public function addSarung(){
+		$merek = $_POST['inputmerek'];
+		$nama = $_POST['inputnama'];
+		$jumlah = $_POST['inputjumlah'];
+		$harga = $_POST['inputharga'];
+		$deskripsi = $_POST['inputdeskripsi'];
+		$gambar = $_FILES['inputgambar'];
+		//upload gambar process
+		$config['upload_path'] = './resource/img/sarung';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']	= '200';
+		$config['encrypt_name'] = TRUE;
+		$this->load->library('upload', $config);
+		//end of upload gambar process
+		if (!$this->upload->do_upload('inputgambar')){//gagal upload
+			echo $this->upload->display_errors();
+		} else {
+			$pp =$this->upload->data('file_name');
+			$pp = $pp['file_name'];
+			//add to database
+			$newsarung = array(//data to insert
+				'id_merk'=>$merek,
+				'nama'=>$nama,
+				'jumlah'=>$jumlah,
+				'harga'=>$harga,
+				'deskripsi'=>$deskripsi
+				);
+			$this->db->insert('sarung',$newsarung);//insert new sarung data to database
+			//get last id_sarung
+			$lastid = $this->m_sarung->getLastIdSarung();
+			//insert gambar sarung
+			$gambar = array(
+				'id_sarung'=>$lastid,
+				'gambar'=>$pp
+				);
+			$this->db->insert('gambar',$gambar);//insert gambar to database
+			//end of add to database
+			redirect($this->agent->referrer());//kembali ke halaman utama
+		}
+	}
+	//delete sarung
+	public function deleteSarung(){
+		$id = $this->uri->segment(3);
+		$data = array('id_sarung'=>$id);
+		$this->db->delete('sarung',$data);
+		$this->db->delete('gambar',$data);
+		redirect($this->agent->referrer());
+	}
 	//edit data sarung
 	public function editSarung(){
+		if(!empty($_POST)){//process update sarung
+			$idsarung = $_POST['idsarung'];
+			$merek = $_POST['inputmerek'];
+			$nama = $_POST['inputnama'];
+			$jumlah = $_POST['inputjumlah'];
+			$harga = $_POST['inputharga'];
+			$deskripsi = $_POST['inputdeskripsi'];
+			//update database process
+			$this->db->where('id_sarung',$idsarung);
+			$data = array(
+				'id_merk'=>$merek,
+				'nama'=>$nama,
+				'jumlah'=>$jumlah,
+				'harga'=>$harga,
+				'deskripsi'=>$deskripsi
+				);
+			$this->db->update('sarung',$data);
+			//end of update database
+			redirect($this->agent->referrer());
+		}
+		$id = $this->uri->segment(3);
 		$data = array(
-			'title'=>'edit data sarung';
-			'script'=>'<script></script>',
+			'title'=>'edit data sarung',
+			'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active")});</script>',
+			'merek'=>$this->m_sarung->semuaMerk(),
+			'view'=>$this->m_sarung->detailSarung($id),
 			);
+		$this->displayAdmin('admin/editsarung',$data);
 	}
 
 	//olah data berita
