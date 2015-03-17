@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 16, 2015 at 06:27 
+-- Generation Time: Mar 17, 2015 at 04:33 
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -173,14 +173,15 @@ CREATE TABLE IF NOT EXISTS `pesan` (
   `status` enum('menunggu pembayaran','lunas') NOT NULL,
   PRIMARY KEY (`id_pesan`),
   KEY `id_pelanggan` (`id_pelanggan`,`id_admin`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `pesan`
 --
 
 INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `tanggalOrder`, `tanggalLunas`, `harga`, `status`) VALUES
-(6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'menunggu pembayaran');
+(6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'menunggu pembayaran'),
+(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'menunggu pembayaran');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,8 @@ CREATE TABLE IF NOT EXISTS `pesan_item` (
 --
 
 INSERT INTO `pesan_item` (`id_pesan`, `id_sarung`, `jumlah`, `subtotal`) VALUES
-(6, 5, 12, 10800000);
+(6, 5, 12, 10800000),
+(7, 5, 22, 19800000);
 
 -- --------------------------------------------------------
 
@@ -230,7 +232,7 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 (2, 2, 'Sarung Tenun Hasaniyyin', 5, 850000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (3, 3, 'Sarung Gajah Duduk Black White', 5, 940000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (4, 4, 'Sarung Cendana Spesial Dobby', 5, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
-(5, 5, 'Sarung Uzair AAC', 22, 900000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.');
+(5, 5, 'Sarung Uzair AAC', 0, 900000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.');
 
 -- --------------------------------------------------------
 
