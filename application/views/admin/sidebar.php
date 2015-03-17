@@ -23,8 +23,8 @@
 			Member
 		</a>
 	</li>
-	<li id="<?php echo site_url('manage/admin')?>">
-		<a href="#">
+	<li id="admin">
+		<a href="<?php echo site_url('manage/admin')?>">
 			<!-- <span class="badge pull-right">42</span> -->
 			Admin
 		</a>

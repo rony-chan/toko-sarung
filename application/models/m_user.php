@@ -34,4 +34,10 @@ class m_user extends CI_Model{
 		$query = $this->db->get('pelanggan');
 		return $query->row_array();
 	}
+	//show all member
+	public function listMember($limit,$offset){
+		$this->db->limit($limit,$offset);
+		$query = $this->db->get('pelanggan');
+		return $query->result_array();
+	}
 }

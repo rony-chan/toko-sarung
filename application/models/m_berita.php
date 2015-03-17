@@ -8,13 +8,12 @@ class m_berita extends CI_Model{
 	}
 	//list berita
 	public function listBerita($limit,$offset){
-		$params = array($offset,$limit);
 		$sql = "SELECT id_berita, admin.username AS 'username',judul,postdate,updatedate,konten
 		FROM berita 
 		INNER JOIN admin ON admin.id_admin = berita.id_admin
 		ORDER BY berita.updatedate ASC
-		LIMIT ?,?";
-		$query = $this->db->query($sql,$params);
+		LIMIT $offset,$limit";
+		$query = $this->db->query($sql);
 		if($query->num_rows>0){
 			return $query->result_array();
 		}else{
