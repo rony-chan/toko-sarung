@@ -8,7 +8,7 @@ class Manage extends Base {
 	public function __construct(){
 		parent::__construct();
 		$this->adminOnly();
-		$this->load->model(array('m_order','m_sarung','m_admin','m_berita'));
+		$this->load->model(array('m_order','m_sarung','m_admin','m_berita','m_user'));
 		// Your own constructor code
 	}
 
@@ -286,9 +286,41 @@ class Manage extends Base {
 		$this->db->delete('berita',array('id_berita'=>$this->uri->segment(3)));
 		redirect($this->agent->referrer());
 	}
+
+	////////////////////////
+	//ALL ABOUT MEMBER
+	///////////////////////
+	//lihat data member
+	public function member(){
+		//start pagination
+		$config = array(
+			'per_page'=>6,
+			'uri_segment'=>3,
+			'num_link'=>4,
+			'base_url'=>site_url('manage/member'),//get lattest location
+			'total_rows'=>$this->db->count_all('pelanggan'),//total berita
+			);
+		//end of pagination
+		$this->load->library('pagination');
+		$uri = $this->uri->segment(3);
+		if(!$uri){
+			$uri = 0;
+		}
+		$this->pagination->initialize($config);
+		$data['title'] = 'Manajemen Member';
+		$data['script'] = '<script>$(document).ready(function(){$("#berita").addClass("active")});</script>';
+		$data['view'] = $this->m_user->listMember($config['per_page'],$uri);
+		$this->displayAdmin('admin/member',$data);
+	}
+
 	//olah data admin
 	public function admin(){
 
+	}
+	//logout
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect('admin');
 	}
 
 }
