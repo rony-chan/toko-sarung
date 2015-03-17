@@ -1,46 +1,48 @@
-<div>
-	<?php $this->load->view('admin/sidebar');?>
-	<div class="col-md-10 admin-content">
-		<div style="display:block">
-			<div class="col-md-6"><h1><?php echo $title;?></h1></div>
-			<div class="col-md-6"><p class="userpanel-admin">Login as username <a href="#">logout</a></p></div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="left-sidebar col-md-2">
+			<!-- sidebar -->
+			<?php echo $this->load->view('admin/sidebar')?>
+			<!-- end of sidebar -->
 		</div>
-		<hr/>
-		<br/>
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#home" data-toggle="tab">Semua <span style="margin-left:10px" class="badge pull-right">42</span></a></li>
-			<li><a href="#profile" data-toggle="tab">Stok Habis <span style="margin-left:10px" class="badge pull-right">0</span></a></li>
-		</ul>
-		<br/>
-		<a href="#" class="btn btn-primary">+ sarung</a>
-		<div class="form-add">
-			<br/>
-			<strong>Tambah Sarung</strong>
-			<form role="form">
-			</form>
-			<br/>
+		<div class="col-md-10">
+			<div class="box box-solid box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Manajemen Data Pesanan</h3>
+				</div><!-- /.box-header -->
+				<div class="box-body">
+					<ul class="nav nav-tabs" id="myTab">
+						<li id="semua"><a href="<?php echo site_url('manage/pesanan');?>">Semua Sarung</a></li>
+						<li id="habis"><a href="<?php echo site_url('manage/pesanan/act/diproses');?>">Stok Habis</a></li>
+					</ul>
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>Id Sarung</th>
+							<th>Merek</th>
+							<th>Nama</th>
+							<th>Jumlah</th>
+							<th>Harga</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<?php foreach($view as $v):?>
+						<tr>
+							<td><?php echo $v['id_sarung']?></td>
+							<td><?php echo $v['merek']?></td>
+							<td><?php echo $v['nama']?></td>
+							<td><?php echo $v['jumlah']?></td>
+							<td>Rp<?php echo number_format($v['harga'])?>,-</td>
+							<td><a href="#" class="btn btn-primary btn-xs">edit</a></td>
+						<tr>
+							<?php endforeach; ?>
+						</tr>
+						</tbody>
+					</table>
+				</div><!-- /.box-body -->
+			</div>
 		</div>
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>id sarung</th>
-					<th>Merek</th>
-					<th>Nama</th>
-					<th>Jumlah</th>
-					<th>Harga</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>...</td>
-					<td>...</td>
-					<td>...</td>
-					<td>...</td>
-					<td>...</td>
-					<td><a href="#">edit</a></td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 </div>

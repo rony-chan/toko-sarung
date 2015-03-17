@@ -24,6 +24,7 @@
 								<th>Pemesan</th>
 								<th>Total Harga</th>
 								<th>Status</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -33,21 +34,24 @@
 								<td><?php echo $v['id_pesan'];?></td>
 								<td><?php echo $v['nama_lengkap'];?></td>
 								<td>Rp<?php echo number_format($v['harga']);?>,-</td>
-								<td>
+
 									<?php
 	                        switch ($v['status']) {
 	                           case 'menunggu pembayaran':
-	                           echo '<span class="label label-warning">'.$v['status'].'</span>';
+	                           echo '<td><span class="label label-warning">'.$v['status'].'</span></td>';
+							   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
 	                           break;
 	                           case 'lunas':
-	                           echo '<span class="label label-success">'.$v['status'].'</span>';
+	                           echo '<td><span class="label label-success">'.$v['status'].'</span></td>';
+								   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
 	                           break;
 	                           default:
-	                           echo '<span class="label label-default">tidak ada status</span>';
+	                           echo '<span class="label label-default">tidak ada status</span> ';
+								   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
 	                           break;
 	                        }
 	                        ?>
-								</td>
+
 							</tr>
 						<?php endforeach; ?>
 						</tbody>

@@ -8,7 +8,7 @@ class Manage extends Base {
 	public function __construct(){
 		parent::__construct();
 		$this->adminOnly();
-		$this->load->model('m_order');
+		$this->load->model(array('m_order','m_sarung'));
 		// Your own constructor code
 	}
 
@@ -91,10 +91,11 @@ class Manage extends Base {
 			$uri = 0;
 		}
 		$data = array(
-			'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active")});</script>',
+			'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active");$("#semua").addClass("active")});</script>',
 			'title'=>'sarung',
+			'view'=>$this->m_sarung->daftarSarung($config['per_page'],$uri),
 		);
-		$this->displayAdmin('admin/pesanan',$data);
+		$this->displayAdmin('admin/sarung',$data);
 	}
 
 	//olah data berita
