@@ -26,10 +26,10 @@
 						<tbody>
 							<?php foreach($view as $v):?>
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td><?php echo $v['judul'];?></td>
+								<td><?php echo $v['username'];?></td>
+								<td><?php echo $v['postdate'];?></td>
+								<td><?php echo $v['updatedate'];?></td>
 								<td></td>
 							</tr>
 						<?php endforeach; ?>

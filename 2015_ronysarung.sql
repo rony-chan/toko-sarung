@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2015 at 04:33 
+-- Generation Time: Mar 17, 2015 at 05:32 
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -99,7 +99,8 @@ INSERT INTO `gambar` (`id_sarung`, `gambar`) VALUES
 (3, 'gajahduduk1.jpg'),
 (4, 'cendana1.jpg'),
 (5, 'uzair1.jpg'),
-(1, 'wadimorbiru.jpg');
+(1, 'wadimorbiru.jpg'),
+(1, 'c448113b35b814ab2c06a167cf165760.jpg');
 
 -- --------------------------------------------------------
 
@@ -171,6 +172,7 @@ CREATE TABLE IF NOT EXISTS `pesan` (
   `tanggalLunas` datetime DEFAULT NULL,
   `harga` int(11) NOT NULL,
   `status` enum('menunggu pembayaran','lunas') NOT NULL,
+  `barangdiambil` int(11) NOT NULL,
   PRIMARY KEY (`id_pesan`),
   KEY `id_pelanggan` (`id_pelanggan`,`id_admin`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
@@ -179,9 +181,9 @@ CREATE TABLE IF NOT EXISTS `pesan` (
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `tanggalOrder`, `tanggalLunas`, `harga`, `status`) VALUES
-(6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'menunggu pembayaran'),
-(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'menunggu pembayaran');
+INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `tanggalOrder`, `tanggalLunas`, `harga`, `status`, `barangdiambil`) VALUES
+(6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'lunas', 0),
+(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'menunggu pembayaran', 0);
 
 -- --------------------------------------------------------
 
@@ -221,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `sarung` (
   `deskripsi` varchar(500) NOT NULL,
   PRIMARY KEY (`id_sarung`),
   KEY `id_merk` (`id_merk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `sarung`
@@ -232,7 +234,7 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 (2, 2, 'Sarung Tenun Hasaniyyin', 5, 850000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (3, 3, 'Sarung Gajah Duduk Black White', 5, 940000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (4, 4, 'Sarung Cendana Spesial Dobby', 5, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
-(5, 5, 'Sarung Uzair AAC', 0, 900000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.');
+(5, 3, 'bla bla', 20, 900000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.');
 
 -- --------------------------------------------------------
 
