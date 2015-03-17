@@ -8,7 +8,7 @@ class Manage extends Base {
 	public function __construct(){
 		parent::__construct();
 		$this->adminOnly();
-		$this->load->model(array('m_order','m_sarung','m_admin'));
+		$this->load->model(array('m_order','m_sarung','m_admin','m_berita'));
 		// Your own constructor code
 	}
 
@@ -217,9 +217,32 @@ class Manage extends Base {
 			);
 		$this->displayAdmin('admin/editsarung',$data);
 	}
+	///////////////////////////
+	// EDIT BERITA
+	///////////////////////////
+
 	//olah data berita
 	public function berita(){
-
+		//start pagination
+		$config = array(
+			'per_page'=>6,
+			'uri_segment'=>3,
+			'num_link'=>4,
+			'base_url'=>site_url('manage/berita'),//get lattest location
+			'total_rows'=>$this->db->count_all('berita'),//total berita
+			);
+		//end of pagination
+		$this->load->library('pagination');
+		$act = $this->uri->segment(4);
+		$uri = $this->uri->segment(4);
+		if(!$uri){
+			$uri = 0;
+		}
+		$this->pagination->initialize($config);
+		$data['title'] = 'Manajemen Berita';
+		$data['script'] = '<script>$(document).ready(function(){$("#berita").addClass("active")});</script>';
+		$data['view'] = $this->m_berita->listBerita($config['per_page'],$uri);
+		$this->displayAdmin('admin/berita',$data);
 	}
 	//olah data admin
 	public function admin(){
