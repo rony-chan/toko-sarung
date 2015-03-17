@@ -233,8 +233,7 @@ class Manage extends Base {
 			);
 		//end of pagination
 		$this->load->library('pagination');
-		$act = $this->uri->segment(4);
-		$uri = $this->uri->segment(4);
+		$uri = $this->uri->segment(3);
 		if(!$uri){
 			$uri = 0;
 		}
@@ -243,6 +242,49 @@ class Manage extends Base {
 		$data['script'] = '<script>$(document).ready(function(){$("#berita").addClass("active")});</script>';
 		$data['view'] = $this->m_berita->listBerita($config['per_page'],$uri);
 		$this->displayAdmin('admin/berita',$data);
+	}
+	//add berita
+	public function addberita(){
+		$judul = $_POST['inputjudul'];
+		$isi = $_POST['inputisi'];
+		$data = array(
+			'judul'=>$judul,
+			'konten'=>$isi,
+			'postdate'=>date('d-m-y H:i:s'),
+			'updatedate'=>date('d-m-y H:i:s'),
+			'id_admin'=>$this->session->userdata['adminlogin']['id_admin'],
+			);
+		// print_r($data);
+		$this->db->insert('berita',$data);
+		redirect($this->agent->referrer());
+	}
+	//edit berita
+	public function editberita(){
+		if(!empty($_POST)){//process data
+			$judul = $_POST['inputjudul'];
+			$isi = $_POST['inputisi'];
+			$idberita = $_POST['idberita'];
+			$this->db->where('id_berita',$idberita);
+			$data = array(
+				'judul'=>$judul,
+				'konten'=>$isi,
+				'updatedate'=>date('d-m-y H:i:s'),
+				'id_admin'=>$this->session->userdata['adminlogin']['id_admin']
+				);
+			$this->db->update('berita',$data);
+			redirect($this->agent->referrer());
+		}else{//view
+			$id = $this->uri->segment(3);
+			$data['title'] = 'Edit Berita';
+			$data['script'] = '<script>$(document).ready(function(){$("#berita").addClass("active")});</script>';
+			$data['view'] = $this->m_berita->bacaBerita($id);
+			$this->displayAdmin('admin/editberita',$data);
+		}
+	}
+	//hapus berita
+	public function hapusberita(){
+		$this->db->delete('berita',array('id_berita'=>$this->uri->segment(3)));
+		redirect($this->agent->referrer());
 	}
 	//olah data admin
 	public function admin(){

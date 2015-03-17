@@ -30,13 +30,19 @@
 								<td><?php echo $v['username'];?></td>
 								<td><?php echo $v['postdate'];?></td>
 								<td><?php echo $v['updatedate'];?></td>
-								<td></td>
+								<td>
+									<a class="btn btn-primary btn-xs" href="<?php echo site_url('manage/editberita/'.$v['id_berita']) ?>">edit</a>
+									<a onclick="return confirm('anda yakin')" class="btn btn-danger btn-xs" href="<?php echo site_url('manage/hapusberita/'.$v['id_berita']) ?>">hapus</a>
+								</td>
 							</tr>
 						<?php endforeach; ?>
 						</tbody>
 					</table>
-				</div><!-- /.box-body -->
+				</div><!-- /.box-body -->				
 			</div>
+			<center>
+					<?php echo $this->pagination->create_links() ?>
+				</center>
 		</div>
 	</div>
 </div>
@@ -45,59 +51,26 @@
 <div class="modal fade" id="addsarung" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form method="POST" action="<?php echo site_url('manage/addsarung');?>" enctype="multipart/form-data">
+			<form method="POST" action="<?php echo site_url('manage/addberita');?>">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Add Sarung</h4>
+					<h4 class="modal-title">Add Berita</h4>
 				</div>
 				<div class="modal-body">
 					<div class="row">
 						<div class="form-group">
-							<label for="inputEmail1" class="col-lg-2 control-label">Merek</label>
+							<label for="inputPassword1" class="col-lg-2 control-label">Judul</label>
 							<div class="col-lg-10">
-								<select class="form-control" name="inputmerek" required>
-									<option value="">Pilih merek</option>
-									<?php foreach($merek as $m):?>
-										<option value="<?php echo $m['id_sarung_merk'] ?>"><?php echo $m['merek'] ?></option>
-									<?php endforeach; ?>
-								</select>
+								<input type="text" name="inputjudul" class="form-control" id="inputPassword1">
 							</div>
 						</div>
 						<br/><br/>
 						<div class="form-group">
-							<label for="inputPassword1" class="col-lg-2 control-label">Nama</label>
+							<label for="inputPassword1" class="col-lg-2 control-label">Berita</label>
 							<div class="col-lg-10">
-								<input type="text" name="inputnama" class="form-control" id="inputPassword1">
+								<textarea style="min-height:200px" class="form-control" name="inputisi" id="inputPassword1"></textarea>
 							</div>
-						</div>
-						<br/><br/>
-						<div class="form-group">
-							<label for="inputPassword1" class="col-lg-2 control-label">Jumlah</label>
-							<div class="col-lg-10">
-								<input type="number" name="inputjumlah" class="form-control" id="inputPassword1">
-							</div>
-						</div>
-						<br/><br/>
-						<div class="form-group">
-							<label for="inputPassword1" class="col-lg-2 control-label">Harga</label>
-							<div class="col-lg-10">
-								<input type="number" name="inputharga" class="form-control" id="inputPassword1" placeholder="masukan angka tanpa titik">
-							</div>
-						</div>
-						<br/><br/>
-						<div class="form-group">
-							<label for="inputPassword1" class="col-lg-2 control-label">Deskripsi</label>
-							<div class="col-lg-10">
-								<textarea class="form-control" name="inputdeskripsi" id="inputPassword1"></textarea>
-							</div>
-						</div>
-						<br/><br/><br/>
-						<div class="form-group">
-							<label for="inputPassword1" class="col-lg-2 control-label">Gambar</label>
-							<div class="col-lg-10">
-								<input class="form-control" type="file" name="inputgambar" required>
-							</div>
-						</div>
+						</div>						
 					</div>
 				</div>
 				<div class="modal-footer">
