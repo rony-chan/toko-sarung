@@ -15,14 +15,14 @@ class m_order extends CI_Model{
 	public function allOrder($limit,$offset,$status=""){
 		if(empty($status)){//show all
 			$params = array($offset,$limit);
-			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status',pesan.barangDiambil
 			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
 			LIMIT ?,?";
 		}else{
-			$params = array($offset,$limit,$status);
-			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status'
+			$params = array($status,$offset,$limit);
+			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.harga,pesan.status AS 'status',pesan.barangDiambil
 			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
-			LIMIT ?,? WHERE pesan.status = ?";
+			WHERE pesan.status = ? LIMIT ?,?";
 		}
 		$query = $this->db->query($sql,$params);
 		return $query->result_array();

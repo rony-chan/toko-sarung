@@ -8,7 +8,7 @@ class Manage extends Base {
 	public function __construct(){
 		parent::__construct();
 		$this->adminOnly();
-		$this->load->model(array('m_order','m_sarung'));
+		$this->load->model(array('m_order','m_sarung','m_admin'));
 		// Your own constructor code
 	}
 
@@ -16,6 +16,21 @@ class Manage extends Base {
 		redirect(site_url('manage/pesanan'));
 	}
 
+	//ubah status pesanan
+	public function ubahStatus(){
+		$idpesanan = $this->uri->segment(3);
+		$status = $this->uri->segment(4);
+		$this->m_admin->ubahStatusPesanan($idpesanan,$status);
+		redirect($this->agent->referrer());//kembali ke halaman sebelumnya
+	}
+	//ubah barang sudah diambil
+	public function statusBarang(){
+		$idpesanan = $this->uri->segment(3);
+		$status = $this->uri->segment(4);//status barang
+		$this->db->where('id_pesan',$idpesanan);
+		$this->db->update('pesan',array('barangDiambil'=>$status));
+		redirect($this->agent->referrer());//ubah status barang
+	}
 	//olah data pesanan
 	public function pesanan(){
 		//start pagination
@@ -41,7 +56,8 @@ class Manage extends Base {
 				$data = array(
 					'script'=>'<script>$(document).ready(function(){$("#diproses").addClass("active");$("#pesanan").addClass("active")});</script>',
 					'title'=>'Pesanan Diproses',
-				);
+					'view'=>$this->m_order->allOrder($config['per_page'],$uri,'menunggu pembayaran'),
+					);
 				break;
 				case 'selesai':
 				//pagination
@@ -51,7 +67,8 @@ class Manage extends Base {
 				$data = array(
 					'script'=>'<script>$(document).ready(function(){$("#selesai").addClass("active");$("#pesanan").addClass("active")});</script>',
 					'title'=>'Pesanan Selesai',
-				);
+					'view'=>$this->m_order->allOrder($config['per_page'],$uri,'lunas'),
+					);
 				break;
 			}
 		}else{//get lattest order
@@ -68,7 +85,7 @@ class Manage extends Base {
 				'script'=>'<script>$(document).ready(function(){$("#semua").addClass("active");$("#pesanan").addClass("active")});</script>',
 				'title'=>'Semua Pesanan',
 				'view'=>$this->m_order->allOrder($config['per_page'],$uri,''),
-			);
+				);
 		}
 		$this->displayAdmin('admin/pesanan',$data);
 	}
@@ -81,28 +98,129 @@ class Manage extends Base {
 			'uri_segment'=>3,
 			'num_link'=>4,
 			'base_url'=>site_url('p/sarung'),//get lattest location
-			'total_rows'=>$this->db->count_all('sarung'),//total berita on database
-		);
+			);
 		//end of pagination
 		$this->load->library('pagination');
-		$this->pagination->initialize($config);
-		$uri = $this->uri->segment(4);
-		if(!$uri){
-			$uri = 0;
+		$act = $this->uri->segment(4);
+		if(!empty($act)){
+			switch ($act) {
+				case 'habis':
+				$uri = $this->uri->segment(5);
+				if(!$uri){
+					$uri = 0;
+				}
+				//pagination
+				$config ['total_rows'] = $this->m_sarung->countDaftarSarungHabis();//total sarun habis
+				//end of pagonation
+				$data = array(
+					'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active");$("#habis").addClass("active")});</script>',
+					'title'=>'sarung',
+					'view'=>$this->m_sarung->daftarSarungHabis($config['per_page'],$uri),
+					);
+				break;
+			}
+		}else{
+			$uri = $this->uri->segment(4);
+			if(!$uri){
+				$uri = 0;
+			}
+			//pagination
+			$config ['total_rows']=$this->db->count_all('sarung');//total berita on database
+				//end of pagonation
+			$data = array(
+				'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active");$("#semua").addClass("active")});</script>',
+				'title'=>'sarung',
+				'view'=>$this->m_sarung->daftarSarung($config['per_page'],$uri),
+				);
 		}
-		$data = array(
-			'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active");$("#semua").addClass("active")});</script>',
-			'title'=>'sarung',
-			'view'=>$this->m_sarung->daftarSarung($config['per_page'],$uri),
-		);
+		$this->pagination->initialize($config);
+		$data['merek'] = $this->m_sarung->semuaMerk();
 		$this->displayAdmin('admin/sarung',$data);
 	}
-
+	//add sarung
+	public function addSarung(){
+		$merek = $_POST['inputmerek'];
+		$nama = $_POST['inputnama'];
+		$jumlah = $_POST['inputjumlah'];
+		$harga = $_POST['inputharga'];
+		$deskripsi = $_POST['inputdeskripsi'];
+		$gambar = $_FILES['inputgambar'];
+		//upload gambar process
+		$config['upload_path'] = './resource/img/sarung';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']	= '200';
+		$config['encrypt_name'] = TRUE;
+		$this->load->library('upload', $config);
+		//end of upload gambar process
+		if (!$this->upload->do_upload('inputgambar')){//gagal upload
+			echo $this->upload->display_errors();
+		} else {
+			$pp =$this->upload->data('file_name');
+			$pp = $pp['file_name'];
+			//add to database
+			$newsarung = array(//data to insert
+				'id_merk'=>$merek,
+				'nama'=>$nama,
+				'jumlah'=>$jumlah,
+				'harga'=>$harga,
+				'deskripsi'=>$deskripsi
+				);
+			$this->db->insert('sarung',$newsarung);//insert new sarung data to database
+			//get last id_sarung
+			$lastid = $this->m_sarung->getLastIdSarung();
+			//insert gambar sarung
+			$gambar = array(
+				'id_sarung'=>$lastid,
+				'gambar'=>$pp
+				);
+			$this->db->insert('gambar',$gambar);//insert gambar to database
+			//end of add to database
+			redirect($this->agent->referrer());//kembali ke halaman utama
+		}
+	}
+	//delete sarung
+	public function deleteSarung(){
+		$id = $this->uri->segment(3);
+		$data = array('id_sarung'=>$id);
+		$this->db->delete('sarung',$data);
+		$this->db->delete('gambar',$data);
+		redirect($this->agent->referrer());
+	}
+	//edit data sarung
+	public function editSarung(){
+		if(!empty($_POST)){//process update sarung
+			$idsarung = $_POST['idsarung'];
+			$merek = $_POST['inputmerek'];
+			$nama = $_POST['inputnama'];
+			$jumlah = $_POST['inputjumlah'];
+			$harga = $_POST['inputharga'];
+			$deskripsi = $_POST['inputdeskripsi'];
+			//update database process
+			$this->db->where('id_sarung',$idsarung);
+			$data = array(
+				'id_merk'=>$merek,
+				'nama'=>$nama,
+				'jumlah'=>$jumlah,
+				'harga'=>$harga,
+				'deskripsi'=>$deskripsi
+				);
+			$this->db->update('sarung',$data);
+			//end of update database
+			redirect($this->agent->referrer());
+		}
+		$id = $this->uri->segment(3);
+		$data = array(
+			'title'=>'edit data sarung',
+			'script'=>'<script>$(document).ready(function(){$("#sarung").addClass("active")});</script>',
+			'merek'=>$this->m_sarung->semuaMerk(),
+			'view'=>$this->m_sarung->detailSarung($id),
+			);
+		$this->displayAdmin('admin/editsarung',$data);
+	}
 	//olah data berita
 	public function berita(){
 
 	}
-
 	//olah data admin
 	public function admin(){
 
