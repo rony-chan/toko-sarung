@@ -30,4 +30,13 @@ class m_admin extends CI_Model{
 	}
 	//count show all sarung
 	public function countShowSarung(){$query = $this->db->get('sarung');return $query->row_array();}
+
+	//////////////
+	// ALL ABOUT PESANAN
+	/////////////
+	//ubah status pesanan
+	public function ubahStatusPesanan($idpesanan,$status){
+		$this->db->where('id_pesan',$idpesanan);
+		return $this->db->update('pesan',array('status'=>str_replace('-', ' ', $status)));
+	}
 }

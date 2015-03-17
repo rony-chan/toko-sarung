@@ -12,8 +12,8 @@
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<ul class="nav nav-tabs" id="myTab">
-						<li id="semua"><a href="<?php echo site_url('manage/pesanan');?>">Semua Sarung</a></li>
-						<li id="habis"><a href="<?php echo site_url('manage/pesanan/act/diproses');?>">Stok Habis</a></li>
+						<li id="semua"><a href="<?php echo site_url('manage/sarung');?>">Semua Sarung</a></li>
+						<li id="habis"><a href="<?php echo site_url('manage/sarung/act/habis');?>">Stok Habis</a></li>
 					</ul>
 					<table class="table table-striped">
 						<thead>

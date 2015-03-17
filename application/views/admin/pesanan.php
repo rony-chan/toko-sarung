@@ -39,16 +39,25 @@
 	                        switch ($v['status']) {
 	                           case 'menunggu pembayaran':
 	                           echo '<td><span class="label label-warning">'.$v['status'].'</span></td>';
-							   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
+							   echo '<td><a href="'.site_url('manage/ubahStatus/'.$v['id_pesan']).'/lunas" class="btn btn-primary btn-xs">ubah lunas</a></td>';
 	                           break;
 	                           case 'lunas':
-	                           echo '<td><span class="label label-success">'.$v['status'].'</span></td>';
-								   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
-	                           break;
-	                           default:
-	                           echo '<span class="label label-default">tidak ada status</span> ';
-								   echo '<td><a href="#" class="btn btn-primary btn-xs">ubah lunas</a></td>';
-	                           break;
+		                          echo '<td><span class="label label-success">'.$v['status'].'</span>';
+		                           switch ($v['barangDiambil']){
+								  	case '0':
+								  		echo ' barang belum diambil';
+								  		break;
+								  	case '1':
+								  		echo ' barang sudah diambil';
+								  		break;						  	
+								  	
+								  }
+		                          echo '</td>';
+								  echo '<td>';
+								  echo '<a href="'.site_url('manage/ubahStatus/'.$v['id_pesan']).'/menunggu-pembayaran" class="btn btn-primary btn-xs">ubah tidak lunas</a> ';
+								  echo '<a href="'.site_url('manage/statusBarang/'.$v['id_pesan']).'/1" class="btn btn-default btn-xs">barang diambil</a>';
+								  echo '</td>';
+	                           break;	                          
 	                        }
 	                        ?>
 

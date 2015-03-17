@@ -22,6 +22,33 @@ class m_sarung extends CI_Model{
 		}
 
 	}
+	//menampilkan semua sarung yang habis
+	public function daftarSarungHabis($limit,$offset){
+		$params = array($offset,$limit);
+		$sql = "SELECT sarung.id_sarung AS 'id_sarung', sarung_merk.merek AS 'merek',nama,jumlah, harga,deskripsi,sarung_merk.merek AS 'merek',sarung_merk.id_sarung_merk AS 'id_merk'
+		FROM sarung 
+		INNER JOIN sarung_merk ON sarung_merk.id_sarung_merk = sarung.id_merk
+		WHERE sarung.jumlah = 0
+		ORDER BY sarung.id_sarung DESC
+		LIMIT ?,?";
+		$query = $this->db->query($sql,$params);
+		if($query->num_rows>0){
+			return $query->result_array();
+		}else{
+			return array();
+		}
+
+	}
+	//hitung jumlah sarung yang habis
+	public function countDaftarSarungHabis(){
+		$sql = "SELECT sarung.id_sarung AS 'id_sarung', sarung_merk.merek AS 'merek',nama,jumlah, harga,deskripsi,sarung_merk.merek AS 'merek',sarung_merk.id_sarung_merk AS 'id_merk'
+		FROM sarung 
+		INNER JOIN sarung_merk ON sarung_merk.id_sarung_merk = sarung.id_merk
+		WHERE sarung.jumlah = 0
+		ORDER BY sarung.id_sarung DESC";
+		$query = $this->db->query($sql);
+		$query->num_rows();
+	}
 	//menampilkan semua sarung
 	public function daftarSarungByMerek($limit,$offset,$idmerek){
 		$params = array($idmerek,$offset,$limit);
