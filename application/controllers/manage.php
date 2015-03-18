@@ -189,7 +189,12 @@ class Manage extends Base {
 		$data = array('id_sarung'=>$id);
 		$this->db->delete('sarung',$data);
 		$this->db->delete('gambar',$data);
-		redirect($this->agent->referrer());
+		echo '
+			<script>
+			alert("Hapus Sarung Berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 	}
 	//edit data sarung
 	public function editSarung(){
@@ -211,7 +216,12 @@ class Manage extends Base {
 				);
 			$this->db->update('sarung',$data);
 			//end of update database
-			redirect($this->agent->referrer());
+			echo '
+			<script>
+			alert("Edit Sarung Berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 		}
 		$id = $this->uri->segment(3);
 		$data = array(
@@ -261,7 +271,12 @@ class Manage extends Base {
 			);
 		// print_r($data);
 		$this->db->insert('berita',$data);
-		redirect($this->agent->referrer());
+		echo '
+			<script>
+			alert("Tambah Berita Berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 	}
 	//edit berita
 	public function editberita(){
@@ -277,7 +292,12 @@ class Manage extends Base {
 				'id_admin'=>$this->session->userdata['adminlogin']['id_admin']
 				);
 			$this->db->update('berita',$data);
-			redirect($this->agent->referrer());
+			echo '
+			<script>
+			alert("Edit Berita Berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 		}else{//view
 			$id = $this->uri->segment(3);
 			$data['title'] = 'Edit Berita';
