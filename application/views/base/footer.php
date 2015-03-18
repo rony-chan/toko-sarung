@@ -55,37 +55,37 @@
             <div class="form-group">
                 <label for="inputnama" class="col-sm-3 control-label">Nama Lengkap</label>
                 <div class="col-sm-9">
-                    <input name="inputnama" type="text" class="form-control" placeholder="Nama Lengkap">
+                    <input name="inputnama" type="text" class="form-control" placeholder="Nama Lengkap" required>
                 </div>
             </div>
             <div class="form-group">
               <label for="inputalamat" class="col-sm-3 control-label">Alamat Lengkap</label>
               <div class="col-sm-9">
-                <input name="inputalamat" type="text" class="form-control" placeholder="Alamat Lengkap">
+                <input name="inputalamat" type="text" class="form-control" placeholder="Alamat Lengkap" required>
             </div>
         </div>
         <div class="form-group">
           <label for="inputtelepon" class="col-sm-3 control-label">Nomor Telepon / Handphone</label>
           <div class="col-sm-9">
-            <input name="inputtelp" type="text" class="form-control" placeholder="Nomor Telepon / Handphone">
+            <input name="inputtelp" type="text" class="form-control" placeholder="Nomor Telepon / Handphone" required>
         </div>
     </div>
     <div class="form-group">
       <label for="inputemail" class="col-sm-3 control-label">Email</label>
       <div class="col-sm-9">
-        <input name="inputemail" type="email" class="form-control" placeholder="Email">
+        <input name="inputemail" type="email" class="form-control" placeholder="Email" required>
     </div>
 </div>
 <div class="form-group">
   <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
   <div class="col-sm-9">
-    <input name="inputpassword" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    <input name="inputpassword" type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
 </div>
 </div>
 <div class="form-group">
   <label for="inputPassword3" class="col-sm-3 control-label">Ulangi Password</label>
   <div class="col-sm-9">
-    <input name="inputpassword2" type="password" class="form-control" id="inputPassword3" placeholder="Ulangi Password">
+    <input name="inputpassword2" type="password" class="form-control" id="inputPassword3" placeholder="Ulangi Password" required>
 </div>
 </div>
 </div>
