@@ -39,4 +39,20 @@ class m_admin extends CI_Model{
 		$this->db->where('id_pesan',$idpesanan);
 		return $this->db->update('pesan',array('status'=>str_replace('-', ' ', $status)));
 	}
+
+	//////////////
+	// ALL ABOUT ADMIN
+	/////////////
+	//lihat semua data admin
+	public function listAdmin($limit,$offset){
+		$this->db->limit($limit,$offset);
+		$query = $this->db->get('admin');
+		return $query->result_array();
+	}
+	//detail admin
+	public function detailAdmin($id){
+		$this->db->where('id_admin',$id);
+		$query = $this->db->get('admin');
+		return $query->row_array();//get admin data on single array
+	}
 }
