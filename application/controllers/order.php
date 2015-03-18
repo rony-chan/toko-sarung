@@ -59,6 +59,14 @@ class Order extends Base {
    ///////////////////////////
    //add to cart
    public function addToCart(){
+      if($this->cart->total_items()==0){
+         echo '
+         <script>
+         alert("Cart Masih Kosong");
+            window.location="'.$this->agent->referrer().'";
+         </script>
+         ';
+      }
       $link = explode('?',$this->agent->referrer());
       $link = $link[0];
       if(empty($_POST)){
