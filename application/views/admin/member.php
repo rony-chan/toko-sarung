@@ -11,8 +11,6 @@
 					<h3 class="box-title">Manajemen Data Berita</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
-					<br/>
-					<a data-toggle="modal" class="btn btn btn-primary" href="#addsarung">Tambah Berita</a>
 					<table class="table table-striped">
 						<thead>
 							<tr>

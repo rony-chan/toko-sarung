@@ -308,14 +308,80 @@ class Manage extends Base {
 		}
 		$this->pagination->initialize($config);
 		$data['title'] = 'Manajemen Member';
-		$data['script'] = '<script>$(document).ready(function(){$("#berita").addClass("active")});</script>';
+		$data['script'] = '<script>$(document).ready(function(){$("#member").addClass("active")});</script>';
 		$data['view'] = $this->m_user->listMember($config['per_page'],$uri);
 		$this->displayAdmin('admin/member',$data);
 	}
 
 	//olah data admin
 	public function admin(){
-
+		if(!empty($_POST)){//process form
+			$data = array(
+				'nama_lengkap'=>$_POST['inputnama'],
+				'alamat'=>$_POST['inputalamat'],
+				'notelp'=>$_POST['inputnotelp'],
+				'username'=>$_POST['inputusername'],
+				'password'=>md5(md5($_POST['inputpassword']))
+				);
+			$this->db->insert('admin',$data);
+			redirect($this->agent->referrer());//kembali ke halaman utama
+		}else{//display
+			$this->load->library('pagination');
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('manage/admin'),//get lattest location
+				'total_rows'=>$this->db->count_all('admin'),//total berita
+				);
+			$uri = $this->uri->segment(3);
+			if(!$uri){
+				$uri = 0;
+			}
+			$this->pagination->initialize($config);
+			$data = array(
+				'title'=>'Manajemen Admin',
+				'script'=>'<script>$(document).ready(function(){$("#admin").addClass("active")});</script>',
+				'view'=>$this->m_admin->listAdmin($config['per_page'],$uri),
+				);
+			$this->displayAdmin('admin/admin',$data);
+		}		
+	}
+	//hapus admin
+	public function deleteadmin(){
+		$id=$this->uri->segment(3);
+		$this->db->where('id_admin',$id);
+		$this->db->delete('admin');
+		redirect($this->agent->referrer());//kembali ke halaman sebelumnya
+	}
+	//edit admin
+	public function editadmin(){
+		if(!empty($_POST)){
+			if(!empty($_POST['inputpassword'])){
+				$password = md5(md5($_POST['inputpassword']));
+			}else{
+				$password = $_POST['oldpassword'];
+			}
+			//update database
+			$this->db->where('id_admin',$this->uri->segment(3));
+			$data = array(
+				'nama_lengkap'=>$_POST['inputnama'],
+				'alamat'=>$_POST['inputalamat'],
+				'notelp'=>$_POST['inputnotelp'],
+				'username'=>$_POST['inputusername'],
+				'password'=>$password
+				);
+			$this->db->update('admin',$data);
+			redirect($this->agent->referrer());
+		}else{
+			$id = $this->uri->segment(3);//get id admin
+			$data = array(
+				'title'=>'Edit Data Admin',
+				'script'=>'<script>$(document).ready(function(){$("#admin").addClass("active")});</script>',
+				'view'=>$this->m_admin->detailAdmin($id),
+				);
+			$this->displayAdmin('admin/editadmin',$data);
+		}
 	}
 	//logout
 	public function logout(){
