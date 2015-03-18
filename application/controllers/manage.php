@@ -175,7 +175,12 @@ class Manage extends Base {
 				);
 			$this->db->insert('gambar',$gambar);//insert gambar to database
 			//end of add to database
-			redirect($this->agent->referrer());//kembali ke halaman utama
+			echo '
+			<script>
+			alert("tambah sarung berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 		}
 	}
 	//delete sarung

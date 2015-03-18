@@ -183,6 +183,37 @@ class P extends Base {
 			return false;
 		}
 	}
+	//edit profile
+	public function editprofile(){
+		if(!empty($_POST)){
+			if(!empty($_POST['inputpassword'])){//jika update password 
+				$pasword = md5(md5($_POST['inputpassword']));
+			}else{//tidak update password
+				$password = $_POST['oldpassword'];
+			}
+			//update db
+			$this->db->where('id_pelanggan',$_POST['id']);
+			$data = array(
+				'nama_lengkap'=>$_POST['inputnama'],
+				'alamat'=>$_POST['inputalamat'],
+				'notelp'=>$_POST['inputtelp'],
+				'password'=>$password,
+				'email'=>$_POST['inputemail'],
+				);
+			$this->db->update('pelanggan',$data);
+			echo '
+			<script>
+			alert("update profile berhasil");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
+		}
+		$data = array(
+			'title'=>'Edit Profile',
+			'view'=>$this->m_user->userbyId($this->session->userdata['userlogin'][0]['id_pelanggan']),
+			);
+		$this->displayUser('user/editprofile',$data);
+	}
 	//logout
 	public function logout(){
 		$this->session->sess_destroy();
