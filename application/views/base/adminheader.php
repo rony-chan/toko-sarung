@@ -25,7 +25,7 @@
 
     <header style="background-color:rgb(210, 210, 210)" class="main-header">
       <!-- Logo -->
-      <a href="../index2.html" class="logo"><b>Admin</b>SARUNG</a>
+      <a href="<?php echo base_url('manage/pesanan') ?>" class="logo"><b>Admin</b>SARUNG</a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" role="navigation">
         <!-- Navbar Right Menu -->
