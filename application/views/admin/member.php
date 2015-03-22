@@ -8,7 +8,7 @@
 		<div class="col-md-10">
 			<div class="box box-solid box-primary">
 				<div class="box-header">
-					<h3 class="box-title">Manajemen Data Berita</h3>
+					<h3 class="box-title">Manajemen Data Member</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<table class="table table-striped">

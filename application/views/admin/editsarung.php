@@ -8,7 +8,7 @@
 		<div class="col-md-10">
 			<div class="box box-solid box-primary">
 				<div class="box-header">
-					<h3 class="box-title">Manajemen Data Pesanan</h3>
+					<h3 class="box-title">Manajemen Data Sarung</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<h3>Edit Data Sarung</h3>
