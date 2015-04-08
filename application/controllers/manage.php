@@ -165,14 +165,23 @@ class Manage extends Base {
 				'harga'=>$harga,
 				'deskripsi'=>$deskripsi
 				);
-			$this->db->insert('sarung',$newsarung);//insert new sarung data to database
+			//cek apakah ada duplikasi nama sarung
+			if($this->m_sarung->foundName($nama)){//jika nama ditemukan
+				echo '
+				<script>
+					alert("duplikat nama sarung");
+					window.location="'.$this->agent->referrer().'";
+				</script>
+				';
+			}else{
+				if($this->db->insert('sarung',$newsarung)){//insert new sarung data to database
 			//get last id_sarung
-			$lastid = $this->m_sarung->getLastIdSarung();
+					$lastid = $this->m_sarung->getLastIdSarung();
 			//insert gambar sarung
-			$gambar = array(
-				'id_sarung'=>$lastid,
-				'gambar'=>$pp
-				);
+					$gambar = array(
+						'id_sarung'=>$lastid,
+						'gambar'=>$pp
+						);
 			$this->db->insert('gambar',$gambar);//insert gambar to database
 			//end of add to database
 			echo '
@@ -181,23 +190,33 @@ class Manage extends Base {
 				window.location="'.$this->agent->referrer().'";
 			</script>
 			';
+		}else{
+				//end of add to database
+			echo '
+			<script>
+				alert("duplikat nama sarung");
+				window.location="'.$this->agent->referrer().'";
+			</script>
+			';
 		}
 	}
+}
+}
 	//delete sarung
-	public function deleteSarung(){
-		$id = $this->uri->segment(3);
-		$data = array('id_sarung'=>$id);
-		$this->db->delete('sarung',$data);
-		$this->db->delete('gambar',$data);
-		echo '
-		<script>
-			alert("Hapus Sarung Berhasil");
-			window.location="'.$this->agent->referrer().'";
-		</script>
-		';
-	}
+public function deleteSarung(){
+	$id = $this->uri->segment(3);
+	$data = array('id_sarung'=>$id);
+	$this->db->delete('sarung',$data);
+	$this->db->delete('gambar',$data);
+	echo '
+	<script>
+		alert("Hapus Sarung Berhasil");
+		window.location="'.$this->agent->referrer().'";
+	</script>
+	';
+}
 	//edit data sarung
-	public function editSarung(){
+public function editSarung(){
 		if(!empty($_POST)){//process update sarung
 			$idsarung = $_POST['idsarung'];
 			$merek = $_POST['inputmerek'];
@@ -575,7 +594,7 @@ class Manage extends Base {
 			'title'=>'Detail Pasokan',
 			'view'=>$this->m_pasokan->detailPasokan($id),
 			'item'=>$this->m_pasokan->itemPasokan($id),
-		);
+			);
 		$this->displayAdmin('admin/detailpasokan',$data);//view untuk admin tambah pasokan
 	}
 	//hapus pasokan

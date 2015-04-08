@@ -135,4 +135,14 @@ class m_sarung extends CI_Model{
 		$query = $query->row_array();
 		return $query['merek'];
 	}
+	//menemukan nama yang sama
+	public function foundName($name){
+		$this->db->where('nama',$name);
+		$query = $this->db->get('sarung');
+		if($query->num_rows()>0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
