@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2015 at 05:32 
+-- Generation Time: Apr 08, 2015 at 02:50 
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `password` text NOT NULL,
   PRIMARY KEY (`id_admin`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `admin`
@@ -45,7 +45,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`id_admin`, `nama_lengkap`, `alamat`, `notelp`, `username`, `password`) VALUES
 (1, 'Yusuf Akhsan Hidayat', 'DIY, Indonesia', '08123', 'yussan', 'be71a8e61b64f613366380071fae3b38'),
-(2, 'Rony I', 'Jl. Cempaka 116A Concat Depok Sleman Yogyakarta', '082220356836', 'rony', 'a6296f234a2ff4800237a96a049ca58c');
+(2, 'Rony I', 'Jl. Cempaka 116A Concat Depok Sleman Yogyakarta', '082220356836', 'rony', 'a6296f234a2ff4800237a96a049ca58c'),
+(4, 'sadsd', 'sdsd', '08', 'sdsdsdsd', 'be71a8e61b64f613366380071fae3b38');
 
 -- --------------------------------------------------------
 
@@ -74,7 +75,7 @@ INSERT INTO `berita` (`id_berita`, `id_admin`, `judul`, `konten`, `postdate`, `u
 (3, 1, 'Cara Belanja', 'Tutorial Cara Pemesanan dan Pembelian Sarung di Toko Sarung Hasaniyyin\r\n1. Login dengan akun masing-masing. Jika belum mempunyai akun silakan Klik ''Daftar''\r\n2. Pilih jenis, ukuran dan jumlah Sarung yang akan di pesan\r\n3. Setelah pemesanan selaesai cetak bukti pesanan\r\n4. Kemudian datang ke Toko kami dengan membawa prin out pesanan\r\n5. Barang siap dibawa :)', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
 (4, 1, 'Lokasi Toko Sarung Hasaniyyin', 'Alamat Toko Sarung Hasaniyyin:\r\nJl. Cempaka 5 No. 3, Kel. Poncol, Kab. Pekalongan, Jawa Tengah\r\n\r\nGoogle Maps:\r\nhttp://maps.google.com/', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
 (5, 1, 'Baca Saya', 'Toko Sarung Hasaniyyin adalah toko grosir sarung yang menyediakan berbagai macam jenis sarung untuk dijual kembali oleh para pembeli.\r\n\r\nToko ini hanya menjual dan menyediakan sarung dalam hitungan Kodi dan tidak menerima pembelian sarung dalam bentuk satuan.\r\n\r\nUntuk pemesanan sarung diharuskan kepada pembeli untuk datang langsung ke toko kami agar tidak terjadi sesuatu yang diingikan oleh kedua belah pihak.', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
-(6, 2, 'Garansi', 'Garansi Barang (Sarung)\r\n1. Garansi barang dilakukan dalam waktu seminggu sebelum sarung di jual kembali.\r\n2. Garansi berupaka penukaran sarung dengan model yang sama.\r\n3. Tidak menerima Claim Garansi apabila sarung hilang dalam perjalanan pulang.\r\n4. Semoga Barokah', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
+(6, 1, 'Garansi', 'Garansi Barang (Sarung)\n1. Garansi barang dilakukan dalam waktu seminggu sebelum sarung di jual kembali.\n2. Garansi berupaka penukaran sarung dengan model yang sama.\n3. Tidak menerima Claim Garansi apabila sarung hilang dalam perjalanan pulang.\n4. Semoga Barokahsdsdsdsd', '2015-01-17 00:00:00', '2017-03-15 18:04:45'),
 (7, 2, 'Hubungi Kami', 'Hubungi Kami di:\r\nNo. Telepon: (0274)-998877\r\nNo. HP: 087733498000\r\nBBM: 7D7C85BB\r\nLine:\r\nWhatsapp:\r\nEmail: dr_key@gmail.com', '2015-01-17 00:00:00', '2015-01-17 00:00:00');
 
 -- --------------------------------------------------------
@@ -114,7 +115,14 @@ CREATE TABLE IF NOT EXISTS `pasokan` (
   `tanggal` datetime NOT NULL,
   PRIMARY KEY (`id_pasokan`),
   KEY `id_pemasok` (`id_pemasok`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `pasokan`
+--
+
+INSERT INTO `pasokan` (`id_pasokan`, `id_pemasok`, `tanggal`) VALUES
+(5, 1, '2015-04-08 08:31:48');
 
 -- --------------------------------------------------------
 
@@ -125,15 +133,20 @@ CREATE TABLE IF NOT EXISTS `pasokan` (
 CREATE TABLE IF NOT EXISTS `pasokan_item` (
   `id_pasokan` int(11) NOT NULL,
   `id_sarung` int(11) NOT NULL,
-  `ukuran` int(11) NOT NULL,
-  `id_sarung_merk` int(11) NOT NULL,
   `jumlah` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
   `subtotal` int(11) NOT NULL,
-  KEY `id_pasokan` (`id_pasokan`,`id_sarung`,`id_sarung_merk`),
-  KEY `id_sarung_merk` (`id_sarung_merk`),
+  KEY `id_pasokan` (`id_pasokan`,`id_sarung`),
   KEY `id_sarung` (`id_sarung`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pasokan_item`
+--
+
+INSERT INTO `pasokan_item` (`id_pasokan`, `id_sarung`, `jumlah`, `harga`, `subtotal`) VALUES
+(5, 5, 20, 900000, 18000000),
+(5, 4, 5, 1060000, 5300000);
 
 -- --------------------------------------------------------
 
@@ -149,14 +162,36 @@ CREATE TABLE IF NOT EXISTS `pelanggan` (
   `password` text NOT NULL,
   `email` varchar(30) NOT NULL,
   PRIMARY KEY (`id_pelanggan`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `nama_lengkap`, `alamat`, `notelp`, `password`, `email`) VALUES
-(1, 'Yusuf Konbawa', 'Jl Lele Pugeran', '08123456', 'be71a8e61b64f613366380071fae3b38', 'iam@yussan.me');
+(1, 'Yusuf Konbawa', 'Jl Lele Pugeran', '08123456', 'be71a8e61b64f613366380071fae3b38', 'iam@yussan.me'),
+(2, 'lisas', 'Singgasina Street', '123', 'be71a8e61b64f613366380071fae3b38', 'lisa@art.co.jp');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pemasok`
+--
+
+CREATE TABLE IF NOT EXISTS `pemasok` (
+  `id_pemasok` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_pemasok` varchar(100) NOT NULL,
+  `alamat_pemasok` varchar(200) NOT NULL,
+  `no_telp` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_pemasok`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `pemasok`
+--
+
+INSERT INTO `pemasok` (`id_pemasok`, `nama_pemasok`, `alamat_pemasok`, `no_telp`) VALUES
+(1, 'Yussan Dev Inci', 'Lele 1st Street Number 123 Maguwoharjo, Sleman, DIY, Indonesia ', '');
 
 -- --------------------------------------------------------
 
@@ -175,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `pesan` (
   `barangdiambil` int(11) NOT NULL,
   PRIMARY KEY (`id_pesan`),
   KEY `id_pelanggan` (`id_pelanggan`,`id_admin`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `pesan`
@@ -183,7 +218,11 @@ CREATE TABLE IF NOT EXISTS `pesan` (
 
 INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `tanggalOrder`, `tanggalLunas`, `harga`, `status`, `barangdiambil`) VALUES
 (6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'lunas', 0),
-(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'menunggu pembayaran', 0);
+(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'lunas', 1),
+(8, 1, NULL, '2018-03-15 15:06:02', NULL, 0, 'menunggu pembayaran', 0),
+(9, 1, NULL, '2018-03-15 15:06:22', NULL, 0, 'menunggu pembayaran', 0),
+(10, 1, NULL, '2018-03-15 15:07:07', NULL, 0, 'menunggu pembayaran', 0),
+(11, 1, NULL, '2018-03-15 15:08:22', NULL, 0, 'menunggu pembayaran', 0);
 
 -- --------------------------------------------------------
 
@@ -223,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `sarung` (
   `deskripsi` varchar(500) NOT NULL,
   PRIMARY KEY (`id_sarung`),
   KEY `id_merk` (`id_merk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `sarung`
@@ -233,7 +272,7 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 (1, 1, 'Sarung Wadimor Jacquard Lilin Gerimis', 5, 1400000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.\r\nMenggunakan bahan anti panas, memungkinkan penggunan selalu sejuk ketika menggunakannya.\r\nSarung ini tahan terhadap air, aman ketika digunakan dalam keadaan hujan ataupun ketika berenang.\r\nAda 2 varian warna merah dan biru.\r\n'),
 (2, 2, 'Sarung Tenun Hasaniyyin', 5, 850000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (3, 3, 'Sarung Gajah Duduk Black White', 5, 940000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
-(4, 4, 'Sarung Cendana Spesial Dobby', 5, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
+(4, 4, 'Sarung Cendana Spesial Dobby', 10, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (5, 3, 'bla bla', 20, 900000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.');
 
 -- --------------------------------------------------------
@@ -288,10 +327,15 @@ ALTER TABLE `gambar`
   ADD CONSTRAINT `gambar_ibfk_1` FOREIGN KEY (`id_sarung`) REFERENCES `sarung` (`id_sarung`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `pasokan`
+--
+ALTER TABLE `pasokan`
+  ADD CONSTRAINT `pasokan_ibfk_1` FOREIGN KEY (`id_pemasok`) REFERENCES `pemasok` (`id_pemasok`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `pasokan_item`
 --
 ALTER TABLE `pasokan_item`
-  ADD CONSTRAINT `pasokan_item_ibfk_1` FOREIGN KEY (`id_sarung_merk`) REFERENCES `sarung_merk` (`id_sarung_merk`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pasokan_item_ibfk_2` FOREIGN KEY (`id_sarung`) REFERENCES `sarung` (`id_sarung`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pasokan_item_ibfk_3` FOREIGN KEY (`id_pasokan`) REFERENCES `pasokan` (`id_pasokan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
