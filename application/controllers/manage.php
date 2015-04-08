@@ -177,7 +177,7 @@ class Manage extends Base {
 			//end of add to database
 			echo '
 			<script>
-			alert("tambah sarung berhasil");
+				alert("tambah sarung berhasil");
 				window.location="'.$this->agent->referrer().'";
 			</script>
 			';
@@ -190,11 +190,11 @@ class Manage extends Base {
 		$this->db->delete('sarung',$data);
 		$this->db->delete('gambar',$data);
 		echo '
-			<script>
+		<script>
 			alert("Hapus Sarung Berhasil");
-				window.location="'.$this->agent->referrer().'";
-			</script>
-			';
+			window.location="'.$this->agent->referrer().'";
+		</script>
+		';
 	}
 	//edit data sarung
 	public function editSarung(){
@@ -218,7 +218,7 @@ class Manage extends Base {
 			//end of update database
 			echo '
 			<script>
-			alert("Edit Sarung Berhasil");
+				alert("Edit Sarung Berhasil");
 				window.location="'.$this->agent->referrer().'";
 			</script>
 			';
@@ -272,11 +272,11 @@ class Manage extends Base {
 		// print_r($data);
 		$this->db->insert('berita',$data);
 		echo '
-			<script>
+		<script>
 			alert("Tambah Berita Berhasil");
-				window.location="'.$this->agent->referrer().'";
-			</script>
-			';
+			window.location="'.$this->agent->referrer().'";
+		</script>
+		';
 	}
 	//edit berita
 	public function editberita(){
@@ -294,7 +294,7 @@ class Manage extends Base {
 			$this->db->update('berita',$data);
 			echo '
 			<script>
-			alert("Edit Berita Berhasil");
+				alert("Edit Berita Berhasil");
 				window.location="'.$this->agent->referrer().'";
 			</script>
 			';
@@ -407,6 +407,183 @@ class Manage extends Base {
 				);
 			$this->displayAdmin('admin/editadmin',$data);
 		}
+	}
+	//manajemen pemasok
+	public function pemasok(){
+		$this->load->model(array('m_pasokan'));
+		if(!empty($_POST)){//post 
+
+		}else{//only show
+			//start pagination
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('manage/pemasok'),//get lattest location
+				'total_rows'=>$this->db->count_all('pemasok'),//total berita
+				);
+			//end of pagination
+			$this->load->library('pagination');
+			$uri = $this->uri->segment(3);
+			if(!$uri){
+				$uri = 0;
+			}
+			$data = array(
+				'title'=>'Edit Data Admin',
+				'script'=>'<script>$(document).ready(function(){$("#pemasok").addClass("active");$("#tabpemasok").addClass("active")});</script>',
+				'view'=>$this->m_pasokan->getPemasok($config['per_page'],$uri),
+				);
+			$this->displayAdmin('admin/pemasok',$data);
+		}
+	}
+	//action untuk pemasok
+	public function pemasokaction(){
+		switch ($_GET['act']) {
+			case 'add':
+			$data = array
+			(
+				'nama_pemasok'=>$_POST['inputnama'],
+				'alamat_pemasok'=>$_POST['inputalamat'],
+				'no_telp'=>$_POST['inputtelp'],
+				);
+				$this->db->insert('pemasok',$data);//memasukan data pemasok baru
+				break;			
+				case 'edit':
+				$id = $_GET['id'];
+				$this->db->where('id_pemasok',$id);
+				$data = array
+				(
+					'nama_pemasok'=>$_POST['inputnama'],
+					'alamat_pemasok'=>$_POST['inputalamat'],
+					'no_telp'=>$_POST['inputtelp'],
+					);
+			$this->db->update('pemasok',$data);//update database
+			break;
+			case 'delete':
+			$id = $_GET['id'];
+			$this->db->where('id_pemasok',$id);
+			$this->db->delete('pemasok');//delte pemaok
+			break;
+		}
+		echo '
+		<script>
+			alert("Olah Pemasok Berhasil");
+			window.location="'.$this->agent->referrer().'";
+		</script>
+		';
+	}
+	//manajemen pasokan
+	public function pasokan(){
+		$this->load->library('cart');
+		$this->load->model(array('m_pasokan'));
+		if(!empty($_POST)){//post 
+
+		}else{//only show
+			//start pagination
+			$config = array(
+				'per_page'=>6,
+				'uri_segment'=>3,
+				'num_link'=>4,
+				'base_url'=>site_url('manage/pasokan'),//get lattest location
+				'total_rows'=>$this->db->count_all('pasokan'),//total berita
+				);
+			//end of pagination
+			$this->load->library('pagination');
+			$uri = $this->uri->segment(3);
+			if(!$uri){
+				$uri = 0;
+			}
+			$data = array(
+				'title'=>'Edit Data Admin',
+				'script'=>'<script>$(document).ready(function(){$("#pemasok").addClass("active");$("#tabpasokan").addClass("active")});</script>',
+				'view'=>$this->m_pasokan->getPasokan($config['per_page'],$uri),
+				);
+			$this->displayAdmin('admin/pasokan',$data);
+		}
+	}
+	//menampilkan pasokan 
+	public function pasokanitem(){
+		$this->load->model(array('m_pasokan'));
+		$data = array
+		(
+			'title'=>'Pasokan Item',
+			);
+	}
+	//tambah pasokan
+	public function tambahpasokan(){
+		$this->load->library('cart');
+		$data = array
+		(
+			'title'=>'Tambah Pasokan',
+			'script'=>'<script>$(document).ready(function(){$("#pemasok").addClass("active");$("#tabpasokan").addClass("active")});</script>',
+			);
+		$this->displayAdmin('admin/tambahpasokan',$data);//view untuk admin tambah pasokan
+	}
+	//pasokan cart
+	public function pasokancart(){
+		$this->load->model(array('m_sarung'));		
+		$this->load->library('cart');
+		//detail sarung berdasarkan id sarung
+		$sarung = $this->m_sarung->detailSarung($_POST['idsarung']);
+		//memasukan data ke cart
+		$insert = array(
+			'id'=>$this->input->post('idsarung'), //id barang untuk dimasukan kedalam session
+			'qty'=>$this->input->post('jumlah'),//jumlah barang yang dibeli
+			'price'=>$sarung['harga'],//harga jual barang = (HB*10%) + HB
+			'merk'=>$sarung['merek'],//nama barang yang dimasukan
+			'name'=>$sarung['nama'],//nama barang yang dimasukan
+
+			);
+		$this->cart->insert($insert);//memasukan ke cart
+		redirect($this->agent->referrer());
+	}
+	//hapus cart item
+	//memasukan cart item ke stok
+	public function carttodb(){
+		$this->load->model(array('m_sarung','m_pasokan'));		
+		$this->load->library('cart');
+		//mendapatkan data transaksi
+		$total = $this->cart->total();
+		//insert data pasokan
+		$idpemasok = $_POST['idpemasok'];
+		$now = date('Y-m-d H:i:s');
+		$sql = "INSERT INTO pasokan(id_pemasok,tanggal) VALUES($idpemasok,'$now')";
+		$this->db->query($sql);
+		//mendapatkan id terakhir pasokan
+		$latestpasokan = $this->m_pasokan->latestPasokan();
+		//memasukan item pasokan
+		foreach($this->cart->contents() as $item):
+			$data =array
+		(
+			'id_pasokan'=>$latestpasokan['id_pasokan'],
+			'id_sarung'=>$item['id'],
+			'jumlah'=>$item['qty'],
+			'harga'=>$item['price'],
+			'subtotal'=>$item['price']*$item['qty'],
+			);
+		//memasukan ke pasokan_item 
+		$this->db->insert('pasokan_item',$data);
+		endforeach;
+		redirect(site_url('manage/pasokan'));
+	}
+	//lihat detail pasokan
+	public function detailpasokan(){
+		$this->load->model('m_pasokan');
+		$id = $this->uri->segment(3);
+		$data = array
+		(
+			'title'=>'Detail Pasokan',
+			'view'=>$this->m_pasokan->detailPasokan($id),
+			'item'=>$this->m_pasokan->itemPasokan($id),
+		);
+		$this->displayAdmin('admin/detailpasokan',$data);//view untuk admin tambah pasokan
+	}
+	//hapus pasokan
+	public function hapuspasokan(){
+		$id = $this->uri->segement(3);
+		$this->db->where('id_pasokan',$id);
+		$this->db->delete('pasokan');
+		redirect($this->agent->referrer());;
 	}
 	//logout
 	public function logout(){

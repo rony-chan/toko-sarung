@@ -5,6 +5,12 @@
 			Pesanan
 		</a>
 	</li>
+	<li id="pemasok">
+		<a href="<?php echo site_url('manage/pasokan')?>">
+			<!-- <span class="badge pull-right">42</span> -->
+			Pemasok
+		</a>
+	</li>
 	<li id="sarung">
 		<a href="<?php echo site_url('manage/sarung')?>">
 			<!-- <span class="badge pull-right">42</span> -->
