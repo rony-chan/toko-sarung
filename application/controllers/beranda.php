@@ -9,6 +9,7 @@ class Beranda extends Base {
 		parent::__construct();
         // memanggil model m_beranda
 
+		$this->load->model('m_admin');
 		$this->load->library(array('form_validation', 'session'));
 	}
 
@@ -52,6 +53,25 @@ class Beranda extends Base {
 			</script>
 			';
 		}
-	}	
+	}
+
+	//View Android [Data Sarung]
+	public function view_android_sarung() {
+		$data['data_sarung'] = $this->m_admin->data_sarung();
+		$data['sarung_habis'] = $this->m_admin->data_sarung_habis();
+		$this->load->view('android/cek_datasarung', $data);
+	}
+
+	//View Android [Data Pemasok]
+	public function view_android_pemasok() {
+		$data['data_pemasok'] = $this->m_admin->data_pemasok();
+		$this->load->view('android/cek_datapemasok', $data);
+	}
+
+	//View Android [Data Penjualan]
+	public function view_android_penjualan() {
+		$data['data_penjualan'] = $this->m_admin->data_penjualan();
+		$this->load->view('android/cek_datapenjualan', $data);
+	}
 
 }

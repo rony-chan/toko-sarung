@@ -55,4 +55,32 @@ class m_admin extends CI_Model{
 		$query = $this->db->get('admin');
 		return $query->row_array();//get admin data on single array
 	}
+
+	//Database for Android
+	public function data_sarung(){
+		$sql = "SELECT nama, jumlah, merek from sarung inner join sarung_merk on sarung.id_merk=sarung_merk.id_sarung_merk";
+		$query = $this->db->query($sql);
+		if($query->num_rows()>0) {
+			return $query->result_array();
+		}else{
+			return array();
+		}
+	}
+	public function data_sarung_habis(){
+		$sql = "SELECT nama, jumlah, merek from sarung inner join sarung_merk on sarung.id_merk=sarung_merk.id_sarung_merk WHERE jumlah=0";
+		$query = $this->db->query($sql);
+		if($query->num_rows()>0) {
+			return $query->result_array();
+		}else{
+			return array();
+		}
+	}
+	//public function data_pemasok(){
+	//	$sql = "";
+	//	$query = ;
+	//}
+	//public function data_penjualan(){
+	//	$sql = "";
+	//	$query = ;
+	//}
 }
