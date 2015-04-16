@@ -1,3 +1,7 @@
-Notifikasi saat menambah, merubah dang menhapus data admin
+Tambah Jenis sarung di Manajemen Pasokan
 
-Notifikasi Logout member dan admin
+Error di delete Manajemen Pasokan
+
+Notifikasi semua edit delete di halaman admin
+
+Tampilan Beranda cuma 4 item

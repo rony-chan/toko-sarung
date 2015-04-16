@@ -6203,3 +6203,102 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/* Main Android */
+.left{
+  width: 555px;
+  border: 1px solid #dedede;
+  background: cyan;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+}
+
+  .left img{
+    max-width: 100%;
+    height: auto;
+  }
+
+.center{
+  clear: both;
+  border: 1px solid #dedede;
+  padding: 5px;
+  margin: 5px;
+}
+  
+  .center img{
+    max-width: 100%;
+    height: auto;
+  }
+
+.right{
+  width: 555px;
+  border: 1px solid #dedede;
+  background: pink;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+}
+
+  .right img{
+    max-width: 100%;
+    height: auto;
+  }
+
+.footer{
+  clear: both;
+  border: 1px solid #dedede;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* untuk ukuran 1080px kebawah */
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .left {
+    width: 50%;
+    /* background: #fff000; */
+  }
+
+  .right {
+    clear: both;
+    padding: 1% 4%;
+    width: auto;
+    float: none;
+  }
+}
+
+
+/* untuk ukuran layar 700px kebawah */
+@media screen and (max-width: 780px) {
+  .header,
+
+  .center{
+    text-align: center;
+  } 
+
+  .footer{
+    text-align: center;
+  }
+
+  .left {
+    width: auto;
+    float: none;
+  }
+  
+  .right {
+    width: auto;
+    float: none;
+  }
+}

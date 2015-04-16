@@ -13,6 +13,7 @@
   <!-- Sarung -->
   <link href="<?php echo base_url('resource/css/sarung.css'); ?>" rel="stylesheet">
   <!-- Style -->
+  
   <link href="<?php echo base_url('resource/css/style.css'); ?>" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url('resource/css/dashboard.css'); ?>" rel="stylesheet">
