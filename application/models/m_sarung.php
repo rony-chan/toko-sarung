@@ -6,15 +6,21 @@ class m_sarung extends CI_Model{
 		parent::__construct();
 		//Do your magic here
 	}
+	//menampilkan merek berdasarkan id pemasok
+	public function merekByPemasok($idpemasok)
+	{
+		$this->db->where('id_pemasok',$idpemasok);
+		$query = $this->db->get('sarung_merk');
+		return $query->row_array();
+	}
 	//menampilkan semua sarung
 	public function daftarSarung($limit,$offset){
-		$params = array($offset,$limit);
 		$sql = "SELECT sarung.id_sarung AS 'id_sarung', sarung_merk.merek AS 'merek',nama,jumlah, harga,deskripsi,sarung_merk.merek AS 'merek',sarung_merk.id_sarung_merk AS 'id_merk'
 		FROM sarung 
 		INNER JOIN sarung_merk ON sarung_merk.id_sarung_merk = sarung.id_merk
 		ORDER BY sarung.id_sarung DESC
-		LIMIT ?,?";
-		$query = $this->db->query($sql,$params);
+		LIMIT $offset,$limit";
+		$query = $this->db->query($sql);
 		if($query->num_rows>0){
 			return $query->result_array();
 		}else{

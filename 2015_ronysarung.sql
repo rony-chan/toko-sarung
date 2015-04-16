@@ -2,10 +2,10 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 15, 2015 at 02:05 PM
+-- Host: localhost
+-- Generation Time: Apr 16, 2015 at 03:40 
 -- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -94,7 +94,8 @@ INSERT INTO `gambar` (`id_sarung`, `gambar`) VALUES
 (1, 'c448113b35b814ab2c06a167cf165760.jpg'),
 (5, '29dd31cceb91d2300882bda39f9c3ae1.jpg'),
 (6, '19d13b9e05bf8234c06c698c0ce0a0ea.jpg'),
-(7, 'e7c53b6757dcd8379090c0f00a543f60.jpg');
+(7, 'e7c53b6757dcd8379090c0f00a543f60.jpg'),
+(8, '46ccb375b806dfcc18afb03a725bbcbf.jpg');
 
 -- --------------------------------------------------------
 
@@ -106,14 +107,15 @@ CREATE TABLE IF NOT EXISTS `pasokan` (
 `id_pasokan` int(11) NOT NULL,
   `id_pemasok` int(11) NOT NULL,
   `tanggal` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pasokan`
 --
 
 INSERT INTO `pasokan` (`id_pasokan`, `id_pemasok`, `tanggal`) VALUES
-(6, 2, '2015-04-15 13:33:55');
+(6, 2, '2015-04-15 13:33:55'),
+(8, 2, '2015-04-16 14:50:56');
 
 -- --------------------------------------------------------
 
@@ -134,7 +136,9 @@ CREATE TABLE IF NOT EXISTS `pasokan_item` (
 --
 
 INSERT INTO `pasokan_item` (`id_pasokan`, `id_sarung`, `jumlah`, `harga`, `subtotal`) VALUES
-(6, 1, 5, 1400000, 7000000);
+(6, 1, 5, 1400000, 7000000),
+(8, 5, 4, 800000, 3200000),
+(8, 1, 10, 1400000, 14000000);
 
 -- --------------------------------------------------------
 
@@ -170,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `pemasok` (
   `nama_pemasok` varchar(100) NOT NULL,
   `alamat_pemasok` varchar(200) NOT NULL,
   `no_telp` varchar(15) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemasok`
@@ -178,10 +182,11 @@ CREATE TABLE IF NOT EXISTS `pemasok` (
 
 INSERT INTO `pemasok` (`id_pemasok`, `nama_pemasok`, `alamat_pemasok`, `no_telp`) VALUES
 (2, 'PT. Wadimor', 'Jln. Jakarta Pusat', '0274 684583'),
-(3, 'PT. Gajah Duduk', 'Jln. Jakarta Barat', '0274 684624'),
 (4, 'PT. Sarung Cendana', 'Jln. Jakarta Pusat', '0274 632145'),
-(5, 'PT. Uzair Sarung', 'Jln. Bekasi', '0274 963852'),
-(6, 'PT. Atlas Sarung', 'Jln. Bekasi', '0274 745896');
+(6, 'PT. Atlas Sarung', 'Jln. Bekasi', '0274 745896'),
+(12, 'PT Yus', 'Jl Yus', '789'),
+(13, 'PT Gajah Duduk', 'Jalan Dr Sutomo 65, Jakarta', '0867'),
+(14, 'PT. Pulau Mas', 'Jln. Bekasi', '084576903');
 
 -- --------------------------------------------------------
 
@@ -246,7 +251,7 @@ CREATE TABLE IF NOT EXISTS `sarung` (
   `jumlah` int(11) NOT NULL COMMENT 'dalam bentuk kodi',
   `harga` int(11) NOT NULL,
   `deskripsi` varchar(500) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sarung`
@@ -259,7 +264,8 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 (4, 4, 'Sarung Cendana Spesial Dobby', 9, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (5, 1, 'Sarung Wadimor Hujan Gerimis', 5, 800000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
 (6, 6, 'Sarung Atlas Premium 770 Songket', 5, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
-(7, 6, 'Sarung Atlas Super 970 Songket', 5, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah');
+(7, 6, 'Sarung Atlas Super 970 Songket', 5, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
+(8, 10, 'Sarung Pulau Mas Sutera', 5, 2000000, 'Terbuat benang sutera asli');
 
 -- --------------------------------------------------------
 
@@ -269,20 +275,21 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 
 CREATE TABLE IF NOT EXISTS `sarung_merk` (
 `id_sarung_merk` int(11) NOT NULL,
+  `id_pemasok` int(11) NOT NULL,
   `merek` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sarung_merk`
 --
 
-INSERT INTO `sarung_merk` (`id_sarung_merk`, `merek`) VALUES
-(1, 'Wadimor'),
-(2, 'Hasaniyyin'),
-(3, 'Gajah Duduk'),
-(4, 'Cendana'),
-(5, 'Uzair'),
-(6, 'Atlas');
+INSERT INTO `sarung_merk` (`id_sarung_merk`, `id_pemasok`, `merek`) VALUES
+(1, 2, 'Sarung Tenun Wadimor'),
+(4, 4, 'Sarung Cendana'),
+(6, 6, 'Sarung Atlas'),
+(8, 12, 'Yus Sarungsman'),
+(9, 13, 'Gajah Duduk'),
+(10, 14, 'Pulau Mas');
 
 -- --------------------------------------------------------
 
@@ -363,7 +370,7 @@ ALTER TABLE `sarung`
 -- Indexes for table `sarung_merk`
 --
 ALTER TABLE `sarung_merk`
- ADD PRIMARY KEY (`id_sarung_merk`);
+ ADD PRIMARY KEY (`id_sarung_merk`), ADD KEY `id_pemasok` (`id_pemasok`);
 
 --
 -- Indexes for table `slider`
@@ -389,7 +396,7 @@ MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `pasokan`
 --
 ALTER TABLE `pasokan`
-MODIFY `id_pasokan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id_pasokan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
@@ -399,7 +406,7 @@ MODIFY `id_pelanggan` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `pemasok`
 --
 ALTER TABLE `pemasok`
-MODIFY `id_pemasok` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id_pemasok` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `pesan`
 --
@@ -409,12 +416,12 @@ MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 -- AUTO_INCREMENT for table `sarung`
 --
 ALTER TABLE `sarung`
-MODIFY `id_sarung` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id_sarung` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `sarung_merk`
 --
 ALTER TABLE `sarung_merk`
-MODIFY `id_sarung_merk` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id_sarung_merk` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
@@ -456,6 +463,12 @@ ADD CONSTRAINT `pesan_ibfk_1` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan
 ALTER TABLE `pesan_item`
 ADD CONSTRAINT `pesan_item_ibfk_1` FOREIGN KEY (`id_pesan`) REFERENCES `pesan` (`id_pesan`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `pesan_item_ibfk_2` FOREIGN KEY (`id_sarung`) REFERENCES `sarung` (`id_sarung`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sarung_merk`
+--
+ALTER TABLE `sarung_merk`
+ADD CONSTRAINT `sarung_merk_ibfk_1` FOREIGN KEY (`id_pemasok`) REFERENCES `pemasok` (`id_pemasok`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

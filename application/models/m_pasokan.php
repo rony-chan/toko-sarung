@@ -9,6 +9,8 @@ class m_pasokan extends CI_Model{
 
 	//MANAJEMEN PASOKAN
 	public function getPasokan($limit,$offset){
+		$sql = "SELECT ";
+		$this->db->join('pemasok','pemasok.id_pemasok= pasokan.id_pemasok');
 		$this->db->limit($limit,$offset);
 		$query = $this->db->get('pasokan');
 		if($query->row_array()>0){
@@ -22,6 +24,7 @@ class m_pasokan extends CI_Model{
 	//menampilkan seluruh pemasok
 	public function getPemasok($limit,$offset){
 		$this->db->limit($limit,$offset);
+		$this->db->join('sarung_merk','sarung_merk.id_pemasok=pemasok.id_pemasok');
 		$query = $this->db->get('pemasok');
 		if($query->row_array()>0){
 			return $query->result_array();
@@ -31,8 +34,10 @@ class m_pasokan extends CI_Model{
 	}
 	//pemasok berdasarkan id pemasok
 	public function pemasokById($idpemasok){
-		$this->db->where('id_pemasok',$idpemasok);
-		$query = $this->db->get('pemasok');
+		$sql = "SELECT pemasok.id_pemasok AS 'id_pemasok', pemasok.nama_pemasok,pemasok.alamat_pemasok,pemasok.no_telp,sarung_merk.merek AS 'merek'
+		FROM pemasok INNER JOIN sarung_merk ON sarung_merk.id_pemasok = pemasok.id_pemasok
+		WHERE pemasok.id_pemasok = ?";
+		$query = $this->db->query($sql,$idpemasok);
 		return $query->row_array();
 	}
 	//mendapatkan pasokan terakhir

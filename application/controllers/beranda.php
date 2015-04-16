@@ -18,7 +18,7 @@ class Beranda extends Base {
 		//menyimpan judul halaman dengan variabel title
 		$data = array(
 			'title'=>'Toko Grosir',
-			'sarung'=>$this->m_sarung->daftarSarung(10,0),//10 sarung terbaru
+			'sarung'=>$this->m_sarung->daftarSarung(5,0),//10 sarung terbaru
 			'berita'=>$this->m_berita->listBerita(4,0),//4 berita terbaru
 			);
 		//load data pada controller base dan menyisipkan file header.php

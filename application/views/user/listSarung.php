@@ -30,7 +30,7 @@
 				<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-img" src="<?php echo $thumb ?>"></div>
 				<div class="col-md-6">
 					<small><a style="color:#A1A1A1" href="<?php echo site_url('p/merek/'.$s['id_merk'])?>"><?php echo $s['merek']?></a></small>
-					<h4><a href="<?php echo site_url('p/sarung/'.$s['id_sarung'])?>"><?php echo $s['nama']?></a></h4>
+					<h4><a href="<?php echo site_url('p/sarung/view/'.$s['id_sarung'])?>"><?php echo $s['nama']?></a></h4>
 					<p><?php echo substr($s['deskripsi'], 0,200);?>...</p>
 				</div>
 				<div class="harga-stok col-md-2">
@@ -47,6 +47,7 @@
 				</div>
 			</div>
 		<?php endforeach;?>	
+		<br/>
 		<div class="large-12 columns">
 			<center><?php echo $this->pagination->create_links();?></center>
 		</div>

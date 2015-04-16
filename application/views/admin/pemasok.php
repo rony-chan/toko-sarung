@@ -16,6 +16,7 @@
 					<label>Nama :</label><input class="form-control" type="text" name="inputnama" value="<?php echo $data['nama_pemasok'];?>" placeholder="masukan nama pemasok"><br/>
 					<label>Alamat : </label><textarea class="form-control" type="text" name="inputalamat" placeholder="masukan alamat pemasok"><?php echo $data['alamat_pemasok'];?></textarea><br/>
 					<label>No Telp : </label><input class="form-control" type="text" name="inputtelp" placeholder="masukan no telp pemasok" value="<?php echo $data['no_telp'];?>"><br/>
+					<label>Merk Sarung : </label><input class="form-control" type="text" name="inputmerk" placeholder="masukan no telp pemasok" value="<?php echo $data['merek'];?>"><br/>
 					<button class="btn btn-primary" type="submit">Simpan Perubahan</button>
 				</form>
 				<?php } ?>
@@ -34,6 +35,7 @@
 							<tr>
 								<th>Id Pemasok</th>
 								<th>Nama</th>
+								<th>Merek</th>
 								<th>Alamat</th>
 								<th>No Telp</th>
 								<th></th>
@@ -44,6 +46,7 @@
 								<tr>
 									<td><?php echo $v['id_pemasok'];?></td>								
 									<td><?php echo $v['nama_pemasok'];?></td>
+									<td><?php echo $v['merek'];?></td>
 									<td><?php echo $v['alamat_pemasok'];?></td>
 									<td><?php echo $v['no_telp'];?></td>
 									<td>
@@ -76,6 +79,7 @@
 					<label>Nama :</label><input class="form-control" type="text" name="inputnama" placeholder="masukan nama pemasok"><br/>
 					<label>Alamat : </label><textarea class="form-control" type="text" name="inputalamat" placeholder="masukan alamat pemasok"></textarea><br/>
 					<label>No Telp : </label><input class="form-control" type="text" name="inputtelp" placeholder="masukan no telp pemasok"><br/>
+					<label>Merek Sarung : </label><input class="form-control" type="text" name="mereksarung" placeholder="Merek sarung dari pemasok"><br/>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -1,3 +1,30 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		loadSarung();
+		var idpemasok = $('#pilihpemasok').val();
+		$('#pasokanidpemasok').val(idpemasok);
+		$('#pilihpemasok').change(function(){
+			var idpemasok = $('#pilihpemasok').val();
+			$('#pasokanidpemasok').val(idpemasok);
+			loadSarung();
+		});
+	});
+//load sarung
+function loadSarung(){
+	var idpemasok = $('#pilihpemasok').val();
+	$.ajax({
+		url:'<?php echo site_url("ajax/getSarungByPemasok")?>',
+		data:{idpemasok:idpemasok},
+		method:'POST',
+		success:function(response){
+			$('#pilihansarung').html(response);
+		},
+		error:function(){
+			alert('error haha');
+		}
+	});
+}
+</script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="left-sidebar col-md-2">
@@ -13,8 +40,14 @@
 				<div class="box-body">
 					<h4>Tambah Pasokan</h4>
 					<form class="form" action="<?php echo site_url('manage/pasokancart')?>" method="POST">
-						<label>Id Sarung <small>Jika id Sarung belum tersedia, silahkan <a target="_blank" href="<?php echo site_url('manage/sarung') ?>">Tambah Sarung</a></small></label>	
-						<input class="form-control" type="number" name="idsarung" required>
+						<label>Pemasok</label>
+						<select id="pilihpemasok" class="form-control">
+							<?php foreach($pemasok as $p):?>
+								<option value="<?php echo $p['id_pemasok']?>"><?php echo $p['nama_pemasok']?></option>
+							<?php endforeach;?>
+						</select>
+						<label>Sarung</label>
+						<span id="pilihansarung"></span>
 						<label>Jumlah Sarung (kodi)<small></label>	
 						<input class="form-control" type="number" name="jumlah" required>
 						<br/>
@@ -49,30 +82,35 @@
 								<td><?php echo number_format($item['qty']*$item['price']);?></td>	
 								<!-- <td><a href="#" class="btn btn-xs">x</a></td>						 -->
 							</tr>
-						<?php $i++;endforeach;?>
-					</tbody>
-				</table>				
-				<div class="row">
-					<div class="col-md-6">
-						<h3><strong>Rp <?php echo $this->cart->format_number($this->cart->total());?> ,-</strong></h3>
-						<form action="<?php echo site_url('manage/carttodb') ?>" method="POST">
-							<div class="col-md-5">
-								<label>Id Pemasok</label>
-								<input class="form-control" name="idpemasok" name="idpemasok" placeholder="masukan id pemasok" required>
-							</div>
-							<div class="col-md-3">
-								<label></label>
-								<button type="submit" class="btn btn-primary">Masukan Ke Gudang</button>
-							</div>
-						</form>
+							<?php $i++;endforeach;?>
+						</tbody>
+					</table>				
+					<div class="row">
+						<div class="col-md-12">
+							<h3><strong>Rp <?php echo $this->cart->format_number($this->cart->total());?> ,-</strong></h3>
+							<form action="<?php echo site_url('manage/carttodb') ?>" method="POST">
+								<div class="col-md-12">
+									<div class="col-md-3">
+									<select name="idpemasok" class="form-control" required>
+											<option value="">pilih pemasok</option>
+											<?php foreach($pemasok as $p):?>
+												<option value="<?php echo $p['id_pemasok']?>"><?php echo $p['nama_pemasok']?></option>
+											<?php endforeach;?>
+										</select>
+									</div>
+									<div class="col-md-6">
+										<button type="submit" class="btn btn-primary">Masukan Ke Gudang</button> <a class="btn btn-danger" href="<?php echo site_url('manage/resetcart')?>">reset cart</a>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
-				</div>
-			<?php endif; ?>
-		</div><!-- /.box-body -->				
+				<?php endif; ?>
+			</div><!-- /.box-body -->				
+		</div>
+		<center>
+			<?php //echo $this->pagination->create_links() ?>
+		</center>
 	</div>
-	<center>
-		<?php //echo $this->pagination->create_links() ?>
-	</center>
-</div>
 </div>
 </div>

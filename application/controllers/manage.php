@@ -459,13 +459,23 @@ public function editSarung(){
 	public function pemasokaction(){
 		switch ($_GET['act']) {
 			case 'add':
+			$merek = $_POST['mereksarung'];
 			$data = array
 			(
 				'nama_pemasok'=>$_POST['inputnama'],
 				'alamat_pemasok'=>$_POST['inputalamat'],
 				'no_telp'=>$_POST['inputtelp'],
-				);
-				$this->db->insert('pemasok',$data);//memasukan data pemasok baru
+				);				
+				if($this->db->insert('pemasok',$data)){//memasukan data pemasok baru
+					//mendapatkan id pemasok terakhir
+					$sqlpemasok = "SELECT * FROM pemasok WHERE nama_pemasok = '".$_POST['inputnama']."'";
+					$querypemasok = $this->db->query($sqlpemasok);
+					$querypemasok = $querypemasok->row_array();
+					$idpemasok = $querypemasok['id_pemasok'];
+					//memasukan data merek sarung
+					$sqlsarung = "INSERT INTO sarung_merk(id_pemasok,merek) VALUES($idpemasok,'$merek')";
+					$querysarung = $this->db->query($sqlsarung);
+				}
 				break;			
 				case 'edit':
 				$id = $_GET['id'];
@@ -477,6 +487,9 @@ public function editSarung(){
 					'no_telp'=>$_POST['inputtelp'],
 					);
 			$this->db->update('pemasok',$data);//update database
+			$data = array('merek'=>$_POST['inputmerk']);
+			$this->db->where('id_pemasok',$id);
+			$this->db->update('sarung_merk',$data);
 			break;
 			case 'delete':
 			$id = $_GET['id'];
@@ -530,11 +543,13 @@ public function editSarung(){
 	}
 	//tambah pasokan
 	public function tambahpasokan(){
+		$this->load->model(array('m_pasokan'));
 		$this->load->library('cart');
 		$data = array
 		(
 			'title'=>'Tambah Pasokan',
 			'script'=>'<script>$(document).ready(function(){$("#pemasok").addClass("active");$("#tabpasokan").addClass("active")});</script>',
+			'pemasok'=>$this->m_pasokan->getPemasok(10,0),
 			);
 		$this->displayAdmin('admin/tambahpasokan',$data);//view untuk admin tambah pasokan
 	}
@@ -551,12 +566,16 @@ public function editSarung(){
 			'price'=>$sarung['harga'],//harga jual barang = (HB*10%) + HB
 			'merk'=>$sarung['merek'],//nama barang yang dimasukan
 			'name'=>$sarung['nama'],//nama barang yang dimasukan
-
 			);
 		$this->cart->insert($insert);//memasukan ke cart
 		redirect($this->agent->referrer());
 	}
 	//hapus cart item
+	public function resetcart(){
+		$this->load->library('cart');
+		$this->cart->destroy();
+		redirect($this->agent->referrer());//kambali ke halaman sebelumnya
+	}
 	//memasukan cart item ke stok
 	public function carttodb(){
 		$this->load->model(array('m_sarung','m_pasokan'));		
@@ -564,8 +583,8 @@ public function editSarung(){
 		//mendapatkan data transaksi
 		$total = $this->cart->total();
 		//insert data pasokan
-		$idpemasok = $_POST['idpemasok'];
 		$now = date('Y-m-d H:i:s');
+		$idpemasok = $_POST['idpemasok'];
 		$sql = "INSERT INTO pasokan(id_pemasok,tanggal) VALUES($idpemasok,'$now')";
 		$this->db->query($sql);
 		//mendapatkan id terakhir pasokan
@@ -583,6 +602,7 @@ public function editSarung(){
 		//memasukan ke pasokan_item 
 		$this->db->insert('pasokan_item',$data);
 		endforeach;
+		$this->cart->destroy();//reset cart
 		redirect(site_url('manage/pasokan'));
 	}
 	//lihat detail pasokan
@@ -599,7 +619,7 @@ public function editSarung(){
 	}
 	//hapus pasokan
 	public function hapuspasokan(){
-		$id = $this->uri->segement(3);
+		$id = $this->uri->segment(3);
 		$this->db->where('id_pasokan',$id);
 		$this->db->delete('pasokan');
 		redirect($this->agent->referrer());;

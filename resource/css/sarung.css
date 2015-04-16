@@ -2,7 +2,7 @@ html{background-color: #f4f4f4}
 .item{
 	padding: 20px;
 	margin-left: 0px;
-	border-bottom: 1px solid rgb(148, 192, 231);}
+	/* border-bottom: 1px solid rgb(148, 192, 231); */}
 .item h4{margin: 0;}
 .item-img{width: 100%;}
 .harga-stok{padding-top: 35px;}

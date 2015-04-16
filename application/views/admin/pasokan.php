@@ -31,7 +31,7 @@
 							<?php foreach($view as $v):?>
 								<tr>
 									<td><?php echo $v['id_pasokan'];?></td>								
-									<td><?php echo $v['id_pemasok'];?></td>								
+									<td><?php echo $v['nama_pemasok'];?></td>								
 									<td><?php echo $v['tanggal'];?></td>								
 									<td>
 										<a class="btn btn-xs btn-primary" href="<?php echo site_url('manage/detailpasokan/'.$v['id_pasokan']) ?>">detail</a>

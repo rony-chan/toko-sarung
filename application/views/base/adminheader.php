@@ -19,9 +19,24 @@
   <link href="<?php echo base_url('resource/css/style.css'); ?>" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url('resource/css/dashboard.css'); ?>" rel="stylesheet">
+   <!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="<?php echo base_url('resource/js/jquery-1.9.1.min.js'); ?>"></script>
+   <!-- main_jquery must placed bottom jquery core -->
+   <script src="<?php //echo base_url('resource/js/main_jquery.js'); ?>"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="<?php echo base_url('resource/js/bootstrap.js'); ?>"></script>
+   <script src="<?php echo base_url('resource/js/docs.min.js'); ?>"></script>
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   <script src="<?php echo base_url('resource/js/ie10-viewport-bug-workaround.js'); ?>"></script>
+   <!-- 3 js untuk slider -->
+   <script src="<?php echo base_url('resource/js/jssor.js'); ?>"></script>
+   <script src="<?php echo base_url('resource/js/jssor.slider.js'); ?>"></script>
   <?php if(!empty($script)):echo $script;endif;?>
-
-  <body>
+   <script>$('.dropdown-toggle').dropdown()</script>
+   <body>
 
     <header style="background-color:rgb(210, 210, 210)" class="main-header">
       <!-- Logo -->
@@ -31,15 +46,15 @@
         <!-- Navbar Right Menu -->
         <?php if(!empty($this->session->userdata('adminlogin'))):?>
          <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
+           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong><?php echo $this->session->userdata['adminlogin']['username'];?></strong><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
              <!-- <li class="divider"></li> -->
-              <li><a href="<?php echo site_url('manage/logout');?>">logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      <?php endif;?>
-    </nav>
-  </header>
-  <br/>
+             <li><a href="<?php echo site_url('manage/logout');?>">logout</a></li>
+           </ul>
+         </li>
+       </ul>
+     <?php endif;?>
+   </nav>
+ </header>
+ <br/>

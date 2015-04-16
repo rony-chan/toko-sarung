@@ -35,6 +35,7 @@
 				</div>
 			</div>
 		<?php endforeach;?>
+		<a class="btn btn-primary" href="<?php echo site_url('p/sarung');?>">Lihat Semua Sarung <span class="glyphicon glyphicon-chevron-right"></span></a>
 		<div class="page-header">
 			<h1>Berita Terbaru <small>jangan sampai ketinggalan</small></h1>
 		</div>

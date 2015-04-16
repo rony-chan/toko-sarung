@@ -47,8 +47,8 @@ class P extends Base {
 	/// ALL ABOUT SARUNG
 	//////////////////////////
 	public function sarung(){
-		if(!empty($this->uri->segment(3))){//lihat detai sarung
-			$idsarung = $this->uri->segment(3);
+		if(!empty($this->uri->segment(4))){//lihat detai sarung
+			$idsarung = $this->uri->segment(4);
 			$data = array(
 				'view'=>$this->m_sarung->detailSarung($idsarung),
 				'gambar'=>$this->m_sarung->gambarBySarung($idsarung),//menampilkan semua gambar berdasarkan id sarung
@@ -59,7 +59,7 @@ class P extends Base {
 		}else{//lihat daftar sarung
 			//pagination setup
 			$config = array(
-				'per_page'=>6,
+				'per_page'=>5,
 				'uri_segment'=>3,
 				'num_link'=>4,
 				'base_url'=>site_url('p/sarung'),//get lattest location
@@ -67,8 +67,8 @@ class P extends Base {
 				);
 			$this->load->library('pagination');
 			$this->pagination->initialize($config);
-			$uri = $this->uri->segment(4);
-			if(!$uri){
+			$uri = $this->uri->segment(3);
+			if(!$uri && !is_numeric($uri)){
 				$uri = 0;
 			}
 			//$this->pagination->create_links();
