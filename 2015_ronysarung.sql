@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2015 at 03:40 
+-- Generation Time: Apr 19, 2015 at 02:14 
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `pasokan` (
 `id_pasokan` int(11) NOT NULL,
   `id_pemasok` int(11) NOT NULL,
   `tanggal` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pasokan`
@@ -396,7 +396,7 @@ MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `pasokan`
 --
 ALTER TABLE `pasokan`
-MODIFY `id_pasokan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `id_pasokan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --

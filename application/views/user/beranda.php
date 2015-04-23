@@ -18,7 +18,7 @@
 				<div class="col-md-2"><p><small>23/01/2014</small></p><img class="item-img" src="<?php echo $thumb ?>"></div>
 				<div class="col-md-6">
 					<small><a style="color:#A1A1A1" href="<?php echo site_url('p/merek/'.$s['id_merk'])?>"><?php echo $s['merek']?></a></small>
-					<h4><a href="<?php echo site_url('p/sarung/'.$s['id_sarung'])?>"><?php echo $s['nama']?></a></h4>
+					<h4><a href="<?php echo site_url('p/sarung/view/'.$s['id_sarung'])?>"><?php echo $s['nama']?></a></h4>
 					<p><?php echo substr($s['deskripsi'], 0,200);?>...</p>
 				</div>
 				<div class="harga-stok col-md-2">
@@ -88,7 +88,7 @@
 				Toko Grosir Sarung Hasaniyyin Webstore </br>
 				Jl. Cempaka 5 No. 3, Kel. Poncol, Kab. Pekalongan </br>
 				Jawa Tengah Indonesia </br>
-				Telp Toko (0274)-998877 </br></br> 
+				Telp Toko (0274)-998877 </br></br>
 
 				HOTLINE 087733498000 (Senin s/d Sabtu :  08:30 WIB s/d 18:15 WIB) </br>
 				Informasi : info@hasaniyyin.net   |   Marketing : sales@hasaniyyin.net   |   SMS : 087733498000

@@ -1,3 +1,8 @@
+<script>
+function pilihantransfer(){
+ $('#pilihtransfer').toggle('fast');
+}
+</script>
 <div class="row">
    <div class="col-md-9">
       <h1>Keranjang <small>cek keranjang belanja sebelum mulai pesan</small></h1>
@@ -36,15 +41,32 @@
                <td></td>
                <td></td>
                <td>
-                  <strong>Rp<?php echo number_format($this->cart->total());?>,-</strong>
+                  <strong>Rp <?php echo number_format($this->cart->total());?>,-</strong>
                </td>
                <td></td>
             </tr>
          </table>
          <div class="row">
             <div class=" col-md-12">
-               <br/>
-               <a class="btn btn-primary" href="<?php echo site_url('order/addOrder') ?>">Masukan Ke Order <i class="glyphicon glyphicon-arrow-right"></i></a>
+               <form class="" action="<?php echo site_url('order/addOrder') ?>" method="post">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <br/>
+                        <p>Pilih metode pembayaran</p>
+                     </div>
+                     <div class="col-md-6">
+                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" onclick="pilihantransfer()" type="radio" name="carabayar" value="transfer" required> Via Transfer</label>
+                     </div>
+                     <div class="col-md-6">
+                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" onclick="return $('#pilihtransfer').hide();" type="radio" name="carabayar" value="transfer" required> Bayar Langsung</label>
+                     </div>
+                     <div style="display:none" id="pilihtransfer" class="col-md-12">
+                        pilih metode transfer
+                     </div>
+                  </div>
+                  <br/>
+                  <button type="submit" class="btn btn-primary">Masukan Ke Order <i class="glyphicon glyphicon-arrow-right"></i></button>
+               </form>
             </div>
          </div>
       </div>
