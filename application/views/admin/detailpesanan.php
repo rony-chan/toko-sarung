@@ -13,7 +13,6 @@
 				<div class="box-body">
 				<a class="btn btn-default btn-md" href="<?php echo base_url('manage/pesanan');?>">kembali</a>
 				<h3>Data Transaksi</h3>
-				<?php print_r($item);?>
 				<table class="table">
 					<tr>
 						<th style="width:200px">Id Pesan</th><td><?php echo $detail['id_pesan'];?></td>

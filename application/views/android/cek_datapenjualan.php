@@ -42,7 +42,7 @@
 			</div> <!--/ .main -->
 
 			<div class="footer">
-				<p>Copyright &copy; 2015 <a href="http://www.hasaniyyin-sarung.com">Toko Sarung Hasaniyyin</a></p>
+				<p>Copyright &copy; 2015 <a href="http://192.168.137.1/project/Hasaniyyin-Grosir/">Toko Grosir Sarung Hasaniyyin</a></p>
 			</div> <!--/ .footer -->
 
 		</div> <!--/ .header -->
