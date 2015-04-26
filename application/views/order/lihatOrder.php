@@ -16,8 +16,8 @@
          </div>
          <ul class="nav nav-tabs">
             <li id="semua"><a href="<?php echo site_url('order/lihatOrder');?>">Semua Order</a></li>
-            <li id="menunggu"><a href="<?php echo site_url('order/lihatOrder/sort/menunggu');?>">Order Menunggu</a></li>
-            <li id="lunas"><a href="<?php echo site_url('order/lihatOrder/sort/lunas');?>">Order Lunas</a></li>
+            <li id="menunggu"><a href="<?php echo site_url('order/lihatOrder/sort/menunggu');?>">Belum Terbayar</a></li>
+            <li id="lunas"><a href="<?php echo site_url('order/lihatOrder/sort/lunas');?>">Lunas</a></li>
          </ul>
          <!-- Table -->
          <?php if(!empty($view)){?>
@@ -27,7 +27,8 @@
                   <th>tgl order</th>
                   <th>tgl lunas</th>
                   <th>Total</th>
-                  <th>Status</th>
+                  <th>Status Bayar</th>
+                  <th>Status Barang</th>
                   <th></th>
                </tr>
                <?php foreach($view as $v):?>
@@ -44,6 +45,21 @@
                            break;
                            case 'lunas':
                            echo '<span class="label label-success">'.$v['status'].'</span>';
+                           break;
+                           default:
+                           echo '<span class="label label-default">tidak ada status</span>';
+                           break;
+                        }
+                        ?>
+                     </td>
+                     <td>
+                        <?php
+                        switch ($v['barang']) {
+                           case 'pending':
+                           echo '<span class="label label-warning">'.$v['barang'].'</span>';
+                           break;
+                           case 'terkirim':
+                           echo '<span class="label label-success">'.$v['barang'].'</span>';
                            break;
                            default:
                            echo '<span class="label label-default">tidak ada status</span>';

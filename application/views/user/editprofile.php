@@ -11,7 +11,7 @@
     <div class="form-group">
       <label for="inputalamat" class="col-sm-3 control-label">Alamat Lengkap</label>
       <div class="col-sm-9">
-        <input name="inputalamat" type="text" class="form-control" placeholder="Alamat Lengkap" value="<?php echo $view['alamat'];?>">
+        <textarea style="height:150px" name="inputalamat" type="text" class="form-control" placeholder="Alamat Lengkap"><?php echo $view['alamat'];?></textarea>
       </div>
     </div>
     <div class="form-group">
@@ -32,7 +32,7 @@
         <input name="inputpassword" type="password" class="form-control" id="inputPassword3" placeholder="Password">
         <input name="oldpassword" type="hidden" class="form-control" id="inputPassword3" placeholder="Password" value="<?php echo $view['password']?>">
       </div>
-    </div>    
+    </div>
   </div>
   <div class="modal-footer">
     <button type="submit" class="btn btn-primary">Edit Profile</button>

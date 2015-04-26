@@ -84,7 +84,7 @@ class P extends Base {
 	public function merek(){
 		if(empty($this->uri->segment(3))){
 			redirect(site_url('p/sarung'));
-		}else{			
+		}else{
 			$idmerek = $this->uri->segment(3);
 			//start pagination
 			$this->db->where('id_merk',$idmerek);
@@ -186,7 +186,7 @@ class P extends Base {
 	//edit profile
 	public function editprofile(){
 		if(!empty($_POST)){
-			if(!empty($_POST['inputpassword'])){//jika update password 
+			if(!empty($_POST['inputpassword'])){//jika update password
 				$pasword = md5(md5($_POST['inputpassword']));
 			}else{//tidak update password
 				$password = $_POST['oldpassword'];

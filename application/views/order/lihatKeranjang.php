@@ -1,7 +1,5 @@
 <script>
-function pilihantransfer(){
- $('#pilihtransfer').toggle('fast');
-}
+
 </script>
 <div class="row">
    <div class="col-md-9">
@@ -48,20 +46,40 @@ function pilihantransfer(){
          </table>
          <div class="row">
             <div class=" col-md-12">
+               <br/>
+               <h4>Masukan Data Pengiriman</h4>
+               <p>Pastikan data yang dimasukan sesuai dengan data sebenar, benarnya agar paket sampai tujuan.<br/>Jika pembayaran tidak dilunasi sampai batas waktu 1x24 jam maka pemesanan akan di cancel, dan stok barang dikembalikan.</p>
+               <hr/>
                <form class="" action="<?php echo site_url('order/addOrder') ?>" method="post">
+                  <div class="row">
+                     <div class=" col-md-12">
+                        <div class="col-md-3"><label>Alamat Tujuan</label></div>
+                        <div class="col-md-9">
+                           <p>
+                              Lengkapi dengan data provinsi, kota, kecamatan, nama jalan dan kode pos.<br/>
+                              Otomatis terisi dari data <a href="<?php echo site_url('p/editProfile')?>">edit profile</a>.
+                           </p>
+                           <textarea name="inputalamat" class="form-control" style="height:100px"><?php echo $user['alamat'];?></textarea></div>
+                     </div>
+                  </div>
                   <div class="row">
                      <div class="col-md-12">
                         <br/>
                         <p>Pilih metode pembayaran</p>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" onclick="pilihantransfer()" type="radio" name="carabayar" value="transfer" required> Via Transfer</label>
+                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" onclick="return $('#pilihtransfer').show('fast');" type="radio" name="carabayar" value="transfer" required> Via Transfer</label>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" onclick="return $('#pilihtransfer').hide();" type="radio" name="carabayar" value="transfer" required> Bayar Langsung</label>
+                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" onclick="return $('#pilihtransfer').hide('fast');" type="radio" name="rekening" value="langsung" required> Bayar Langsung</label>
                      </div>
                      <div style="display:none" id="pilihtransfer" class="col-md-12">
-                        pilih metode transfer
+                        <br/>
+                        <div class="col-md-12">
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bca.jpg')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bca"></center></p></div>
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bri.png')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bri"></center></p></div>
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_mandiri.jpg')?>"></center><p>No Rek: xxx-xxxx</p><center><input type="radio" name="rekening" value="mandiri"></center></div>
+                        </div>
                      </div>
                   </div>
                   <br/>

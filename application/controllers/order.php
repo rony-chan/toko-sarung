@@ -12,8 +12,10 @@ class Order extends Base {
    // ALL ABOUT CUSTOMER
    ///////////////////////////
    public function lihatKeranjang(){
+      $this->load->model('m_user');
       $data = array(
          'title'=>'Lihat Keranjang',
+         'user'=>$this->m_user->userbyId($this->session->userdata['userlogin'][0]['id_pelanggan']),
          );
       $this->displayUser('order/lihatKeranjang',$data);
    }
@@ -97,7 +99,7 @@ class Order extends Base {
    //ALL ABOUT ORDER
    //////////////////////////////////////////
    public function addOrder(){
-      $cart =$this->cart->total_items(); 
+      $cart =$this->cart->total_items();
       if($cart<=0||empty($cart)){
          echo '
          <script>
@@ -110,10 +112,13 @@ class Order extends Base {
          $data = array(
             'id_pelanggan'=>$this->session->userdata['userlogin'][0]['id_pelanggan'],
             'id_admin'=>null,
-            'tanggalOrder'=>date('d-m-y H:i:s'),
+            'tanggalOrder'=>date('d-m-Y H:i:s'),
             'tanggalLunas'=>null,
             'harga'=>$this->cart->total(),
-            'status'=>'menunggu pembayaran'
+            'status'=>'menunggu pembayaran',
+            'alamat'=>$_POST['inputalamat'],
+            'rekening'=>$_POST['rekening'],
+            'barang'=>'pending',
             );
       //ada to order
          $this->db->insert('pesan',$data);

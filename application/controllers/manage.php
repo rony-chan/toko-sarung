@@ -89,7 +89,20 @@ class Manage extends Base {
 		}
 		$this->displayAdmin('admin/pesanan',$data);
 	}
-
+	//manage detail pesanan
+	public function detailpesanan()
+	{
+		$this->load->model('m_order');
+		$idpesanan = $this->uri->segment(3);
+		$data = array
+		(
+		'title'=>'Detail Pesanan',
+		'script'=>'<script>$(document).ready(function(){$("#selesai").addClass("active");$("#pesanan").addClass("active")});</script>',
+		'detail'=>$this->m_order->detailOrder($idpesanan),
+		'item'=>$this->m_order->getOrderItem($idpesanan)
+		);
+		$this->displayAdmin('admin/detailpesanan',$data);
+	}
 	//olah data sarung
 	public function sarung(){
 		//start pagination
@@ -389,7 +402,7 @@ public function editSarung(){
 				'view'=>$this->m_admin->listAdmin($config['per_page'],$uri),
 				);
 			$this->displayAdmin('admin/admin',$data);
-		}		
+		}
 	}
 	//hapus admin
 	public function deleteadmin(){
@@ -430,7 +443,7 @@ public function editSarung(){
 	//manajemen pemasok
 	public function pemasok(){
 		$this->load->model(array('m_pasokan'));
-		if(!empty($_POST)){//post 
+		if(!empty($_POST)){//post
 
 		}else{//only show
 			//start pagination
@@ -465,7 +478,7 @@ public function editSarung(){
 				'nama_pemasok'=>$_POST['inputnama'],
 				'alamat_pemasok'=>$_POST['inputalamat'],
 				'no_telp'=>$_POST['inputtelp'],
-				);				
+				);
 				if($this->db->insert('pemasok',$data)){//memasukan data pemasok baru
 					//mendapatkan id pemasok terakhir
 					$sqlpemasok = "SELECT * FROM pemasok WHERE nama_pemasok = '".$_POST['inputnama']."'";
@@ -476,7 +489,7 @@ public function editSarung(){
 					$sqlsarung = "INSERT INTO sarung_merk(id_pemasok,merek) VALUES($idpemasok,'$merek')";
 					$querysarung = $this->db->query($sqlsarung);
 				}
-				break;			
+				break;
 				case 'edit':
 				$id = $_GET['id'];
 				$this->db->where('id_pemasok',$id);
@@ -508,7 +521,7 @@ public function editSarung(){
 	public function pasokan(){
 		$this->load->library('cart');
 		$this->load->model(array('m_pasokan'));
-		if(!empty($_POST)){//post 
+		if(!empty($_POST)){//post
 
 		}else{//only show
 			//start pagination
@@ -533,7 +546,7 @@ public function editSarung(){
 			$this->displayAdmin('admin/pasokan',$data);
 		}
 	}
-	//menampilkan pasokan 
+	//menampilkan pasokan
 	public function pasokanitem(){
 		$this->load->model(array('m_pasokan'));
 		$data = array
@@ -555,7 +568,7 @@ public function editSarung(){
 	}
 	//pasokan cart
 	public function pasokancart(){
-		$this->load->model(array('m_sarung'));		
+		$this->load->model(array('m_sarung'));
 		$this->load->library('cart');
 		//detail sarung berdasarkan id sarung
 		$sarung = $this->m_sarung->detailSarung($_POST['idsarung']);
@@ -578,7 +591,7 @@ public function editSarung(){
 	}
 	//memasukan cart item ke stok
 	public function carttodb(){
-		$this->load->model(array('m_sarung','m_pasokan'));		
+		$this->load->model(array('m_sarung','m_pasokan'));
 		$this->load->library('cart');
 		//mendapatkan data transaksi
 		$total = $this->cart->total();
@@ -599,7 +612,7 @@ public function editSarung(){
 			'harga'=>$item['price'],
 			'subtotal'=>$item['price']*$item['qty'],
 			);
-		//memasukan ke pasokan_item 
+		//memasukan ke pasokan_item
 		$this->db->insert('pasokan_item',$data);
 		endforeach;
 		$this->cart->destroy();//reset cart
