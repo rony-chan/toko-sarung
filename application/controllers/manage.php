@@ -107,7 +107,7 @@ class Manage extends Base {
 	public function sarung(){
 		//start pagination
 		$config = array(
-			'per_page'=>6,
+			'per_page'=>20,
 			'uri_segment'=>3,
 			'num_link'=>4,
 			'base_url'=>site_url('p/sarung'),//get lattest location
@@ -160,8 +160,8 @@ class Manage extends Base {
 		$gambar = $_FILES['inputgambar'];
 		//upload gambar process
 		$config['upload_path'] = './resource/img/sarung';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '200';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size']	= '5000';
 		$config['encrypt_name'] = TRUE;
 		$this->load->library('upload', $config);
 		//end of upload gambar process
@@ -183,7 +183,7 @@ class Manage extends Base {
 				echo '
 				<script>
 					alert("duplikat nama sarung");
-					window.location="'.$this->agent->referrer().'";
+					window.location="'.site_url('manage/sarung').'";
 				</script>
 				';
 			}else{
@@ -200,7 +200,7 @@ class Manage extends Base {
 			echo '
 			<script>
 				alert("tambah sarung berhasil");
-				window.location="'.$this->agent->referrer().'";
+				window.location="'.site_url('manage/sarung').'";
 			</script>
 			';
 		}else{
@@ -208,7 +208,7 @@ class Manage extends Base {
 			echo '
 			<script>
 				alert("duplikat nama sarung");
-				window.location="'.$this->agent->referrer().'";
+				window.location="'.site_url('manage/sarung').'";
 			</script>
 			';
 		}
@@ -224,7 +224,7 @@ public function deleteSarung(){
 	echo '
 	<script>
 		alert("Hapus Sarung Berhasil");
-		window.location="'.$this->agent->referrer().'";
+		window.location="'.site_url('manage/sarung').'";
 	</script>
 	';
 }
@@ -251,7 +251,7 @@ public function editSarung(){
 			echo '
 			<script>
 				alert("Edit Sarung Berhasil");
-				window.location="'.$this->agent->referrer().'";
+				window.location="'.site_url('manage/sarung').'";
 			</script>
 			';
 		}
@@ -306,7 +306,7 @@ public function editSarung(){
 		echo '
 		<script>
 			alert("Tambah Berita Berhasil");
-			window.location="'.$this->agent->referrer().'";
+			window.location="'.site_url('manage/berita').'";
 		</script>
 		';
 	}
@@ -327,7 +327,7 @@ public function editSarung(){
 			echo '
 			<script>
 				alert("Edit Berita Berhasil");
-				window.location="'.$this->agent->referrer().'";
+				window.location="'.site_url('manage/berita').'";
 			</script>
 			';
 		}else{//view
@@ -341,7 +341,7 @@ public function editSarung(){
 	//hapus berita
 	public function hapusberita(){
 		$this->db->delete('berita',array('id_berita'=>$this->uri->segment(3)));
-		redirect($this->agent->referrer());
+		redirect(site_url('manage/berita'));
 	}
 
 	////////////////////////
@@ -429,7 +429,7 @@ public function editSarung(){
 				'password'=>$password
 				);
 			$this->db->update('admin',$data);
-			redirect($this->agent->referrer());
+			redirect(site_url('manage/admin'));
 		}else{
 			$id = $this->uri->segment(3);//get id admin
 			$data = array(
@@ -448,7 +448,7 @@ public function editSarung(){
 		}else{//only show
 			//start pagination
 			$config = array(
-				'per_page'=>6,
+				'per_page'=>20,
 				'uri_segment'=>3,
 				'num_link'=>4,
 				'base_url'=>site_url('manage/pemasok'),//get lattest location
@@ -526,7 +526,7 @@ public function editSarung(){
 		}else{//only show
 			//start pagination
 			$config = array(
-				'per_page'=>6,
+				'per_page'=>20,
 				'uri_segment'=>3,
 				'num_link'=>4,
 				'base_url'=>site_url('manage/pasokan'),//get lattest location
