@@ -11,27 +11,29 @@
 	<div class="container">
 
 		<div class="header">
-			<h3>Cek Data Penjualan</h3>
+			<h3 class="text-center">Cek Data Penjualan</h3>
 
 			<div class="main">
 
-				<div class="center">
-					<h3>Data Penjualank</h3>
-					<table class="table">
+				<div class="middle">
+					<h4 class="text-center">Data Penjualan</h4>
+					<table class="table table-bordered">
 						<thead>
-							<tr>
-								<th>Merek</th>
-								<th>Nama</th>
-								<th>Jumlah</th>
+							<tr class="success">
+								<th class="text-center">Pelanggan</th>
+								<th class="text-center">Pesanan</th>
+								<th class="text-center">Jumlah</th>
+								<th class="text-center">Subtotal</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach ($data_sarung as $row) { ?>
-							<?php if($row['jumlah'] > 0):?>
-							<tr>
-								<th><?php echo $row['merek'] ?></th>
+							<?php foreach ($data_penjualan as $row) { ?>
+							<?php if($row['subtotal'] > 0):?>
+							<tr class="danger">
+								<th><?php echo $row['nama_lengkap'] ?></th>
 								<th><?php echo $row['nama'] ?></th>
-								<th><?php echo $row['jumlah'] ?></th>
+								<th><?php echo $row['jumlah'] ?> Kodi</th>
+								<th>Rp <?php echo number_format($row['subtotal']) ?></th>
 							</tr>
 							<?php endif; ?>
 							<?php }?>

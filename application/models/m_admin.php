@@ -66,6 +66,7 @@ class m_admin extends CI_Model{
 			return array();
 		}
 	}
+	
 	public function data_sarung_habis(){
 		$sql = "SELECT nama, jumlah, merek from sarung inner join sarung_merk on sarung.id_merk=sarung_merk.id_sarung_merk WHERE jumlah=0";
 		$query = $this->db->query($sql);
@@ -75,12 +76,30 @@ class m_admin extends CI_Model{
 			return array();
 		}
 	}
-	//public function data_pemasok(){
-	//	$sql = "";
-	//	$query = ;
-	//}
-	//public function data_penjualan(){
-	//	$sql = "";
-	//	$query = ;
-	//}
+
+	public function data_pemasok(){
+		$sql = "SELECT pemasok.nama_pemasok, sarung.nama, pasokan_item.jumlah, pasokan_item.subtotal FROM pasokan_item 
+				INNER JOIN pasokan ON pasokan.id_pasokan = pasokan_item.id_pasokan 
+				INNER JOIN pemasok ON pasokan.id_pemasok = pemasok.id_pemasok 
+				INNER JOIN sarung on sarung.id_sarung = pasokan_item.id_sarung ";
+		$query = $this->db->query($sql);
+		if ($query->num_rows()>0) {
+			return $query->result_array();
+		}else{
+			return array();
+		}
+	}
+
+	public function data_penjualan(){
+		$sql = "SELECT pelanggan.nama_lengkap, sarung.nama, pesan_item.jumlah, pesan_item.subtotal from pelanggan 
+				inner join pesan on pesan.id_pelanggan=pelanggan.id_pelanggan 
+				inner join pesan_item on pesan_item.id_pesan=pesan.id_pesan 
+				inner join sarung on sarung.id_sarung=pesan_item.id_sarung";
+		$query = $this->db->query($sql);
+		if ($query->num_rows()>0) {
+			return $query->result_array();
+		}else{
+			return array();
+		}
+	}
 }
