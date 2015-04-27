@@ -93,36 +93,3 @@
       <?php $this->load->view('user/sidebar');?>
    </div>
 </div>
-<!-- Footer -->
-<center><br/>
-   <div class="page-footer">
-      <h5>Didukung oleh :</h5><br/>
-      <div class="row" >
-         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-               <img data-src="holder.js/100%x120" alt="...">
-            </a>
-         </div>
-         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-               <img data-src="holder.js/100%x120" alt="...">
-            </a>
-         </div>
-         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-               <img data-src="holder.js/100%x120" alt="...">
-            </a>
-         </div>
-         <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-               <img data-src="holder.js/100%x120" alt="...">
-            </a>
-         </div>
-      </div>
-      fhghhf
-   </div>
-</center>
-
-</div>
-</div>
-</div>
