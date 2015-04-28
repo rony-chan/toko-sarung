@@ -24,7 +24,7 @@ class m_user extends CI_Model{
 		if($this->m_admin->can_login($username,$password)){
 			return true;
 		}else{
-			$this->form_validation->set_message('validate_credentials','email dan password tidak cucok');
+			$this->form_validation->set_message('validate_credentials','email dan password tidak cocok');
 			return false;
 		}
 	}
