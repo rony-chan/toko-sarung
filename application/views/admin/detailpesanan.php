@@ -15,7 +15,7 @@
 				<h3>Data Transaksi</h3>
 				<table class="table">
 					<tr>
-						<th style="width:200px">Id Pesan</th><td><?php echo $detail['id_pesan'];?></td>
+						<th style="width:200px">No Ref</th><td><?php echo $detail['noref'];?></td>
 					</tr>
 					<tr>
 						<th style="width:200px">Nama Pelanggan</th><td><?php echo $detail['nama_lengkap'];?></td>

@@ -15,12 +15,12 @@ class m_order extends CI_Model{
 	public function allOrder($limit,$offset,$status=""){
 		if(empty($status)){//show all
 			$params = array($offset,$limit);
-			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.rekening,pesan.harga,pesan.status AS 'status',pesan.barangDiambil
+			$sql = "SELECT pesan.noref,pelanggan.nama_lengkap, pesan.id_pesan, pesan.rekening,pesan.harga,pesan.status AS 'status',pesan.barangDiambil
 			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
 			LIMIT ?,?";
 		}else{
 			$params = array($status,$offset,$limit);
-			$sql = "SELECT pelanggan.nama_lengkap, pesan.id_pesan, pesan.rekening, pesan.harga,pesan.status AS 'status',pesan.barangDiambil
+			$sql = "SELECT pesan.noref,pelanggan.nama_lengkap, pesan.id_pesan, pesan.rekening, pesan.harga,pesan.status AS 'status',pesan.barangDiambil
 			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
 			WHERE pesan.status = ? LIMIT ?,?";
 		}

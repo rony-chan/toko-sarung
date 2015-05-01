@@ -11,11 +11,9 @@ class Manage extends Base {
 		$this->load->model(array('m_order','m_sarung','m_admin','m_berita','m_user'));
 		// Your own constructor code
 	}
-
 	public function index(){
 		redirect(site_url('manage/pesanan'));
 	}
-
 	//ubah status pesanan
 	public function ubahStatus(){
 		$idpesanan = $this->uri->segment(3);
@@ -30,6 +28,12 @@ class Manage extends Base {
 		$this->db->where('id_pesan',$idpesanan);
 		$this->db->update('pesan',array('barangDiambil'=>$status));
 		redirect($this->agent->referrer());//ubah status barang
+	}
+	//cari pesanan
+	public function caripesanan(){
+		$noref = $_POST['noref'];
+		$this->db->where('noref',$noref);
+		echo $noref;
 	}
 	//olah data pesanan
 	public function pesanan(){

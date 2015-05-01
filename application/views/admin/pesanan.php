@@ -11,6 +11,18 @@
 					<h3 class="box-title">Manajemen Data Pesanan</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
+					<div class="col-md-12">
+				      <form action="<?php echo site_url('manage/caripesanan') ?>">
+					<div class="input-group">
+					  <input type="text" class="form-control" placeholder="masukan nomor referensi">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Cari Transaksi</button>
+				      </span>
+				    </div><!-- /input-group -->
+					  </form>
+					<br/>
+				</div>
+				
 					<ul class="nav nav-tabs" id="myTab">
 						<li id="semua"><a href="<?php echo site_url('manage/pesanan');?>">Semua Pesanan</a></li>
 						<li id="diproses"><a href="<?php echo site_url('manage/pesanan/act/diproses');?>">Pesanan Diproses</a></li>
@@ -20,7 +32,7 @@
 						<thead>
 							<tr>
 								<th>No.</th>
-								<th>Id Pesan</th>
+								<th>No Ref</th>
 								<th>Pemesan</th>
 								<th>Total Harga</th>
 								<th>Bayar Via</th>
@@ -32,7 +44,7 @@
 							<?php foreach($view as $v):?>
 								<tr>
 									<td>1</td>
-									<td><?php echo $v['id_pesan'];?></td>
+									<td><?php echo $v['noref'];?></td>
 									<td><?php echo $v['nama_lengkap'];?></td>
 									<td>Rp<?php echo number_format($v['harga']);?>,-</td>
 									<td><?php echo $v['rekening'];?></td>
