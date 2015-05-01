@@ -31,9 +31,14 @@ class Manage extends Base {
 	}
 	//cari pesanan
 	public function caripesanan(){
-		$noref = $_POST['noref'];
+		$noref = $_GET['noref'];
 		$this->db->where('noref',$noref);
-		echo $noref;
+		$data = array(
+		'title'=>'Cari Pesanan',
+		'view'=>$this->m_order->searchPesanan($noref),
+		'script'=>'<script>$(document).ready(function(){$("#pesanan").addClass("active")});</script>',
+		);
+		$this->displayAdmin('admin/pesanan',$data);
 	}
 	//olah data pesanan
 	public function pesanan(){

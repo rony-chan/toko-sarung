@@ -27,6 +27,13 @@ class m_order extends CI_Model{
 		$query = $this->db->query($sql,$params);
 		return $query->result_array();
 	}
+	public function searchPesanan($noref){
+		$sql = "SELECT pesan.noref,pelanggan.nama_lengkap, pesan.id_pesan, pesan.rekening,pesan.harga,pesan.status AS 'status',pesan.barangDiambil
+			FROM pesan INNER JOIN pelanggan ON pelanggan.id_pelanggan = pesan.id_pelanggan
+			WHERE pesan.noref  = ?";
+			$query = $this->db->query($sql,$noref);
+			return $query->result_array();
+	}
 	//count all order
 	public function countAllOrder($status=""){
 		if(empty($status)){//show all

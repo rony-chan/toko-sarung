@@ -14,7 +14,7 @@
 					<div class="col-md-12">
 				      <form action="<?php echo site_url('manage/caripesanan') ?>">
 					<div class="input-group">
-					  <input type="text" class="form-control" placeholder="masukan nomor referensi">
+					  <input name="noref" type="text" class="form-control" placeholder="masukan nomor referensi" value="<?php if(!empty($_GET['noref']))echo $_GET['noref'];?>">
 				      <span class="input-group-btn">
 				        <button class="btn btn-default" type="button">Cari Transaksi</button>
 				      </span>
@@ -79,6 +79,7 @@
 						</tbody>
 					</table>
 				</div><!-- /.box-body -->
+						<?php if(empty($view)){echo '<center><h1>Booking tidak ditemukan</h1></center>';}?>
 			</div>
 		</div>
 	</div>
