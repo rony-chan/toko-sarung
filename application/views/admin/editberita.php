@@ -1,3 +1,5 @@
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="left-sidebar col-md-2">
