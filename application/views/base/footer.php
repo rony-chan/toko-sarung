@@ -99,8 +99,6 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url('resource/js/jquery-1.9.1.min.js'); ?>"></script>
     <!-- main_jquery must placed bottom jquery core -->
     <script src="<?php echo base_url('resource/js/main_jquery.js'); ?>"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
