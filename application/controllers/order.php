@@ -68,13 +68,21 @@ class Order extends Base {
       } else {
          $idBarang = $_POST['idbarang'];
          $jumlah = $_POST['jumlah'];
+         //perbandingan jumlah sarung dan yang ada di cart
+         $cartContent = $this->cart->contents();
+         foreach($cartContent as $c){
+            if($c['id'] == $idBarang){
+               $jumlahCart = $jumlah+$c['qty'];
+            }
+         }
+         if(empty($jumlahCart)){$jumlahCart = $jumlah;}
          //is jumlah stok = di database
          $sarung = $this->m_sarung->detailSarung($idBarang);//total stok sarung di database
-         if($jumlah <= $sarung['jumlah']){//pesanan lebih kecil/ sama dengan di gudang
+         if($jumlahCart <= $sarung['jumlah']){//pesanan lebih kecil/ sama dengan di gudang
             //masukan ke cart
             $data = array(
                'id'=>$idBarang,
-               'qty'=>$jumlah,
+               'qty'=>$jumlahCart,
                'price'=>$sarung['harga'],
                'name'=>$sarung['nama']
                );
@@ -112,12 +120,13 @@ class Order extends Base {
          $data = array(
             'id_pelanggan'=>$this->session->userdata['userlogin'][0]['id_pelanggan'],
             'id_admin'=>null,
-            'tanggalOrder'=>date('d-m-Y H:i:s'),
+            'tanggalOrder'=>date('Y-m-d H:i:s'),
             'tanggalLunas'=>null,
             'harga'=>$this->cart->total(),
             'status'=>'menunggu pembayaran',
             'alamat'=>$_POST['inputalamat'],
             'rekening'=>$_POST['rekening'],
+            'caraambil'=>$_POST['caraambil'],
             'barang'=>'pending',
             );
       //ada to order
@@ -130,7 +139,7 @@ class Order extends Base {
                'id_pesan' => $idOrder,
                'id_sarung' => $i['id'],
                'jumlah' => $i['qty'],
-               'subtotal' => $i['subtotal']
+               'subtotal' => $i['subtotal'],
                );
          //memasukan ke order item
          $this->db->insert('pesan_item',$item);
