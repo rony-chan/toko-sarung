@@ -23,7 +23,7 @@
          <?php if(!empty($view)){?>
             <table class="table">
                <tr>
-                  <th>id order</th>
+                  <th>noref</th>
                   <th>tgl order</th>
                   <th>tgl lunas</th>
                   <th>Total</th>
@@ -33,7 +33,7 @@
                </tr>
                <?php foreach($view as $v):?>
                   <tr>
-                     <td><?php echo $v['id_pesan']; ?></td>
+                     <td><?php echo $v['noref']; ?></td>
                      <td><?php echo $v['tanggalOrder']; ?></td>
                      <td><?php echo $v['tanggalLunas']; ?></td>
                      <td>Rp<?php echo number_format($v['harga']);?>,-</td>

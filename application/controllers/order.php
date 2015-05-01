@@ -133,6 +133,8 @@ class Order extends Base {
          $this->db->insert('pesan',$data);
       //get lattest id order by user
          $idOrder = $this->m_order->getLastIdOrder($this->session->userdata['userlogin'][0]['id_pelanggan']);
+           $sqlNoRef = "UPDATE pesan SET noref = ? WHERE id_pesan = ?";
+           $this->db->query($sqlNoRef,array('2015'.$idOrder,$idOrder));
       //masukan order item
          foreach($this->cart->contents() as $i):
             $item = array(
