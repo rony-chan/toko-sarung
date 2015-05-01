@@ -1,3 +1,12 @@
+<script src="<?php echo base_url('resource/js/tinymce/tinymce.min.js')?>"></script>
+<script>
+tinymce.init({plugins: "image",selector:'textarea'});
+$(document).on('focusin', function(e) {
+    if ($(event.target).closest(".mce-window").length) {
+        e.stopImmediatePropagation();
+    }
+});
+</script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="left-sidebar col-md-2">
@@ -68,7 +77,10 @@
 						<div class="form-group">
 							<label for="inputPassword1" class="col-lg-2 control-label">Berita</label>
 							<div class="col-lg-10">
-								<textarea style="min-height:200px" class="form-control" name="inputisi" id="inputPassword1"></textarea>
+								<a target="_blank" class="btn btn-default" href="<?php echo site_url('manage/uploadgambar');?>">Tambah Gambar</a>
+								<br/>
+								<br/>
+								<textarea style="height:350px" class="form-control" name="inputisi" id="inputPassword1"></textarea>
 							</div>
 						</div>						
 					</div>

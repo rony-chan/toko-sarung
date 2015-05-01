@@ -12,7 +12,7 @@
               <div class="col-md-10">
                 <h4><a href="<?php echo site_url('p/berita/'.$v['id_berita']);?>"><?php echo $v['judul']?></a></h4>
                 <p><?php
-                  echo substr($v['konten'], 0,100)?></p>
+                  echo strip_tags(substr($v['konten'], 0,100))?></p>
                 </div>
               </div>
             <?php endforeach; ?>

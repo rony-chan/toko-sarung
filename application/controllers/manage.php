@@ -14,6 +14,36 @@ class Manage extends Base {
 	public function index(){
 		redirect(site_url('manage/pesanan'));
 	}
+	//upload images
+	public function uploadgambar()
+	{
+		$data = array(
+			'title'=>'Upload gambar'
+		);
+		if(!empty($_FILES)){
+			//upload process
+			$config['upload_path']          = './resource/img/news';
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
+			$config['encrypt_name']         = TRUE;
+
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('gambar'))
+			{
+				$error = array('error' => $this->upload->display_errors());
+				$data['error'] = $error;
+			}
+			else
+			{
+				$data['upload']=$this->upload->data();
+			}
+			//end of upload process
+		}	
+		$this->displayAdmin('admin/uploadgambar',$data);
+	}
 	//ubah status pesanan
 	public function ubahStatus(){
 		$idpesanan = $this->uri->segment(3);

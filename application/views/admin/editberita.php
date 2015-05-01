@@ -1,5 +1,7 @@
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>tinymce.init({selector:'textarea'});</script>
+<script src="<?php echo base_url('resource/js/tinymce/tinymce.min.js')?>"></script>
+<script>
+tinymce.init({plugins: "image",selector:'textarea'});
+</script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="left-sidebar col-md-2">
@@ -29,6 +31,9 @@
 								<div class="form-group">
 									<label for="inputPassword1" class="col-lg-2 control-label">Isi</label>
 									<div class="col-lg-10">
+										<a target="_blank" class="btn btn-default" href="<?php echo site_url('manage/uploadgambar');?>">Tambah Gambar</a>
+								<br/>
+								<br/>
 										<textarea style="height:200px" class="form-control" name="inputisi" id="inputPassword1"><?php echo $view['konten'];?></textarea>
 									</div>
 								</div>
