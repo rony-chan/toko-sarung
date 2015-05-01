@@ -179,7 +179,7 @@ class P extends Base {
 		if($this->m_user->can_login($username,$password)){
 			return true;
 		}else{
-			$this->form_validation->set_message('validate_credentials','email dan password tidak cucok');
+			$this->form_validation->set_message('validate_credentials','email dan password tidak cocok');
 			return false;
 		}
 	}
