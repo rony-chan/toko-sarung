@@ -68,17 +68,17 @@
                         <p>Pilih metode Pembayaran</p>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" onclick="return $('#pilihtransfer').show('fast');" type="radio" name="carabayar" value="transfer" required> Via Transfer</label>
+                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" onclick="return $('#pilihtransfer').show('fast');" type="radio" name="carabayar" value="transfer"> Via Transfer</label>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" onclick="return $('#pilihtransfer').hide('fast');" type="radio" name="carabayar" value="langsung" required> Bayar Langsung</label>
+                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" onclick="return $('#pilihtransfer').hide('fast');" type="radio" name="carabayar" value="langsung"> Bayar Langsung</label>
                      </div>
                      <div style="display:none" id="pilihtransfer" class="col-md-12">
                         <br/>
                         <div class="col-md-12">
-                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bca.jpg')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bca" required></center></p></div>
-                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bri.png')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bri" required></center></p></div>
-                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_mandiri.jpg')?>"></center><p>No Rek: xxx-xxxx</p><center><input type="radio" name="rekening" value="mandiri" required></center></div>
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bca.jpg')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bca" ></center></p></div>
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_bri.png')?>"></center><p>No Rek: xxx-xxxx</p><p><center><input type="radio" name="rekening" value="bri" ></center></p></div>
+                           <div class="col-md-4"><center><img style="width:80%" src="<?php echo base_url('resource/img/logo/logo_mandiri.jpg')?>"></center><p>No Rek: xxx-xxxx</p><center><input type="radio" name="rekening" value="mandiri" ></center></div>
                         </div>
                         <br/>
                         <div class="col-md-12">
@@ -86,10 +86,10 @@
                         <p>Pilih metode Pengambilan Barang</p>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" type="radio" name="caraambil" value="kirim" required> Kirim (masih masa promosi, pengiriman gratis)</label>
+                     <label><input data-toggle="tooltip" title="pilih bank untuk transfer" type="radio" name="caraambil" value="kirim" > Kirim (masih masa promosi, pengiriman gratis)</label>
                      </div>
                      <div class="col-md-6">
-                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" type="radio" name="caraambil" value="langsung" required> Ambil Langsung</label>
+                     <label><input data-toggle="tooltip" title="langsung bayar dan ambil barang ditoko kami" type="radio" name="caraambil" value="langsung" > Ambil Langsung</label>
                      </div>
                      </div>                     
                   </div>
