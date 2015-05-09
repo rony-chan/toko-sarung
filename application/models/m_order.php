@@ -95,8 +95,17 @@ class m_order extends CI_Model{
 		FROM sarung
 		INNER JOIN pesan_item ON pesan_item.id_sarung = sarung.id_sarung
 		WHERE pesan_item.id_pesan = ?";
-		$items = $this->db->query($sql,$idorder);
-		return $items->result_array();
+		$query = $this->db->query($sql,$idorder);
+		if($query->num_rows()>0){return $query->result_array();}
+		else{return array();}
+	}
+	//cek order yang melewati batas
+	public function cekOrder()
+	{
+		$sql = "SELECT * FROM pesan WHERE tanggalOrder < CURRENT_DATE() AND status='Menunggu Pembayaran'";
+		$query = $this->db->query($sql);
+		if($query->num_rows()>0){return $query->result_array();}
+		else{return array();}
 	}
 
 }

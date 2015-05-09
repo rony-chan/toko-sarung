@@ -4,6 +4,13 @@ require_once 'application/controllers/base.php';
 
 
 class P extends Base {
+
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('m_order');
+		// Your own constructor code
+	}
+
 	public function index(){
 		echo 'forbidden';
 	}
@@ -47,6 +54,22 @@ class P extends Base {
 	/// ALL ABOUT SARUNG
 	//////////////////////////
 	public function sarung(){
+		//cek yang lewat jatuh tempo
+		$jatuhtempo = $this->m_order->cekOrder();
+		if(!empty($jatuhtempo))
+		{
+			foreach($jatuhtempo as $jt):
+				$this->db->where('id_pesan',$jt['id_pesan']);
+				$this->db->update('pesan',array('status'=>'Batal','barang'=>'batal'));//ubah status transaksi menjadi batal
+				//mengembalikan stok
+				$detail = $this->m_order->getOrderItem($jt['id_order']);
+				foreach($detail as $d):
+					$sql = "UPDATE sarung SET jumlah = jumlah + ".$d['jumlah']." WHERE id_sarung = ".$d['id_sarung'];
+					$this->db->query($sql);
+				endforeach;
+			endforeach;
+		}
+		//end of cek jatuh tempo
 		if(!empty($this->uri->segment(4))){//lihat detai sarung
 			$idsarung = $this->uri->segment(4);
 			$data = array(
@@ -80,6 +103,7 @@ class P extends Base {
 			$this->displayUser('user/listSarung',$data);
 		}
 	}
+
 	//merek
 	public function merek(){
 		if(empty($this->uri->segment(3))){
