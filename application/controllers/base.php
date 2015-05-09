@@ -12,7 +12,7 @@ class Base extends CI_Controller {
             if(empty($this->session->userdata('adminlogin'))){
                   redirect(site_url('admin?error=Anda belum login'));
             }
-      }     
+      }
       protected function displayAdmin($content_admin, $data) {
             //menyimpan variabel content_admin
             $data['content_admin'] = $content_admin;

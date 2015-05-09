@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2015 at 02:14 
+-- Generation Time: May 06, 2015 at 01:25 
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `2015_ronysarung`
 --
+CREATE DATABASE IF NOT EXISTS `2015_ronysarung` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `2015_ronysarung`;
 
 -- --------------------------------------------------------
 
@@ -68,7 +70,7 @@ INSERT INTO `berita` (`id_berita`, `id_admin`, `judul`, `konten`, `postdate`, `u
 (4, 1, 'Lokasi Toko Sarung Hasaniyyin', 'Alamat Toko Sarung Hasaniyyin:\r\nJl. Cempaka 5 No. 3, Kel. Poncol, Kab. Pekalongan, Jawa Tengah\r\n\r\nGoogle Maps:\r\nhttp://maps.google.com/', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
 (5, 1, 'Baca Saya', 'Toko Sarung Hasaniyyin adalah toko grosir sarung yang menyediakan berbagai macam jenis sarung untuk dijual kembali oleh para pembeli.\r\n\r\nToko ini hanya menjual dan menyediakan sarung dalam hitungan Kodi dan tidak menerima pembelian sarung dalam bentuk satuan.\r\n\r\nUntuk pemesanan sarung diharuskan kepada pembeli untuk datang langsung ke toko kami agar tidak terjadi sesuatu yang diingikan oleh kedua belah pihak.', '2015-01-17 00:00:00', '2015-01-17 00:00:00'),
 (6, 1, 'Garansi', 'Garansi Barang (Sarung)\n1. Garansi barang dilakukan dalam waktu seminggu sebelum sarung di jual kembali.\n2. Garansi berupaka penukaran sarung dengan model yang sama.\n3. Tidak menerima Claim Garansi apabila sarung hilang dalam perjalanan pulang.\n4. Semoga Barokahsdsdsdsd', '2015-01-17 00:00:00', '2017-03-15 18:04:45'),
-(7, 1, 'Hubungi Kami', 'Hubungi Kami di:\r\nNo. Telepon: (0274)-998877\r\nNo. HP: 087733498000\r\nBBM: 7D7C85BB\r\nLine:\r\nWhatsapp:\r\nEmail: dr_key@gmail.com', '2015-01-17 00:00:00', '2009-04-15 08:21:00');
+(7, 1, 'Hubungi Kami', '<p><img src="../../resource/img/news/10bf342a0d1f465d008a32833593646e.jpg" alt="" width="564" height="376" /></p>\n<h3>Makasih</h3>\n<p>Hubungi Kami di: No. Telepon: (0274)-998877 No. HP: 087733498000 BBM: 7D7C85BB Line: Whatsapp: Email: dr_key@gmail.com</p>', '2015-01-17 00:00:00', '2002-05-15 05:23:44');
 
 -- --------------------------------------------------------
 
@@ -198,23 +200,26 @@ CREATE TABLE IF NOT EXISTS `pesan` (
 `id_pesan` int(11) NOT NULL,
   `id_pelanggan` int(11) NOT NULL,
   `id_admin` int(11) DEFAULT NULL,
+  `alamat` varchar(500) NOT NULL,
+  `rekening` enum('bri','bca','mandiri') DEFAULT NULL,
   `tanggalOrder` datetime NOT NULL,
   `tanggalLunas` datetime DEFAULT NULL,
+  `caraambil` enum('langsung','kirim') DEFAULT NULL,
   `harga` int(11) NOT NULL,
-  `status` enum('menunggu pembayaran','lunas') NOT NULL,
+  `status` enum('menunggu pembayaran','lunas','langsung') NOT NULL,
+  `barang` enum('pending','terkirim') NOT NULL,
+  `noref` varchar(20) NOT NULL,
   `barangdiambil` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `tanggalOrder`, `tanggalLunas`, `harga`, `status`, `barangdiambil`) VALUES
-(6, 1, NULL, '2012-03-15 05:43:33', NULL, 10800000, 'lunas', 0),
-(7, 1, NULL, '2016-03-15 09:00:08', NULL, 19800000, 'lunas', 1),
-(12, 1, NULL, '2008-04-15 18:57:04', NULL, 7000000, 'lunas', 1),
-(13, 3, NULL, '2014-04-15 03:03:12', NULL, 2550000, 'lunas', 0),
-(14, 3, NULL, '2014-04-15 15:07:26', NULL, 1060000, 'menunggu pembayaran', 0);
+INSERT INTO `pesan` (`id_pesan`, `id_pelanggan`, `id_admin`, `alamat`, `rekening`, `tanggalOrder`, `tanggalLunas`, `caraambil`, `harga`, `status`, `barang`, `noref`, `barangdiambil`) VALUES
+(18, 1, NULL, 'Jl Lele Pugeran', 'bca', '2015-05-01 03:02:07', NULL, 'kirim', 800000, 'menunggu pembayaran', 'pending', '201518', 0),
+(19, 1, NULL, 'Jl Lele Pugeran', 'bri', '2015-05-03 15:31:35', NULL, 'kirim', 6000000, 'menunggu pembayaran', 'pending', '201519', 0),
+(20, 1, NULL, 'Jl Lele Pugeran', NULL, '2015-05-03 15:48:29', NULL, NULL, 2200000, 'menunggu pembayaran', 'pending', '201520', 0);
 
 -- --------------------------------------------------------
 
@@ -234,9 +239,9 @@ CREATE TABLE IF NOT EXISTS `pesan_item` (
 --
 
 INSERT INTO `pesan_item` (`id_pesan`, `id_sarung`, `jumlah`, `subtotal`) VALUES
-(12, 1, 5, 7000000),
-(13, 2, 3, 2550000),
-(14, 4, 1, 1060000);
+(18, 5, 1, 800000),
+(19, 8, 3, 6000000),
+(20, 6, 1, 2200000);
 
 -- --------------------------------------------------------
 
@@ -262,10 +267,10 @@ INSERT INTO `sarung` (`id_sarung`, `id_merk`, `nama`, `jumlah`, `harga`, `deskri
 (2, 2, 'Sarung Tenun Hasaniyyin', 2, 850000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (3, 3, 'Sarung Gajah Duduk Black White', 5, 940000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
 (4, 4, 'Sarung Cendana Spesial Dobby', 9, 1060000, 'Dari bahan bermutu tinggi, tahan dalam segala kondisi Mulus seperti kuliat ayam goreng. Memiliki citarasa seni yang tinggi.'),
-(5, 1, 'Sarung Wadimor Hujan Gerimis', 5, 800000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
-(6, 6, 'Sarung Atlas Premium 770 Songket', 5, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
-(7, 6, 'Sarung Atlas Super 970 Songket', 5, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
-(8, 10, 'Sarung Pulau Mas Sutera', 5, 2000000, 'Terbuat benang sutera asli');
+(5, 1, 'Sarung Wadimor Hujan Gerimis', 0, 800000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
+(6, 6, 'Sarung Atlas Premium 770 Songket', 4, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
+(7, 6, 'Sarung Atlas Super 970 Songket', 1, 2200000, 'Terbuat dari bahan berkualitas tenun terbaik yang diproses dengan teknik modern yang menjadikan kain terasa lembut dan warna tidak mudah luntur sehingga menjadikannya nyaman dipake sehari-hari tanpa masalah'),
+(8, 10, 'Sarung Pulau Mas Sutera', 0, 2000000, 'Terbuat benang sutera asli');
 
 -- --------------------------------------------------------
 
@@ -411,7 +416,7 @@ MODIFY `id_pemasok` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `sarung`
 --
